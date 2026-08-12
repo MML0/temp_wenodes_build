@@ -45,7 +45,7 @@ export default function ProjectCard({ project, index }) {
     setIsHovered(true);
     hoverTimerRef.current = setTimeout(() => {
       startGalleryCycle();
-    }, 1200);
+    }, 500);
   };
 
   const handleMouseLeave = () => {
@@ -268,12 +268,17 @@ export default function ProjectCard({ project, index }) {
             </div>
           )}
 
-          {hasGallery && showGallery && totalGalleryImages > 1 && (
+          {/* Gallery indicator — always occupies space */}
+          {hasGallery && totalGalleryImages > 1 && (
             <div
               style={{
                 display: "flex",
+                alignItems: "center",
                 gap: "0.35rem",
+                height: "0.7rem",
+                minHeight: "0.7rem",
                 marginTop: "0.9rem",
+                overflow: "hidden",
                 opacity: isHovered ? 1 : 0,
                 transition: "opacity 0.3s ease 0.4s",
               }}
@@ -282,13 +287,15 @@ export default function ProjectCard({ project, index }) {
                 <span
                   key={i}
                   style={{
+                    flexShrink: 0,
                     width: i === galleryIndex ? "1.2rem" : "0.35rem",
                     height: "0.35rem",
                     borderRadius: "999px",
-                    background: i === galleryIndex
-                      ? "rgba(232,230,227,0.9)"
-                      : "rgba(232,230,227,0.25)",
-                    transition: "all 0.4s ease",
+                    background:
+                      i === galleryIndex
+                        ? "rgba(232,230,227,0.9)"
+                        : "rgba(232,230,227,0.25)",
+                    transition: "width 0.4s ease, background 0.4s ease",
                   }}
                 />
               ))}

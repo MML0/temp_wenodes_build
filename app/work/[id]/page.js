@@ -10,14 +10,19 @@ export function generateStaticParams() {
   return works.map((work) => ({ id: work.id.toString() }));
 }
 
-export function generateMetadata({ params }) {
-  const work = works.find((w) => w.id.toString() === params.id);
+export async function generateMetadata({ params }) {
+  const { id } = await params;
+
+  const work = works.find(
+    (w) => w.id.toString() === id
+  );
+
   return {
     title: work ? `${work.title} — WENODES` : "Work — WENODES",
-    description: work?.description || "WeNodes creative project",
+    description:
+      work?.description || "WeNodes creative project",
   };
 }
-
 /* ─── Content Block Renderer ─── */
 function ContentBlock({ block, index, workTitle }) {
   switch (block.type) {
@@ -185,8 +190,12 @@ function StatBox({ label, value }) {
 }
 
 /* ─── Main Page ─── */
-export default function WorkDetailPage({ params }) {
-  const work = works.find((w) => w.id.toString() === params.id);
+export default async function WorkDetailPage({ params }) {
+  const { id } = await params;
+
+  const work = works.find(
+    (w) => w.id.toString() === id
+  );
   if (!work) return notFound();
 
   const hasGallery = Array.isArray(work.gallery) && work.gallery.length > 0;
