@@ -1,2 +1,12 @@
 .next/
 node_modules/
+public/works/*
+.prettierrc
+.DS_Store
+beats.txt
+s.mp3
+test.html
+.gitignore
+public/images/wenodes monogram b copy.png
+test.py
+.DS_Store

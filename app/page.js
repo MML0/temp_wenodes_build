@@ -15,16 +15,27 @@ export default function Home() {
 
   return (
     <main>
-      <div className="scene" aria-hidden="true">
+      {/* PARTICLE BACKGROUND */}
+      <div
+        className="scene"
+        aria-hidden="true"
+      >
         <ParticleScene />
       </div>
 
-      <div className="grain" />
+      {/* GRAIN */}
+      <div
+        className="grain"
+        aria-hidden="true"
+      />
 
+      {/* FOREGROUND */}
       <Navigation />
 
       <section className="hero">
-        <p className="eyebrow">CREATIVE TECHNOLOGY / DIGITAL SYSTEMS</p>
+        <p className="eyebrow">
+          CREATIVE TECHNOLOGY / DIGITAL SYSTEMS
+        </p>
 
         <h1>
           WE
@@ -35,58 +46,118 @@ export default function Home() {
 
         <div className="hero-bottom">
           <p>
-            A collective exploring the space<br />
+            A collective exploring the space
+            <br />
             between technology, art and interaction.
           </p>
-          <span className="scroll">SCROLL TO EXPLORE ↓</span>
+
+          <span className="scroll">
+            SCROLL TO EXPLORE ↓
+          </span>
         </div>
       </section>
 
-      <section className="manifesto" id="about">
+      <section
+        className="manifesto"
+        id="about"
+      >
         <span>01 — ABOUT</span>
+
         <h2>
-          We build <i>experiences</i><br />
+          We build <i>experiences</i>
+          <br />
           that behave like living systems.
         </h2>
+
         <div className="manifesto-cta">
-          <Link href="/about" className="btn">READ MORE →</Link>
+          <Link
+            href="/about"
+            className="btn"
+          >
+            READ MORE →
+          </Link>
         </div>
       </section>
 
-      <section className="manifesto" id="work">
+      <section
+        className="manifesto"
+        id="work"
+      >
         <span>02 — SELECTED WORK</span>
+
         <div className="section-header">
-          <h2>Projects that push boundaries.</h2>
-          <Link href="/work" className="btn-outline">VIEW ALL →</Link>
+          <h2>
+            Projects that push boundaries.
+          </h2>
+
+          <Link
+            href="/work"
+            className="btn-outline"
+          >
+            VIEW ALL →
+          </Link>
         </div>
+
         <div className="projects-grid">
-          {featuredWorks.map((project, i) => (
-            <ProjectCard key={project.id} project={project} index={i} />
-          ))}
+          {featuredWorks.map(
+            (project, i) => (
+              <ProjectCard
+                key={project.id}
+                project={project}
+                index={i}
+              />
+            )
+          )}
         </div>
       </section>
 
-      <section className="manifesto" id="team">
+      <section
+        className="manifesto"
+        id="team"
+      >
         <span>03 — TEAM</span>
+
         <div className="section-header">
-          <h2>People × ideas × technology.</h2>
-          <Link href="/team" className="btn-outline">MEET ALL →</Link>
+          <h2>
+            People × ideas × technology.
+          </h2>
+
+          <Link
+            href="/team"
+            className="btn-outline"
+          >
+            MEET ALL →
+          </Link>
         </div>
+
         <div className="team-grid">
-          {featuredTeam.map((member) => (
-            <MemberCard key={member.id} member={member} />
-          ))}
+          {featuredTeam.map(
+            (member) => (
+              <MemberCard
+                key={member.id}
+                member={member}
+              />
+            )
+          )}
         </div>
       </section>
 
       <section className="manifesto join-section">
         <span>04 — JOIN</span>
+
         <h2>
-          Want to <i>build</i> the future<br />
+          Want to <i>build</i> the future
+          <br />
           with us?
         </h2>
+
         <div className="manifesto-cta">
-          <Link href="/join" className="btn btn-large">APPLY TO JOIN ↗</Link>
+          <Link
+            href="/join"
+            className="btn btn-large"
+          >
+            APPLY TO JOIN ↗
+          </Link>
         </div>
       </section>
 

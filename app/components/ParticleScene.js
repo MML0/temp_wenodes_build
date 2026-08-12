@@ -1,138 +1,9 @@
-// "use client";
-
-// import { Canvas, useFrame, useThree } from "@react-three/fiber";
-// import { useMemo, useRef } from "react";
-// import * as THREE from "three";
-
-// function ParticleField() {
-//   const points = useRef();
-//   const { pointer, viewport } = useThree();
-
-//   const { positions, base } = useMemo(() => {
-//     const count = 18000;
-//     const positions = new Float32Array(count * 3);
-//     const base = new Float32Array(count * 3);
-
-//     for (let i = 0; i < count; i++) {
-//       const i3 = i * 3;
-//       const x = (Math.random() - 0.5) * 14;
-//       const y = (Math.random() - 0.5) * 8.5;
-//       const z = (Math.random() - 0.5) * 4;
-
-//       positions[i3] = base[i3] = x;
-//       positions[i3 + 1] = base[i3 + 1] = y;
-//       positions[i3 + 2] = base[i3 + 2] = z;
-//     }
-
-//     return { positions, base };
-//   }, []);
-
-//   useFrame((state) => {
-//     const attr = points.current.geometry.attributes.position;
-//     const a = attr.array;
-//     const t = state.clock.elapsedTime;
-
-//     const mx = pointer.x * viewport.width * 0.5;
-//     const my = pointer.y * viewport.height * 0.5;
-
-//     for (let i = 0; i < a.length; i += 3) {
-//       const bx = base[i];
-//       const by = base[i + 1];
-//       const bz = base[i + 2];
-
-//       const dx = bx - mx;
-//       const dy = by - my;
-//       const d2 = dx * dx + dy * dy;
-      
-//       // Much wider, more visible mouse radius
-//       const influence = Math.exp(-d2 * 0.12);
-//       const strongInfluence = Math.exp(-d2 * 0.35);
-
-//       const wave = Math.sin(bx * 1.25 + t * 0.45) * 0.065;
-//       const drift = Math.sin(by * 1.8 + t * 0.35) * 0.045;
-
-//       // Stronger repulsion + lift + subtle swirl
-//       const repelX = dx * influence * 0.9;
-//       const repelY = dy * influence * 0.9;
-//       const lift = influence * 0.4;
-//       const swirl = strongInfluence * Math.sin(t * 2 + d2) * 0.12;
-
-//       a[i] += ((bx + repelX + drift + swirl) - a[i]) * 0.05;
-//       a[i + 1] += ((by + repelY + wave + lift) - a[i + 1]) * 0.05;
-//       a[i + 2] += ((bz + influence * 1.4) - a[i + 2]) * 0.04;
-//     }
-
-//     attr.needsUpdate = true;
-//     points.current.rotation.z = Math.sin(t * 0.08) * 0.018;
-//   });
-
-//   return (
-//     <points ref={points}>
-//       <bufferGeometry>
-//         <bufferAttribute
-//           attach="attributes-position"
-//           count={positions.length / 3}
-//           array={positions}
-//           itemSize={3}
-//         />
-//       </bufferGeometry>
-//       <pointsMaterial
-//         size={0.02}
-//         sizeAttenuation
-//         transparent
-//         opacity={0.78}
-//         depthWrite={false}
-//         blending={THREE.AdditiveBlending}
-//         color="#f4f4f0"
-//       />
-//     </points>
-//   );
-// }
-
-// function CursorGlow() {
-//   const mesh = useRef();
-//   const { pointer, viewport } = useThree();
-  
-//   useFrame(() => {
-//     const mx = pointer.x * viewport.width * 0.5;
-//     const my = pointer.y * viewport.height * 0.5;
-//     mesh.current.position.x += (mx - mesh.current.position.x) * 0.08;
-//     mesh.current.position.y += (my - mesh.current.position.y) * 0.08;
-//   });
-  
-//   return (
-//     <mesh ref={mesh} position={[0,0,-1]}>
-//       <planeGeometry args={[3, 3]} />
-//       <meshBasicMaterial 
-//         color="#f4f4f0" 
-//         transparent 
-//         opacity={0.025} 
-//         blending={THREE.AdditiveBlending}
-//         depthWrite={false}
-//       />
-//     </mesh>
-//   );
-// }
-
-// export default function ParticleScene() {
-//   return (
-//     <Canvas
-//       camera={{ position: [0, 0, 6], fov: 55 }}
-//       dpr={[1, 1.7]}
-//       gl={{ antialias: true, alpha: true }}
-//     >
-//       <ParticleField />
-//       <CursorGlow />
-//     </Canvas>
-//   );
-// }
-
-
 "use client";
 
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import * as THREE from "three";
+
 
 /* =========================================================
    SETTINGS
@@ -140,114 +11,146 @@ import * as THREE from "three";
 
 const COUNT = 18000;
 
-const LETTERS_ORDER = [
-  "W",
-  "E",
-  "N",
-  "O",
-  "D",
-  "E",
-  "S",
-];
+const WORD = "WENODES";
+
 
 /*
-  Mostly W,
-  but full WENODES appears often.
+  Letter dimensions.
+
+  The old letters were too narrow, so the horizontal
+  scale is intentionally larger than the vertical scale.
 */
-const W_CHANCE = 0.45;
-const FULL_WORD_CHANCE = 0.38;
+const LETTER_WIDTH = 1.85;
+const LETTER_HEIGHT = 3.05;
+
 
 /*
-  Slow.
+  Space between letters in the full WENODES word.
 */
-const HOLD_MIN = 5;
-const HOLD_MAX = 11;
+const LETTER_SPACING = 1.95;
 
-const TRANSITION_MIN = 3;
-const TRANSITION_MAX = 5;
 
 /*
-  Mouse.
+  Random horizontal deformation.
+
+  Increase this if you want the letters more organic.
 */
-const MOUSE_RADIUS = 2.65;
-const MOUSE_FORCE = 2.15;
+const RANDOM_STRETCH = 0.2;
+
+
+/*
+  Animation timing.
+
+  Everything is intentionally slow.
+*/
+const TIMING = {
+  /*
+    Full WENODES stays visible for a long time.
+  */
+  WORD_HOLD: 14.0,
+
+  /*
+    Slow explosion away from WENODES.
+  */
+  WORD_SCATTER: 29.0,
+
+  /*
+    Time to form each individual letter.
+  */
+  LETTER_FORM: 22.5,
+
+  /*
+    Individual letter remains visible.
+  */
+  LETTER_HOLD: 22.0,
+
+  /*
+    Slow transition between letters.
+  */
+  LETTER_SCATTER: 23.0,
+
+  /*
+    Final WENODES remains visible even longer.
+  */
+  FINAL_WORD_HOLD: 18.0,
+};
 
 
 /* =========================================================
-   PIXEL LETTERS
+   9 × 8 PIXEL MATRIX DEFINITIONS
 ========================================================= */
 
 const LETTERS = {
   W: [
-    [1,0,0,0,1,0,0,0,1],
-    [1,0,0,0,1,0,0,0,1],
-    [1,0,0,0,1,0,0,0,1],
-    [1,0,0,0,1,0,0,0,1],
-    [0,1,0,1,0,1,0,1,0],
-    [0,1,0,1,0,1,0,1,0],
-    [0,0,1,0,0,0,1,0,0],
-    [0,0,1,0,0,0,1,0,0],
+    [1, 0, 0, 0, 1, 0, 0, 0, 1],
+    [1, 0, 0, 0, 1, 0, 0, 0, 1],
+    [1, 0, 0, 0, 1, 0, 0, 0, 1],
+    [1, 0, 0, 0, 1, 0, 0, 0, 1],
+    [0, 1, 0, 1, 0, 1, 0, 1, 0],
+    [0, 1, 0, 1, 0, 1, 0, 1, 0],
+    [0, 0, 1, 0, 0, 0, 1, 0, 0],
+    [0, 0, 1, 0, 0, 0, 1, 0, 0],
   ],
 
   E: [
-    [1,1,1,1,1,1,1,0,0],
-    [1,0,0,0,0,0,0,0,0],
-    [1,0,0,0,0,0,0,0,0],
-    [1,1,1,1,1,1,0,0,0],
-    [1,0,0,0,0,0,0,0,0],
-    [1,0,0,0,0,0,0,0,0],
-    [1,1,1,1,1,1,1,0,0],
-    [0,0,0,0,0,0,0,0,0],
+    [1, 1, 1, 1, 1, 1, 1, 0, 0],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0],
+    [1, 1, 1, 1, 1, 1, 0, 0, 0],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0],
+    [1, 1, 1, 1, 1, 1, 1, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0],
   ],
 
   N: [
-    [1,0,0,0,0,0,0,0,1],
-    [1,1,0,0,0,0,0,0,1],
-    [1,0,1,0,0,0,0,0,1],
-    [1,0,0,1,0,0,0,0,1],
-    [1,0,0,0,1,0,0,0,1],
-    [1,0,0,0,0,1,0,0,1],
-    [1,0,0,0,0,0,1,0,1],
-    [1,0,0,0,0,0,0,1,1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 1, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 1, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 1, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 1, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 1, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 1, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1, 1],
   ],
 
   O: [
-    [0,1,1,1,1,1,1,1,0],
-    [1,0,0,0,0,0,0,0,1],
-    [1,0,0,0,0,0,0,0,1],
-    [1,0,0,0,0,0,0,0,1],
-    [1,0,0,0,0,0,0,0,1],
-    [1,0,0,0,0,0,0,0,1],
-    [0,1,1,1,1,1,1,1,0],
-    [0,0,0,0,0,0,0,0,0],
+    [0, 0, 1, 1, 1, 1, 1, 0, 0],
+    [0, 1, 0, 0, 0, 0, 0, 1, 0],
+    [1, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 1],
+    [0, 1, 0, 0, 0, 0, 0, 1, 0],
+    [0, 0, 1, 1, 1, 1, 1, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0],
   ],
 
   D: [
-    [1,1,1,1,1,1,1,0,0],
-    [1,0,0,0,0,0,0,1,0],
-    [1,0,0,0,0,0,0,0,1],
-    [1,0,0,0,0,0,0,0,1],
-    [1,0,0,0,0,0,0,0,1],
-    [1,0,0,0,0,0,0,1,0],
-    [1,1,1,1,1,1,1,0,0],
-    [0,0,0,0,0,0,0,0,0],
+    [1, 1, 1, 1, 1, 1, 1, 0, 0],
+    [1, 0, 0, 0, 0, 0, 0, 1, 0],
+    [1, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 1, 0],
+    [1, 1, 1, 1, 1, 1, 1, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0],
   ],
 
   S: [
-    [0,1,1,1,1,1,1,1,0],
-    [1,0,0,0,0,0,0,0,1],
-    [1,0,0,0,0,0,0,0,0],
-    [0,1,1,1,1,1,1,0,0],
-    [0,0,0,0,0,0,0,1,1],
-    [1,0,0,0,0,0,0,0,1],
-    [0,1,1,1,1,1,1,1,0],
-    [0,0,0,0,0,0,0,0,0],
+    [0, 1, 1, 1, 1, 1, 1, 1, 0],
+    [1, 0, 0, 0, 0, 0, 0, 0, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 1, 1, 1, 1, 1, 1, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 1, 1],
+    [1, 0, 0, 0, 0, 0, 0, 0, 1],
+    [0, 1, 1, 1, 1, 1, 1, 1, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0],
   ],
 };
 
 
 /* =========================================================
-   RANDOM
+   HELPERS
 ========================================================= */
 
 function random(min, max) {
@@ -255,90 +158,323 @@ function random(min, max) {
 }
 
 
+function clamp01(value) {
+  return Math.max(
+    0,
+    Math.min(1, value)
+  );
+}
+
+
+function smoothstep(value) {
+  value = clamp01(value);
+
+  return (
+    value *
+    value *
+    (3 - 2 * value)
+  );
+}
+
+
+function easeInOut(value) {
+  value = clamp01(value);
+
+  return value < 0.5
+    ? 4 * value * value * value
+    : 1 -
+        Math.pow(
+          -2 * value + 2,
+          3
+        ) /
+          2;
+}
+
+
 /* =========================================================
-   CREATE LETTER PARTICLES
-
-   IMPORTANT:
-
-   Every particle gets a slightly different position.
-
-   This prevents the letters from looking like
-   perfectly locked pixel fonts.
+   CREATE ONE LETTER
 ========================================================= */
 
-function createLetter(letter, count) {
-  const matrix = LETTERS[letter];
+function createLetterTarget(letter) {
+  const matrix =
+    LETTERS[letter];
 
-  const rows = matrix.length;
-  const cols = matrix[0].length;
+  const rows =
+    matrix.length;
+
+  const cols =
+    matrix[0].length;
+
+
+  /*
+    Find all active pixels.
+  */
 
   const cells = [];
 
-  for (let y = 0; y < rows; y++) {
-    for (let x = 0; x < cols; x++) {
-      if (matrix[y][x]) {
-        cells.push({ x, y });
+  for (
+    let y = 0;
+    y < rows;
+    y++
+  ) {
+    for (
+      let x = 0;
+      x < cols;
+      x++
+    ) {
+      if (
+        matrix[y][x] === 1
+      ) {
+        cells.push({
+          x,
+          y,
+        });
       }
     }
   }
 
-  const result = new Float32Array(
-    count * 3
-  );
 
-  const width = 8.0;
-  const height = 4.6;
+  const result =
+    new Float32Array(
+      COUNT * 3
+    );
 
-  const cellW = width / cols;
-  const cellH = height / rows;
 
-  for (let i = 0; i < count; i++) {
-    const i3 = i * 3;
+  /*
+    Pixel size.
+
+    Width is intentionally larger.
+  */
+
+  const cellWidth =
+    LETTER_WIDTH / cols;
+
+  const cellHeight =
+    LETTER_HEIGHT / rows;
+
+
+  for (
+    let i = 0;
+    i < COUNT;
+    i++
+  ) {
+    const i3 =
+      i * 3;
+
 
     const cell =
       cells[
         Math.floor(
-          Math.random() * cells.length
+          Math.random() *
+            cells.length
         )
       ];
 
-    const centerX =
-      -width / 2 +
-      cell.x * cellW +
-      cellW / 2;
-
-    const centerY =
-      height / 2 -
-      cell.y * cellH -
-      cellH / 2;
 
     /*
-      RANDOM DISTRIBUTION.
-
-      This is important.
-
-      Instead of every particle sitting exactly
-      on a pixel, they form a soft particle cloud
-      around the imaginary pixel.
+      Base pixel position.
     */
 
-    const spreadX =
-      cellW * random(0.15, 0.95);
+    let x =
+      -LETTER_WIDTH / 2 +
+      cell.x *
+        cellWidth +
+      cellWidth / 2;
 
-    const spreadY =
-      cellH * random(0.15, 0.95);
+
+    let y =
+      LETTER_HEIGHT / 2 -
+      cell.y *
+        cellHeight -
+      cellHeight / 2;
+
+
+    /*
+      Random horizontal stretch.
+
+      This prevents every particle from sitting
+      on an identical rigid grid.
+
+      It only affects X, so the letter remains
+      recognizable while becoming more organic.
+    */
+
+    const stretch =
+      random(
+        1 -
+          RANDOM_STRETCH,
+        1 +
+          RANDOM_STRETCH
+      );
+
+
+    x *= stretch;
+
+
+    /*
+      Tiny random position inside the pixel.
+    */
+
+    x += random(
+      -cellWidth * 0.6,
+      cellWidth * 0.6
+    );
+
+
+    y += random(
+      -cellHeight * 0.5,
+      cellHeight * 0.5
+    );
+    y*= stretch;
+
+    /*
+      Slight depth randomness.
+    */
+
+    const z =
+      random(
+        -0.34,
+        0.34
+      );
+
+
+    result[i3] = x;
+
+    result[i3 + 1] = y;
+
+    result[i3 + 2] = z;
+  }
+
+
+  return result;
+}
+
+
+/* =========================================================
+   CREATE FULL WENODES
+========================================================= */
+
+function createWordTarget(
+  letterTargets
+) {
+  const result =
+    new Float32Array(
+      COUNT * 3
+    );
+
+
+  const letters =
+    WORD.split("");
+
+
+  /*
+    Total width of the word.
+  */
+
+  const totalWidth =
+    (
+      letters.length - 1
+    ) *
+      LETTER_SPACING +
+    LETTER_WIDTH;
+
+
+  const startX =
+    -totalWidth / 2 +
+    LETTER_WIDTH / 2;
+
+
+  /*
+    Each particle belongs to one
+    of the seven letters.
+  */
+
+  const particlesPerLetter =
+    Math.floor(
+      COUNT /
+        letters.length
+    );
+
+
+  for (
+    let i = 0;
+    i < COUNT;
+    i++
+  ) {
+    const i3 =
+      i * 3;
+
+
+    let letterIndex =
+      Math.floor(
+        i /
+          particlesPerLetter
+      );
+
+
+    /*
+      Clamp the last particles to S.
+    */
+
+    if (
+      letterIndex >=
+      letters.length
+    ) {
+      letterIndex =
+        letters.length - 1;
+    }
+
+
+    const letter =
+      letters[
+        letterIndex
+      ];
+
+
+    const target =
+      letterTargets[
+        letter
+      ];
+
+
+    /*
+      Local particle index.
+    */
+
+    const localIndex =
+      i -
+      letterIndex *
+        particlesPerLetter;
+
+
+    const sourceIndex =
+      (
+        localIndex %
+        COUNT
+      ) * 3;
+
 
     result[i3] =
-      centerX +
-      random(-spreadX, spreadX);
+      target[
+        sourceIndex
+      ] +
+      startX +
+      letterIndex *
+        LETTER_SPACING;
+
 
     result[i3 + 1] =
-      centerY +
-      random(-spreadY, spreadY);
+      target[
+        sourceIndex + 1
+      ];
+
 
     result[i3 + 2] =
-      random(-0.22, 0.22);
+      target[
+        sourceIndex + 2
+      ];
   }
+
 
   return result;
 }
@@ -349,695 +485,1244 @@ function createLetter(letter, count) {
 ========================================================= */
 
 function ParticleField() {
-  const points = useRef();
-
-  const { pointer, viewport } =
-    useThree();
+  const points =
+    useRef(null);
 
 
-  const data = useMemo(() => {
-    /*
-      All letter targets.
-    */
-
-    const targets = {};
-
-    for (const letter of LETTERS_ORDER) {
-      targets[letter] =
-        createLetter(
-          letter,
-          COUNT
-        );
-    }
+  const {
+    viewport,
+  } = useThree();
 
 
-    /*
-      Initial position.
+  /*
+    Browser mouse.
 
-      Start from W.
-    */
+    Global event means foreground UI cannot block
+    the particle interaction.
+  */
 
-    const positions =
-      new Float32Array(
-        COUNT * 3
-      );
+  const mouse =
+    useRef({
+      x: 0,
+      y: 0,
+    });
 
-    positions.set(
-      targets.W
+
+  const smoothMouse =
+    useRef({
+      x: 0,
+      y: 0,
+    });
+
+
+  useEffect(() => {
+    const handleMouseMove =
+      (event) => {
+        mouse.current.x =
+          (
+            event.clientX /
+            window.innerWidth
+          ) *
+            2 -
+          1;
+
+
+        mouse.current.y =
+          -(
+            (
+              event.clientY /
+              window.innerHeight
+            ) *
+              2 -
+            1
+          );
+      };
+
+
+    window.addEventListener(
+      "mousemove",
+      handleMouseMove,
+      {
+        passive: true,
+      }
     );
 
 
-    /*
-      Every particle gets a unique
-      random personality.
-
-      This controls how much it moves
-      during transitions.
-    */
-
-    const personality =
-      new Float32Array(COUNT);
-
-    const noise =
-      new Float32Array(
-        COUNT * 3
+    return () => {
+      window.removeEventListener(
+        "mousemove",
+        handleMouseMove
       );
-
-    for (let i = 0; i < COUNT; i++) {
-      personality[i] =
-        Math.random();
-
-      const i3 = i * 3;
-
-      noise[i3] =
-        random(-1, 1);
-
-      noise[i3 + 1] =
-        random(-1, 1);
-
-      noise[i3 + 2] =
-        random(-1, 1);
-    }
-
-
-    return {
-      positions,
-      targets,
-      personality,
-      noise,
     };
   }, []);
 
 
-  const state = useRef({
-    sequence: ["W"],
+  /* =======================================================
+     PARTICLE DATA
+  ======================================================= */
 
-    index: 0,
+  const data =
+    useMemo(() => {
+      const positions =
+        new Float32Array(
+          COUNT * 3
+        );
 
-    phase: "hold",
 
-    started: false,
+      const base =
+        new Float32Array(
+          COUNT * 3
+        );
 
-    phaseStart: 0,
 
-    holdDuration: 7,
+      const velocity =
+        new Float32Array(
+          COUNT * 3
+        );
 
-    transitionDuration: 4,
-  });
+
+      const randomOffset =
+        new Float32Array(
+          COUNT * 3
+        );
+
+
+      const personality =
+        new Float32Array(
+          COUNT
+        );
+
+
+      /*
+        Create exact individual letters.
+      */
+
+      const letterTargets =
+        {};
+
+      for (
+        const letter of [
+          "W",
+          "E",
+          "N",
+          "O",
+          "D",
+          "S",
+        ]
+      ) {
+        letterTargets[
+          letter
+        ] =
+          createLetterTarget(
+            letter
+          );
+      }
+
+
+      /*
+        Create full WENODES.
+      */
+
+      const word =
+        createWordTarget(
+          letterTargets
+        );
+
+
+      /*
+        Initial particle cloud.
+      */
+
+      for (
+        let i = 0;
+        i < COUNT;
+        i++
+      ) {
+        const i3 =
+          i * 3;
+
+
+        const x =
+          random(
+            -7,
+            7
+          );
+
+
+        const y =
+          random(
+            -4.2,
+            4.2
+          );
+
+
+        const z =
+          random(
+            -2,
+            2
+          );
+
+
+        positions[i3] =
+          base[i3] =
+            x;
+
+
+        positions[i3 + 1] =
+          base[i3 + 1] =
+            y;
+
+
+        positions[i3 + 2] =
+          base[i3 + 2] =
+            z;
+
+
+        velocity[i3] =
+          random(
+            -0.01,
+            0.01
+          );
+
+
+        velocity[i3 + 1] =
+          random(
+            -0.01,
+            0.01
+          );
+
+
+        velocity[i3 + 2] =
+          random(
+            -0.004,
+            0.004
+          );
+
+
+        randomOffset[i3] =
+          random(
+            -1,
+            1
+          );
+
+
+        randomOffset[i3 + 1] =
+          random(
+            -1,
+            1
+          );
+
+
+        randomOffset[i3 + 2] =
+          random(
+            -1,
+            1
+          );
+
+
+        personality[i] =
+          Math.random();
+      }
+
+
+      return {
+        positions,
+        base,
+        velocity,
+        randomOffset,
+        personality,
+        word,
+        letterTargets,
+      };
+    }, []);
 
 
   /* =======================================================
-     CREATE RANDOM SEQUENCE
+     ANIMATION STATE
   ======================================================= */
 
-  function createSequence() {
-    const r = Math.random();
+  const animation =
+    useRef({
+      phase:
+        "WORD_HOLD",
 
-    /*
-      MOST COMMON:
+      phaseStart:
+        0,
 
-      W → WENODES → W
-    */
+      letterIndex:
+        0,
 
-    if (r < FULL_WORD_CHANCE) {
-      return [
-        "W",
-        ...LETTERS_ORDER.slice(1),
-        "W",
-      ];
-    }
-
-
-    /*
-      Sometimes only 2–4 letters.
-    */
-
-    if (r < 0.75) {
-      const length =
-        Math.floor(
-          random(2, 5)
-        );
-
-      const start =
-        Math.floor(
-          random(
-            0,
-            LETTERS_ORDER.length -
-              length
-          )
-        );
-
-      return [
-        "W",
-        ...LETTERS_ORDER.slice(
-          start,
-          start + length
-        ),
-        "W",
-      ];
-    }
-
-
-    /*
-      Sometimes random individual letters.
-    */
-
-    const randomLength =
-      Math.floor(
-        random(2, 4)
-      );
-
-    const result = ["W"];
-
-    for (
-      let i = 0;
-      i < randomLength;
-      i++
-    ) {
-      result.push(
-        LETTERS_ORDER[
-          Math.floor(
-            Math.random() *
-              LETTERS_ORDER.length
-          )
-        ]
-      );
-    }
-
-    result.push("W");
-
-    return result;
-  }
+      initialized:
+        false,
+    });
 
 
   /* =======================================================
      FRAME
   ======================================================= */
 
-  useFrame((stateThree) => {
-    if (!points.current) return;
-
-    const attr =
-      points.current.geometry
-        .attributes.position;
-
-    const a = attr.array;
-
-    const time =
-      stateThree.clock.elapsedTime;
+  useFrame(
+    (state) => {
+      if (
+        !points.current
+      ) {
+        return;
+      }
 
 
-    /* -----------------------------------------------------
-       INITIALIZATION
-    ----------------------------------------------------- */
-
-    if (!state.current.started) {
-      state.current.started = true;
-
-      state.current.sequence =
-        createSequence();
-
-      state.current.phaseStart =
-        time;
-
-      state.current.holdDuration =
-        random(
-          HOLD_MIN,
-          HOLD_MAX
-        );
-
-      state.current.transitionDuration =
-        random(
-          TRANSITION_MIN,
-          TRANSITION_MAX
-        );
-    }
+      const time =
+        state.clock.elapsedTime;
 
 
-    /* -----------------------------------------------------
-       TIME
-    ----------------------------------------------------- */
-
-    const elapsed =
-      time -
-      state.current.phaseStart;
+      const geometry =
+        points.current
+          .geometry;
 
 
-    /* -----------------------------------------------------
-       HOLD → TRANSITION
-    ----------------------------------------------------- */
-
-    if (
-      state.current.phase === "hold" &&
-      elapsed >
-        state.current.holdDuration
-    ) {
-      state.current.phase =
-        "transition";
-
-      state.current.phaseStart =
-        time;
-
-      state.current.transitionDuration =
-        random(
-          TRANSITION_MIN,
-          TRANSITION_MAX
-        );
-    }
+      const attribute =
+        geometry.attributes
+          .position;
 
 
-    /* -----------------------------------------------------
-       TRANSITION → NEXT
-    ----------------------------------------------------- */
+      const positions =
+        attribute.array;
 
-    if (
-      state.current.phase ===
-        "transition" &&
-      elapsed >
-        state.current.transitionDuration
-    ) {
-      state.current.index++;
+
+      const {
+        randomOffset,
+        personality,
+        word,
+        letterTargets,
+      } = data;
+
+
+      const anim =
+        animation.current;
+
+
+      /* -----------------------------------------------------
+         INITIALIZATION
+      ----------------------------------------------------- */
+
+      if (
+        !anim.initialized
+      ) {
+        anim.initialized =
+          true;
+
+        anim.phase =
+          "WORD_HOLD";
+
+        anim.phaseStart =
+          time;
+      }
+
+
+      const elapsed =
+        time -
+        anim.phaseStart;
+
+
+      /* =====================================================
+         ANIMATION STATE MACHINE
+      ===================================================== */
 
 
       /*
-        Finished sequence.
-
-        Start a new random behavior.
+        WENODES stays visible.
       */
 
       if (
-        state.current.index >=
-        state.current.sequence.length - 1
+        anim.phase ===
+        "WORD_HOLD"
       ) {
-        state.current.sequence =
-          createSequence();
+        if (
+          elapsed >
+          TIMING.WORD_HOLD
+        ) {
+          anim.phase =
+            "WORD_SCATTER";
 
-        state.current.index = 0;
+          anim.phaseStart =
+            time;
+        }
       }
 
 
-      state.current.phase =
-        "hold";
+      /*
+        Scatter.
+      */
 
-      state.current.phaseStart =
-        time;
-
-      state.current.holdDuration =
-        random(
-          HOLD_MIN,
-          HOLD_MAX
-        );
-    }
-
-
-    /* -----------------------------------------------------
-       CURRENT LETTER
-    ----------------------------------------------------- */
-
-    const currentLetter =
-      state.current.sequence[
-        state.current.index
-      ];
-
-
-    const nextLetter =
-      state.current.sequence[
-        state.current.index + 1
-      ] || currentLetter;
-
-
-    const currentTarget =
-      data.targets[currentLetter];
-
-    const nextTarget =
-      data.targets[nextLetter];
-
-
-    /* -----------------------------------------------------
-       TRANSITION PROGRESS
-    ----------------------------------------------------- */
-
-    let progress = 0;
-
-    if (
-      state.current.phase ===
-      "transition"
-    ) {
-      progress =
-        Math.min(
-          elapsed /
-            state.current.transitionDuration,
-          1
-        );
-    }
-
-
-    /*
-      Smooth slow curve.
-    */
-
-    const eased =
-      progress *
-      progress *
-      (3 - 2 * progress);
-
-
-    /* =====================================================
-       MOUSE
-    ===================================================== */
-
-    const mouseX =
-      pointer.x *
-      viewport.width *
-      0.5;
-
-    const mouseY =
-      pointer.y *
-      viewport.height *
-      0.5;
-
-
-    /* =====================================================
-       PARTICLES
-    ===================================================== */
-
-    for (
-      let i = 0;
-      i < a.length;
-      i += 3
-    ) {
-      const particle =
-        i / 3;
-
-
-      /* ---------------------------------------------------
-         TARGET
-      --------------------------------------------------- */
-
-      let tx;
-      let ty;
-      let tz;
-
-
-      if (
-        state.current.phase ===
-        "hold"
+      else if (
+        anim.phase ===
+        "WORD_SCATTER"
       ) {
-        /*
-          Stable letter.
+        if (
+          elapsed >
+          TIMING.WORD_SCATTER
+        ) {
+          anim.phase =
+            "LETTER_FORM";
 
-          But still slightly randomized.
-        */
+          anim.phaseStart =
+            time;
 
-        tx =
-          currentTarget[i];
-
-        ty =
-          currentTarget[i + 1];
-
-        tz =
-          currentTarget[i + 2];
+          anim.letterIndex =
+            0;
+        }
       }
 
-      else {
-        /*
-          RANDOMIZED PARTICLE TRANSITION.
 
-          Not every particle travels.
+      /*
+        Letter formation.
+      */
 
-          Some barely move.
-          Some scatter a lot.
-        */
+      else if (
+        anim.phase ===
+        "LETTER_FORM"
+      ) {
+        if (
+          elapsed >
+          TIMING.LETTER_FORM
+        ) {
+          anim.phase =
+            "LETTER_HOLD";
 
-        const personality =
-          data.personality[
+          anim.phaseStart =
+            time;
+        }
+      }
+
+
+      /*
+        Letter stays visible.
+      */
+
+      else if (
+        anim.phase ===
+        "LETTER_HOLD"
+      ) {
+        if (
+          elapsed >
+          TIMING.LETTER_HOLD
+        ) {
+          anim.phase =
+            "LETTER_SCATTER";
+
+          anim.phaseStart =
+            time;
+        }
+      }
+
+
+      /*
+        Scatter before next letter.
+      */
+
+      else if (
+        anim.phase ===
+        "LETTER_SCATTER"
+      ) {
+        if (
+          elapsed >
+          TIMING.LETTER_SCATTER
+        ) {
+          anim.letterIndex++;
+
+
+          /*
+            Finished W E N O D E S.
+          */
+
+          if (
+            anim.letterIndex >=
+            WORD.length
+          ) {
+            anim.phase =
+              "FINAL_WORD";
+
+            anim.phaseStart =
+              time;
+          } else {
+            anim.phase =
+              "LETTER_FORM";
+
+            anim.phaseStart =
+              time;
+          }
+        }
+      }
+
+
+      /*
+        Final full WENODES.
+      */
+
+      else if (
+        anim.phase ===
+        "FINAL_WORD"
+      ) {
+        if (
+          elapsed >
+          TIMING.FINAL_WORD_HOLD
+        ) {
+          anim.phase =
+            "WORD_SCATTER";
+
+          anim.phaseStart =
+            time;
+        }
+      }
+
+
+      /* =====================================================
+         SMOOTH MOUSE
+      ===================================================== */
+
+      smoothMouse.current.x +=
+        (
+          mouse.current.x -
+          smoothMouse.current.x
+        ) *
+        0.045;
+
+
+      smoothMouse.current.y +=
+        (
+          mouse.current.y -
+          smoothMouse.current.y
+        ) *
+        0.045;
+
+
+      const mouseX =
+        smoothMouse.current.x *
+        viewport.width *
+        0.5;
+
+
+      const mouseY =
+        smoothMouse.current.y *
+        viewport.height *
+        0.5;
+
+
+      /* =====================================================
+         GLOBAL ZOOM
+      ===================================================== */
+
+      const zoom =
+        1 +
+        Math.sin(
+          time * 0.075
+        ) *
+          0.035;
+
+
+      /* =====================================================
+         GLOBAL ROTATION
+      ===================================================== */
+
+      const rotation =
+        Math.sin(
+          time * 0.045
+        ) *
+        0.032;
+
+
+      const cos =
+        Math.cos(
+          rotation
+        );
+
+
+      const sin =
+        Math.sin(
+          rotation
+        );
+
+
+      /* =====================================================
+         PARTICLES
+      ===================================================== */
+
+      for (
+        let i = 0;
+        i <
+        positions.length;
+        i += 3
+      ) {
+        const particle =
+          i / 3;
+
+
+        const personal =
+          personality[
             particle
           ];
 
 
+        let targetX = 0;
+        let targetY = 0;
+        let targetZ = 0;
+
+
+        /* ===================================================
+           FULL WENODES
+        =================================================== */
+
+        if (
+          anim.phase ===
+            "WORD_HOLD" ||
+          anim.phase ===
+            "FINAL_WORD"
+        ) {
+          targetX =
+            word[i];
+
+
+          targetY =
+            word[i + 1];
+
+
+          targetZ =
+            word[i + 2];
+
+
+          /*
+            Very subtle living motion.
+          */
+
+          targetX +=
+            Math.sin(
+              time * 0.25 +
+                particle *
+                  0.003
+            ) *
+            0.018;
+
+
+          targetY +=
+            Math.cos(
+              time * 0.22 +
+                particle *
+                  0.002
+            ) *
+            0.018;
+        }
+
+
+        /* ===================================================
+           WORD SCATTER
+        =================================================== */
+
+        else if (
+          anim.phase ===
+          "WORD_SCATTER"
+        ) {
+          const progress =
+            easeInOut(
+              elapsed /
+                TIMING.WORD_SCATTER
+            );
+
+
+          const explosion =
+            1.2 +
+            progress *
+              3.5;
+
+
+          targetX =
+            word[i] +
+            randomOffset[i] *
+              explosion;
+
+
+          targetY =
+            word[i + 1] +
+            randomOffset[
+              i + 1
+            ] *
+              explosion;
+
+
+          targetZ =
+            word[i + 2] +
+            randomOffset[
+              i + 2
+            ] *
+              explosion;
+
+
+          /*
+            Floating randomness.
+          */
+
+          targetX +=
+            Math.sin(
+              time * 0.21 +
+                particle *
+                  0.013
+            ) *
+            0.22;
+
+
+          targetY +=
+            Math.cos(
+              time * 0.18 +
+                particle *
+                  0.011
+            ) *
+            0.22;
+        }
+
+
+        /* ===================================================
+           INDIVIDUAL LETTER
+        =================================================== */
+
+        else {
+          const letter =
+            WORD[
+              anim.letterIndex
+            ];
+
+
+          const letterTarget =
+            letterTargets[
+              letter
+            ];
+
+
+          /* -------------------------------------------------
+             FORM
+          ------------------------------------------------- */
+
+          if (
+            anim.phase ===
+            "LETTER_FORM"
+          ) {
+            const progress =
+              easeInOut(
+                elapsed /
+                  TIMING.LETTER_FORM
+              );
+
+
+            targetX =
+              letterTarget[i] *
+              progress;
+
+
+            targetY =
+              letterTarget[
+                i + 1
+              ] *
+              progress;
+
+
+            targetZ =
+              letterTarget[
+                i + 2
+              ] *
+              progress;
+
+
+            /*
+              Slight formation turbulence.
+            */
+
+            const turbulence =
+              Math.sin(
+                progress *
+                  Math.PI
+              );
+
+
+            targetX +=
+              randomOffset[i] *
+              turbulence *
+              0.18;
+
+
+            targetY +=
+              randomOffset[
+                i + 1
+              ] *
+              turbulence *
+              0.12;
+          }
+
+
+          /* -------------------------------------------------
+             HOLD
+          ------------------------------------------------- */
+
+          else if (
+            anim.phase ===
+            "LETTER_HOLD"
+          ) {
+            targetX =
+              letterTarget[i];
+
+
+            targetY =
+              letterTarget[
+                i + 1
+              ];
+
+
+            targetZ =
+              letterTarget[
+                i + 2
+              ];
+
+
+            /*
+              Tiny breathing motion.
+            */
+
+            targetX +=
+              Math.sin(
+                time * 0.35 +
+                  particle *
+                    0.018
+              ) *
+              0.018;
+
+
+            targetY +=
+              Math.cos(
+                time * 0.31 +
+                  particle *
+                    0.015
+              ) *
+              0.018;
+          }
+
+
+          /* -------------------------------------------------
+             SCATTER
+          ------------------------------------------------- */
+
+          else {
+            const progress =
+              easeInOut(
+                elapsed /
+                  TIMING.LETTER_SCATTER
+              );
+
+
+            const explosion =
+              progress *
+              3.2;
+
+
+            targetX =
+              letterTarget[i] +
+              randomOffset[i] *
+                explosion;
+
+
+            targetY =
+              letterTarget[
+                i + 1
+              ] +
+              randomOffset[
+                i + 1
+              ] *
+                explosion;
+
+
+            targetZ =
+              letterTarget[
+                i + 2
+              ] +
+              randomOffset[
+                i + 2
+              ] *
+                explosion;
+          }
+        }
+
+
+        /* ===================================================
+           MOUSE FORCE
+        =================================================== */
+
+        const px =
+          positions[i];
+
+
+        const py =
+          positions[
+            i + 1
+          ];
+
+
+        const dx =
+          px -
+          mouseX;
+
+
+        const dy =
+          py -
+          mouseY;
+
+
+        const distance =
+          Math.sqrt(
+            dx * dx +
+              dy * dy
+          );
+
+
         /*
-          Only ~60% of particles
-          participate strongly.
+          Large mouse radius.
         */
 
-        const activity =
-          personality >
-          0.38
-            ? 1
-            : personality * 0.25;
+        const mouseRadius =
+          3.3;
 
 
-        /*
-          Each particle gets a
-          different transition timing.
-        */
+        if (
+          distance <
+          mouseRadius
+        ) {
+          const normalized =
+            1 -
+            distance /
+              mouseRadius;
 
-        const delay =
-          personality *
-          0.32;
+
+          const influence =
+            Math.pow(
+              normalized,
+              2.4
+            );
 
 
-        const local =
-          THREE.MathUtils.clamp(
+          /*
+            PUSH
+          */
+
+          const force =
+            influence *
+            1.35;
+
+
+          if (
+            distance >
+            0.001
+          ) {
+            targetX +=
+              (
+                dx /
+                distance
+              ) *
+              force;
+
+
+            targetY +=
+              (
+                dy /
+                distance
+              ) *
+              force;
+          }
+
+
+          /*
+            LEVITATION.
+          */
+
+          targetZ +=
+            influence *
+            0.8;
+
+
+          /*
+            Soft vortex.
+          */
+
+          const swirl =
+            Math.sin(
+              time * 1.1 +
+                particle *
+                  0.008
+            ) *
+            influence *
+            0.13;
+
+
+          targetX +=
             (
-              progress -
-              delay
-            ) /
-              (1 - delay),
-            0,
-            1
+              -dy /
+              Math.max(
+                distance,
+                0.001
+              )
+            ) *
+            swirl;
+
+
+          targetY +=
+            (
+              dx /
+              Math.max(
+                distance,
+                0.001
+              )
+            ) *
+            swirl;
+        }
+
+
+        /* ===================================================
+           GLOBAL MOUSE FIELD
+        =================================================== */
+
+        const mouseDistance =
+          Math.sqrt(
+            mouseX * mouseX +
+              mouseY * mouseY
           );
 
 
-        const localEase =
-          local *
-          local *
-          (3 - 2 * local);
+        const globalInfluence =
+          Math.exp(
+            -mouseDistance *
+              0.11
+          );
 
 
-        /*
-          Scatter is strongest around
-          the middle.
-        */
+        targetX +=
+          -mouseX *
+          globalInfluence *
+          0.12;
 
-        const scatter =
+
+        targetY +=
+          -mouseY *
+          globalInfluence *
+          0.12;
+
+
+        /* ===================================================
+           ORGANIC FLOATING
+        =================================================== */
+
+        const float =
+          0.018 +
+          personal *
+            0.035;
+
+
+        targetX +=
           Math.sin(
-            localEase *
-              Math.PI
-          ) *
-          activity;
-
-
-        /*
-          RANDOM direction.
-
-          Not a perfect radial explosion.
-        */
-
-        const nx =
-          data.noise[i];
-
-        const ny =
-          data.noise[i + 1];
-
-        const nz =
-          data.noise[i + 2];
-
-
-        /*
-          Different particles have
-          different scatter sizes.
-        */
-
-        const amount =
-          random(
-            0.15,
-            0.85
-          );
-
-
-        tx =
-          THREE.MathUtils.lerp(
-            currentTarget[i],
-            nextTarget[i],
-            localEase
-          ) +
-          nx *
-          amount *
-          scatter;
-
-
-        ty =
-          THREE.MathUtils.lerp(
-            currentTarget[i + 1],
-            nextTarget[i + 1],
-            localEase
-          ) +
-          ny *
-          amount *
-          scatter;
-
-
-        tz =
-          THREE.MathUtils.lerp(
-            currentTarget[i + 2],
-            nextTarget[i + 2],
-            localEase
-          ) +
-          nz *
-          amount *
-          scatter;
-      }
-
-
-      /* =================================================
-         MOUSE REPULSION
-      ================================================= */
-
-      const px = a[i];
-      const py = a[i + 1];
-
-
-      const dx =
-        px -
-        mouseX;
-
-      const dy =
-        py -
-        mouseY;
-
-
-      const distance =
-        Math.sqrt(
-          dx * dx +
-          dy * dy
-        );
-
-
-      if (
-        distance <
-          MOUSE_RADIUS &&
-        distance >
-          0.001
-      ) {
-        /*
-          1 = cursor center
-          0 = edge
-        */
-
-        const normalized =
-          1 -
-          distance /
-            MOUSE_RADIUS;
-
-
-        /*
-          Very soft field.
-        */
-
-        const influence =
-          normalized *
-          normalized *
-          normalized;
-
-
-        /*
-          Push away.
-
-          Add a little sideways
-          turbulence so it doesn't
-          look mathematically perfect.
-        */
-
-        const angle =
-          Math.atan2(
-            dy,
-            dx
-          );
-
-
-        const swirl =
-          Math.sin(
-            time * 1.3 +
+            time * 0.21 +
               particle *
-                0.17
+                0.016
           ) *
-          influence *
-          0.12;
+          float;
 
 
-        const force =
-          influence *
-          MOUSE_FORCE;
+        targetY +=
+          Math.cos(
+            time * 0.19 +
+              particle *
+                0.014
+          ) *
+          float;
 
 
-        tx +=
-          Math.cos(angle) *
-          force;
+        targetZ +=
+          Math.sin(
+            time * 0.17 +
+              particle *
+                0.01
+          ) *
+          float;
 
 
-        ty +=
-          Math.sin(angle) *
-          force;
+        /* ===================================================
+           ZOOM
+        =================================================== */
+
+        targetX *= zoom;
+        targetY *= zoom;
 
 
-        /*
-          Tiny sideways movement.
-        */
+        /* ===================================================
+           ROTATION
+        =================================================== */
 
-        tx +=
-          -Math.sin(angle) *
-          swirl;
-
-
-        ty +=
-          Math.cos(angle) *
-          swirl;
+        const rotatedX =
+          targetX * cos -
+          targetY * sin;
 
 
-        /*
-          Slight depth response.
-        */
+        const rotatedY =
+          targetX * sin +
+          targetY * cos;
 
-        tz +=
-          influence *
-          0.12;
+
+        targetX =
+          rotatedX;
+
+
+        targetY =
+          rotatedY;
+
+
+        /* ===================================================
+           SPRING
+        =================================================== */
+
+        let spring =
+          0.018;
+
+
+        if (
+          anim.phase ===
+          "WORD_HOLD"
+        ) {
+          spring =
+            0.014;
+        }
+
+
+        if (
+          anim.phase ===
+          "FINAL_WORD"
+        ) {
+          spring =
+            0.012;
+        }
+
+
+        if (
+          anim.phase ===
+          "WORD_SCATTER"
+        ) {
+          spring =
+            0.022;
+        }
+
+
+        if (
+          anim.phase ===
+          "LETTER_FORM"
+        ) {
+          spring =
+            0.021;
+        }
+
+
+        if (
+          anim.phase ===
+          "LETTER_HOLD"
+        ) {
+          spring =
+            0.014;
+        }
+
+
+        if (
+          anim.phase ===
+          "LETTER_SCATTER"
+        ) {
+          spring =
+            0.024;
+        }
+
+
+        positions[i] +=
+          (
+            targetX -
+            positions[i]
+          ) *
+          spring;
+
+
+        positions[
+          i + 1
+        ] +=
+          (
+            targetY -
+            positions[
+              i + 1
+            ]
+          ) *
+          spring;
+
+
+        positions[
+          i + 2
+        ] +=
+          (
+            targetZ -
+            positions[
+              i + 2
+            ]
+          ) *
+          0.018;
       }
 
 
-      /* =================================================
-         VERY SLOW SPRING
-      ================================================= */
-
-      const spring =
-        state.current.phase ===
-        "hold"
-          ? 0.022
-          : 0.016;
+      attribute.needsUpdate =
+        true;
 
 
-      a[i] +=
-        (tx - a[i]) *
-        spring;
+      /* =====================================================
+         FIELD ROTATION
+      ===================================================== */
+
+      points.current.rotation.z =
+        Math.sin(
+          time * 0.045
+        ) *
+        0.022;
 
 
-      a[i + 1] +=
-        (ty - a[i + 1]) *
-        spring;
+      points.current.rotation.x =
+        Math.sin(
+          time * 0.028
+        ) *
+        0.009;
 
 
-      a[i + 2] +=
-        (tz - a[i + 2]) *
-        0.012;
+      points.current.rotation.y =
+        Math.cos(
+          time * 0.024
+        ) *
+        0.014;
+
+
+      /*
+        Very slow breathing scale.
+      */
+
+      const fieldScale =
+        1 +
+        Math.sin(
+          time * 0.065
+        ) *
+        0.025;
+
+
+      points.current.scale.set(
+        fieldScale,
+        fieldScale,
+        fieldScale
+      );
     }
-
-
-    attr.needsUpdate = true;
-  });
+  );
 
 
   /* =======================================================
-     PARTICLE RENDER
+     RENDER
   ======================================================= */
 
   return (
@@ -1045,10 +1730,7 @@ function ParticleField() {
       <bufferGeometry>
         <bufferAttribute
           attach="attributes-position"
-          count={
-            data.positions.length /
-            3
-          }
+          count={COUNT}
           array={data.positions}
           itemSize={3}
         />
@@ -1056,10 +1738,10 @@ function ParticleField() {
 
 
       <pointsMaterial
-        size={0.014}
+        size={0.02}
         sizeAttenuation
         transparent
-        opacity={0.38}
+        opacity={0.62}
         depthWrite={false}
         blending={
           THREE.AdditiveBlending
@@ -1076,38 +1758,121 @@ function ParticleField() {
 ========================================================= */
 
 function CursorGlow() {
-  const mesh = useRef();
+  const mesh =
+    useRef(null);
+
 
   const {
-    pointer,
     viewport,
   } = useThree();
 
 
+  const mouse =
+    useRef({
+      x: 0,
+      y: 0,
+    });
+
+
+  const smooth =
+    useRef({
+      x: 0,
+      y: 0,
+    });
+
+
+  useEffect(() => {
+    const handleMouseMove =
+      (event) => {
+        mouse.current.x =
+          (
+            event.clientX /
+            window.innerWidth
+          ) *
+            2 -
+          1;
+
+
+        mouse.current.y =
+          -(
+            (
+              event.clientY /
+              window.innerHeight
+            ) *
+              2 -
+            1
+          );
+      };
+
+
+    window.addEventListener(
+      "mousemove",
+      handleMouseMove,
+      {
+        passive: true,
+      }
+    );
+
+
+    return () => {
+      window.removeEventListener(
+        "mousemove",
+        handleMouseMove
+      );
+    };
+  }, []);
+
+
   useFrame(() => {
-    if (!mesh.current) return;
+    if (
+      !mesh.current
+    ) {
+      return;
+    }
+
+
+    smooth.current.x +=
+      (
+        mouse.current.x -
+        smooth.current.x
+      ) *
+      0.945;
+
+
+    smooth.current.y +=
+      (
+        mouse.current.y -
+        smooth.current.y
+      ) *
+      0.945;
+
 
     const x =
-      pointer.x *
+      smooth.current.x *
       viewport.width *
       0.5;
 
+
     const y =
-      pointer.y *
+      smooth.current.y *
       viewport.height *
       0.5;
 
 
     mesh.current.position.x +=
-      (x -
-        mesh.current.position.x) *
-      0.025;
+      (
+        x -
+        mesh.current.position.x
+      ) *
+      0.05;
 
 
     mesh.current.position.y +=
-      (y -
-        mesh.current.position.y) *
-      0.025;
+      (
+        y -
+        mesh.current.position.y
+      ) *
+      0.05;
   });
 
 
@@ -1121,14 +1886,17 @@ function CursorGlow() {
       ]}
     >
       <planeGeometry
-        args={[3, 3]}
+        args={[
+          3,
+          3,
+        ]}
       />
 
 
       <meshBasicMaterial
         color="#f4f4f0"
         transparent
-        opacity={0.012}
+        opacity={0.018}
         blending={
           THREE.AdditiveBlending
         }
@@ -1163,6 +1931,12 @@ export default function ParticleScene() {
       gl={{
         antialias: true,
         alpha: true,
+      }}
+
+      style={{
+        width: "100%",
+        height: "100%",
+        pointerEvents: "none",
       }}
     >
       <ParticleField />

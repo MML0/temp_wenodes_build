@@ -697,3 +697,177 @@ footer a:hover {
     padding: 60px 20px;
   }
 }
+
+
+
+.scene {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.scene canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  pointer-events: none !important;
+}
+
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+main {
+  position: relative;
+}
+
+.hero,
+.manifesto,
+nav,
+footer {
+  position: relative;
+  z-index: 2;
+}
+.super-gallery {
+  width: 100%;
+  overflow: hidden;
+  padding: 1rem 0 3rem;
+}
+
+.super-gallery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.super-gallery-header h3 {
+  margin: 0;
+}
+
+.gallery-hint {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  color: #777;
+}
+
+.gallery-hint span {
+  font-size: 1rem;
+  color: #aaa;
+}
+
+.super-gallery-track {
+  display: flex;
+  gap: 1.2rem;
+
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-behavior: auto;
+  scrollbar-width: none;
+
+  padding: 0 5vw;
+
+  cursor: grab;
+
+  /* Critical for phone swipe */
+  touch-action: pan-x;
+
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.super-gallery-track::-webkit-scrollbar {
+  display: none;
+}
+
+.super-gallery-track:active {
+  cursor: grabbing;
+}
+
+.super-gallery-card {
+  position: relative;
+
+  flex: 0 0 clamp(280px, 65vw, 720px);
+
+  overflow: hidden;
+  border-radius: 6px;
+
+  background: #111;
+
+  aspect-ratio: 16 / 10;
+}
+
+.super-gallery-card img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  pointer-events: none;
+
+  transition:
+    transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1),
+    filter 0.7s ease;
+}
+
+.super-gallery-card:hover img {
+  transform: scale(1.025);
+}
+
+.gallery-number {
+  position: absolute;
+
+  bottom: 12px;
+  left: 12px;
+
+  padding: 5px 8px;
+
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+
+  color: white;
+
+  background: rgba(0, 0, 0, 0.45);
+
+  backdrop-filter: blur(8px);
+
+  border-radius: 3px;
+}
+
+@media (max-width: 600px) {
+  .super-gallery {
+    padding-bottom: 2rem;
+  }
+
+  .super-gallery-header {
+    padding: 0;
+  }
+
+  .gallery-hint {
+    font-size: 0.55rem;
+  }
+
+  .super-gallery-track {
+    gap: 0.7rem;
+    padding: 0 4vw;
+  }
+
+  .super-gallery-card {
+    flex: 0 0 82vw;
+    aspect-ratio: 4 / 3;
+    border-radius: 4px;
+  }
+}
