@@ -142,6 +142,18 @@ function ditherFrames(from, to, fc, seed) {
   });
 }
 
+function ditherOutInFrames(from, to, fc, seed) {
+  const h = from.length, w = from[0].length;
+  const EMPTY = Array.from({ length: h }, () => Array(w).fill(0));
+  const fcOut = Math.floor(fc / 2);
+  const fcIn = fc - fcOut;
+
+  const outFrames = ditherFrames(from, EMPTY, fcOut, seed);
+  const inFrames = ditherFrames(EMPTY, to, fcIn, seed + 1000);
+
+  return [...outFrames, ...inFrames];
+}
+
 function slideFrames(from, to, fc, seed) {
   const rand = seededRand(seed);
   const dirs = ["left", "right", "up", "down", "diag-br", "diag-tl"];
@@ -269,7 +281,6 @@ function pixelZoomFrames(from, to, fc, seed) {
     const m = Array.from({ length: h }, () => Array(w).fill(0));
 
     if (f < halfFc) {
-      // Zoom out existing letter
       const scale = 1 - f / halfFc;
       if (scale > 0.1) {
         for (let y = 0; y < h; y++) {
@@ -285,7 +296,6 @@ function pixelZoomFrames(from, to, fc, seed) {
         }
       }
     } else {
-      // Zoom in target letter
       const scale = (f - halfFc + 1) / (fc - halfFc);
       for (let y = 0; y < h; y++) {
         for (let x = 0; x < w; x++) {
@@ -323,6 +333,7 @@ export default function PixelLogo({ size = 28, className = "" }) {
     nextAt: 0,
     seq: [],
     seqIdx: 0,
+    isFirst: true, // Flag to ensure the initial animation is dither out/in over 5s
   });
 
   const FPS = 12;
@@ -344,9 +355,17 @@ export default function PixelLogo({ size = 28, className = "" }) {
         return;
       }
 
-      const type = ANIMATIONS[Math.floor(Math.random() * ANIMATIONS.length)];
-      const fc = 10 + Math.floor(Math.random() * 8);
-      s.frames = GENERATORS[type](LETTERS[from], LETTERS[to], fc, Date.now());
+      if (s.isFirst) {
+        s.isFirst = false;
+        // Total duration = 5000ms = 60 frames (2.5s dither out + 2.5s dither in)
+        const fcTotal = Math.round(4000 / MS);
+        s.frames = ditherOutInFrames(LETTERS[from], LETTERS[to], fcTotal, Date.now());
+      } else {
+        const type = ANIMATIONS[Math.floor(Math.random() * ANIMATIONS.length)];
+        const fc = 10 + Math.floor(Math.random() * 8);
+        s.frames = GENERATORS[type](LETTERS[from], LETTERS[to], fc, Date.now());
+      }
+
       s.frameIdx = 0;
       s.mode = "transitioning";
       s.nextAt = Date.now() + MS;
@@ -400,7 +419,7 @@ export default function PixelLogo({ size = 28, className = "" }) {
       rid = requestAnimationFrame(tick);
     };
 
-    sRef.current.nextAt = Date.now() + 3000;
+    sRef.current.nextAt = Date.now() + 0;
     rid = requestAnimationFrame(tick);
 
     return () => cancelAnimationFrame(rid);

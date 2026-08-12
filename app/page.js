@@ -97,18 +97,29 @@ export default function Home() {
             VIEW ALL →
           </Link>
         </div>
-
+<style>{`
+    @keyframes cardEnter {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  `}</style>
         <div className="projects-grid">
-          {featuredWorks.map(
-            (project, i) => (
-              <ProjectCard
-                key={project.id}
-                project={project}
-                index={i}
-              />
-            )
-          )}
-        </div>
+  {[17, 3, 5].map((id, i) => {
+    const project = works.find((work) => work.id === id);
+
+    if (!project) return null;
+
+    return (
+      <ProjectCard
+        key={project.id}
+        project={project}
+        index={i}
+      />
+    );
+  })}
+</div>
       </section>
 
       <section
