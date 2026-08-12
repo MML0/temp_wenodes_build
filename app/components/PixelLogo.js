@@ -90,7 +90,7 @@ const LETTERS = {
   ],
 };
 
-const LETTER_ORDER = ["W", "E", "N", "O", "D", "S", "E"];
+const LETTER_ORDER = ["W", "E", "N", "O", "D", "E", "S"];
 const ANIMATIONS = ["dither", "slide", "vanish", "smoked", "cascade", "pixelZoom"];
 
 /* ─── Helpers ─── */
