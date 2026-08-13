@@ -1,0 +1,1452 @@
+Yes. **I agree with the direction**, but I would make the summary more precise and richer. One important distinction: some of the statements in your version describe the intended design language, while others—such as the orbital capability interaction and “LIVE SYSTEM 01.0001”—are implementation-specific and should only be treated as part of the identity if they are actually present in the current page/code.
+
+Here is the stronger version I would use as the **WENODES master design/brand specification**.
+
+# WENODES — Brand, Design & Interaction System
+
+## 01 — Brand Positioning
+
+**WENODES is a creative technology collective working at the intersection of art, technology, interaction, audiovisual systems, and experimental digital experiences.**
+
+The brand should not feel like a conventional:
+
+* creative agency
+* software company
+* production studio
+* portfolio website
+
+Instead, it should feel like a **living technological environment**.
+
+The website is therefore not simply a place that displays projects. It is itself an example of the way WENODES thinks:
+
+> **Technology is not only a tool for creating experiences. Technology can become the experience.**
+
+The identity combines:
+
+**creative experimentation + engineering precision + audiovisual culture + interactive systems.**
+
+---
+
+# 02 — Core Brand Concept
+
+### "Living Systems"
+
+This is the central conceptual direction.
+
+WENODES creates systems that:
+
+* respond
+* react
+* evolve
+* transform
+* communicate
+* behave according to inputs
+
+This concept should appear both in the **content** and in the **interface behavior**.
+
+A page shouldn't simply:
+
+```text
+display → wait
+```
+
+It should:
+
+```text
+observe → react → transform → settle
+```
+
+That distinction is important.
+
+The website should feel like something that is **running**, rather than something that is merely being viewed.
+
+---
+
+# 03 — Visual Personality
+
+The visual personality is:
+
+### Experimental
+
+The design should feel like a laboratory for new ideas.
+
+### Technical
+
+Interfaces contain system information, numbers, categories, states and metadata.
+
+### Minimal
+
+There is very little unnecessary decoration.
+
+### Atmospheric
+
+Dark backgrounds, grain, particles and subtle motion create depth.
+
+### Editorial
+
+Large typography and carefully controlled whitespace create a strong art-direction layer.
+
+### Cinematic
+
+Images, transitions and pacing should feel closer to an audiovisual installation than a standard portfolio.
+
+### Intelligent
+
+The interface should feel deliberately engineered rather than decorated.
+
+### Slightly mysterious
+
+Not everything needs to be explained immediately.
+
+### Confident
+
+The design doesn't need excessive marketing language or visual noise to establish credibility.
+
+---
+
+# 04 — Color System
+
+The foundation is a **monochromatic dark environment**.
+
+### Background
+
+```css
+#080808
+#090909
+#0a0a0a
+#111111
+```
+
+These create different levels of depth rather than relying on multiple colors.
+
+### Primary text
+
+```css
+#e8e6e3
+#f4f4f0
+```
+
+Warm whites are preferable to pure `#fff`.
+
+This keeps the interface cinematic and less sterile.
+
+### Secondary information
+
+```css
+#888
+#666
+#555
+```
+
+### Borders
+
+```css
+rgba(232,230,227,0.08)
+rgba(232,230,227,0.12)
+rgba(232,230,227,0.25)
+rgba(232,230,227,0.6)
+```
+
+### Color philosophy
+
+The interface itself remains mostly monochrome.
+
+**The projects provide the color.**
+
+That is important because it allows project imagery, installations, videos and generative work to become the visual climax.
+
+---
+
+# 05 — Typography System
+
+The typography is one of the strongest parts of the identity.
+
+The system uses two contrasting typefaces.
+
+## Primary — ABC Whyte Inktrap
+
+Files:
+
+```text
+ABCWhyteInktrap-Extralight-Trial.otf
+ABCWhyteInktrap-Book-Trial.otf
+ABCWhyteInktrap-Regular-Trial.otf
+ABCWhyteInktrap-Bold-Trial.otf
+```
+
+### Primary responsibilities
+
+Use Whyte Inktrap for:
+
+* hero headlines
+* major statements
+* section headings
+* project titles
+* body copy
+* philosophical text
+* navigation when appropriate
+* CTA typography
+
+The important characteristic is the contrast between its **clean modern construction** and the distinctive **inktrap details**.
+
+At large sizes it becomes part of the visual identity rather than simply being text.
+
+---
+
+# 06 — Secondary — CoFo Sans Pixel
+
+File:
+
+```text
+CoFoSansPixel-Regular-Trial.otf
+```
+
+This is the **system/UI voice**.
+
+Use it for:
+
+```text
+01 — ABOUT
+02 — WORK
+03 — TEAM
+04 — JOIN
+```
+
+and:
+
+* project categories
+* years
+* locations
+* technical metadata
+* counters
+* labels
+* status indicators
+* small navigation information
+* gallery indicators
+* system messages
+* loading screens
+* experimental UI
+
+For example:
+
+```text
+17 / CONTINUUM
+IMMERSIVE AUDIOVISUAL
+2025
+FREYA GALLERY
+```
+
+### Why the contrast works
+
+Whyte says:
+
+> **human / editorial / expressive**
+
+Pixel says:
+
+> **machine / system / technical**
+
+Together they create the WENODES visual language.
+
+---
+
+# 07 — Typography Hierarchy
+
+A typical page should have approximately three information levels.
+
+### Level 1 — Statement
+
+Large Whyte:
+
+```text
+WE MAKE
+THINGS
+MOVE.
+```
+
+or:
+
+```text
+WE ARE
+WENODES.
+```
+
+### Level 2 — Supporting narrative
+
+Regular/Book Whyte:
+
+```text
+We build experiences that behave
+like living systems.
+```
+
+### Level 3 — System information
+
+Pixel:
+
+```text
+01 — ABOUT
+CREATIVE TECHNOLOGY
+2026
+LIVE SYSTEM
+```
+
+This hierarchy makes the page readable while maintaining the experimental aesthetic.
+
+---
+
+# 08 — Layout System
+
+The layout combines **editorial composition with technical interface structure**.
+
+The fundamental pattern is:
+
+```text
+SYSTEM LABEL
+
+LARGE STATEMENT
+
+
+        supporting information
+
+
+────────────────────────────
+
+CONTENT
+```
+
+Large amounts of whitespace are intentional.
+
+The page should breathe.
+
+Avoid filling every available space.
+
+---
+
+# 09 — Oversized Typography
+
+Large typography is one of the main visual components.
+
+Instead of:
+
+```text
+About us
+```
+
+use:
+
+```text
+WE ARE
+WENODES.
+```
+
+Instead of:
+
+```text
+Our projects
+```
+
+use:
+
+```text
+SELECTED
+PROJECTS.
+```
+
+Words can be split across lines to create rhythm.
+
+Responsive sizing should generally use:
+
+```css
+clamp()
+```
+
+rather than fixed desktop sizes.
+
+The typography should dominate the viewport without becoming unreadable on mobile.
+
+---
+
+# 10 — Section Numbering
+
+Sections behave almost like chapters in a technical document.
+
+Examples:
+
+```text
+01 — ABOUT
+02 — SELECTED WORK
+03 — TEAM
+04 — JOIN
+```
+
+This gives the page a strong navigational rhythm.
+
+It also reinforces the idea that the website is a **system with discrete modules**.
+
+---
+
+# 11 — Metadata Language
+
+Small information should feel like machine-readable information.
+
+For example:
+
+```text
+CATEGORY · YEAR
+LOCATION
+SERVICES
+PROJECT ID
+```
+
+Instead of writing:
+
+> This project was created in...
+
+use:
+
+```text
+2025
+SEOUL
+IMMERSIVE
+INTERACTIVE
+```
+
+This keeps project pages visually dense without creating large amounts of unnecessary prose.
+
+---
+
+# 12 — Interactive Philosophy
+
+Interaction should not exist simply because "animation looks cool."
+
+Every interaction should communicate **system behavior**.
+
+The ideal interaction model is:
+
+```text
+INPUT
+ ↓
+SYSTEM RESPONSE
+ ↓
+TRANSFORMATION
+ ↓
+SETTLE
+```
+
+Examples:
+
+### Mouse
+
+```text
+mouse movement
+      ↓
+particle field disturbance
+      ↓
+particles respond
+```
+
+### Hover
+
+```text
+hover project
+      ↓
+image darkens
+      ↓
+image scales
+      ↓
+metadata appears
+      ↓
+gallery activates
+```
+
+### Scroll
+
+```text
+scroll velocity
+      ↓
+elements react
+      ↓
+movement increases
+      ↓
+system settles
+```
+
+This makes interaction feel intentional rather than decorative.
+
+---
+
+# 13 — Motion Language
+
+Motion should generally be:
+
+* smooth
+* delayed
+* layered
+* responsive
+* slightly physical
+* never overly bouncy
+
+Good motion:
+
+```text
+opacity
+transform
+scale
+blur
+image displacement
+particle movement
+stagger
+```
+
+Avoid excessive:
+
+```text
+spin
+bounce
+elastic UI
+random transitions
+```
+
+The overall motion language should feel closer to **physics and audiovisual systems**.
+
+---
+
+# 14 — Particle Environment
+
+The particle background represents the **living-system concept**.
+
+It should remain secondary to the content.
+
+The hierarchy should be:
+
+```text
+PROJECT / TYPOGRAPHY
+        ↓
+INTERACTION
+        ↓
+PARTICLE ENVIRONMENT
+        ↓
+GRAIN
+```
+
+The particle field should react to the cursor but remain subtle enough that the user can read the page comfortably.
+
+---
+
+# 15 — Grain / Texture
+
+The grain layer provides physicality.
+
+Without grain:
+
+```text
+black + pixels + CSS
+=
+sterile digital interface
+```
+
+With subtle grain:
+
+```text
+black + particles + grain
+=
+cinematic / physical / experimental
+```
+
+It should remain almost subconscious.
+
+---
+
+# 16 — Project Card Language
+
+A project card should behave like a **preview window into a system**.
+
+### Default
+
+```text
+┌────────────────────────┐
+│                        │
+│        PROJECT         │
+│         IMAGE          │
+│                        │
+└────────────────────────┘
+```
+
+### Hover
+
+```text
+┌────────────────────────┐
+│                        │
+│    DARKENED IMAGE      │
+│                        │
+│ CATEGORY · 2025        │
+│ PROJECT TITLE          │
+│ LOCATION               │
+│ SERVICE   SERVICE      │
+│ ● ━━━ ● ● ●            │
+└────────────────────────┘
+```
+
+The interaction hierarchy should be:
+
+1. image
+2. image transformation
+3. project information
+4. gallery
+5. micro-information
+
+---
+
+# 17 — Gallery Interaction
+
+Gallery behavior should feel continuous.
+
+Avoid:
+
+```text
+cover
+→ jump
+→ image 2
+→ jump
+→ cover
+```
+
+Instead:
+
+```text
+cover
+→ image 1
+→ image 2
+→ image 3
+→ image 4
+→ ...
+```
+
+with controlled fading/crossfading.
+
+The gallery should activate after a deliberate hover delay rather than immediately.
+
+This prevents accidental interaction while browsing.
+
+---
+
+# 18 — Buttons
+
+Buttons should look like **system commands**.
+
+Examples:
+
+```text
+VIEW ALL →
+READ MORE →
+MEET ALL →
+APPLY TO JOIN ↗
+```
+
+Avoid large traditional marketing buttons.
+
+Interaction can use:
+
+* border movement
+* subtle fill
+* text translation
+* arrow movement
+* magnetic cursor behavior
+
+The button should feel like issuing a command.
+
+---
+
+# 19 — Capability Presentation
+
+Capabilities should not simply be a boring list.
+
+Instead of:
+
+```text
+WebGL
+AI
+Audio
+Installations
+```
+
+the interface can present them as **systems**.
+
+For example:
+
+```text
+01   REAL-TIME 3D
+02   GENERATIVE SYSTEMS
+03   INTERACTION
+04   AUDIOVISUAL
+05   AI / ML
+06   INSTALLATION
+```
+
+Hovering can alter a visualization or reveal supporting information.
+
+This makes the capabilities section itself demonstrate WENODES' technical philosophy.
+
+---
+
+# 20 — Orbital / Generative Visual Language
+
+If the orbital visualization is part of the implementation, it fits the identity extremely well.
+
+Conceptually:
+
+```text
+       ○
+   ○       ○
+
+       ●
+
+   ○       ○
+       ○
+```
+
+The central element represents the **system**.
+
+The surrounding elements represent:
+
+* disciplines
+* technologies
+* people
+* inputs
+* outputs
+
+Rotating rings reinforce the idea of an interconnected system.
+
+The motion should remain slow and controlled.
+
+---
+
+# 21 — System Indicators
+
+Small status elements can reinforce the technical identity.
+
+Examples:
+
+```text
+● LIVE SYSTEM
+SYSTEM 01.0001
+ONLINE
+PROCESSING
+ACTIVE
+```
+
+These should be used sparingly.
+
+The goal is **technical atmosphere**, not pretending the website is an actual operating system.
+
+---
+
+# 22 — Image Treatment
+
+Images should generally behave like objects inside the system.
+
+Useful effects:
+
+* slow zoom
+* brightness shift
+* crossfade
+* subtle displacement
+* clipping
+* masked reveals
+* grayscale → color transitions
+* hover-based movement
+
+Avoid applying aggressive filters to everything.
+
+The project itself should remain visually dominant.
+
+---
+
+# 23 — Content Voice
+
+The writing should be:
+
+**confident + concise + conceptual + technical.**
+
+Avoid generic agency language such as:
+
+> We are passionate about delivering innovative solutions.
+
+Prefer:
+
+> We build systems that respond, evolve and behave.
+
+Or:
+
+> Code becomes material.
+> Interaction becomes structure.
+> Technology becomes experience.
+
+The writing should feel like WENODES has a point of view.
+
+---
+
+# 24 — Brand Vocabulary
+
+Words that fit the identity:
+
+```text
+SYSTEM
+MOTION
+INTERACTION
+SIGNAL
+INPUT
+OUTPUT
+PROCESS
+BEHAVIOR
+SPACE
+MATERIAL
+GENERATIVE
+REAL-TIME
+AUDIOVISUAL
+EMERGENCE
+EXPERIMENT
+PERCEPTION
+MOVEMENT
+STRUCTURE
+```
+
+Words to avoid overusing:
+
+```text
+innovative
+cutting-edge
+world-class
+solutions
+passionate
+digital transformation
+full-service
+```
+
+Those belong to conventional agency language.
+
+---
+
+# 25 — Page Architecture
+
+The site should feel like one connected system.
+
+### HOME
+
+```text
+HERO
+ ↓
+ABOUT
+ ↓
+SELECTED WORK
+ ↓
+TEAM
+ ↓
+JOIN
+```
+
+### ABOUT
+
+```text
+INTRODUCTION
+ ↓
+PHILOSOPHY
+ ↓
+PROCESS
+ ↓
+CAPABILITIES
+ ↓
+SYSTEM / VISUALIZATION
+ ↓
+CONTACT
+```
+
+### WORK
+
+```text
+INTRO
+ ↓
+FILTER
+ ↓
+PROJECT GRID
+ ↓
+PROJECT DETAIL
+```
+
+### PROJECT
+
+```text
+PROJECT ID
+ ↓
+HERO MEDIA
+ ↓
+DESCRIPTION
+ ↓
+SYSTEM / PROCESS
+ ↓
+GALLERY
+ ↓
+CREDITS
+ ↓
+NEXT PROJECT
+```
+
+### TEAM
+
+```text
+TEAM INTRO
+ ↓
+MEMBER GRID
+ ↓
+INDIVIDUAL PROFILE
+```
+
+---
+
+# 26 — Loading Experience
+
+The loading screen should introduce the brand before the page appears.
+
+Potential sequence:
+
+```text
+PIXEL LOGO
+     ↓
+WENODES
+     ↓
+SYSTEM INITIALIZATION
+     ↓
+00 → 100%
+     ↓
+SITE REVEAL
+```
+
+The pixel font is particularly appropriate here.
+
+The loading experience should feel like **initializing a creative system**, not a generic website spinner.
+
+---
+
+# 27 — Responsive Behavior
+
+Mobile should not simply be a smaller desktop.
+
+The system should adapt.
+
+Desktop:
+
+```text
+large typography
+large whitespace
+multi-column layouts
+particle interaction
+hover galleries
+```
+
+Mobile:
+
+```text
+single-column content
+touch-friendly interactions
+swipe galleries
+reduced particle density
+simplified hover-dependent information
+```
+
+Because there is no real hover on touch devices, important information should never depend exclusively on `:hover`.
+
+---
+
+# 28 — Overall Design Formula
+
+The WENODES identity can be summarized as:
+
+```text
+ABC WHYTE INKTRAP
+        +
+COFO SANS PIXEL
+        +
+NEAR BLACK
+        +
+WARM OFF-WHITE
+        +
+OVERSIZED TYPOGRAPHY
+        +
+TECHNICAL METADATA
+        +
+EXTREME WHITESPACE
+        +
+PARTICLES
+        +
+GRAIN
+        +
+KINETIC MOTION
+        +
+INTERACTIVE SYSTEMS
+        +
+AUDIOVISUAL PROJECTS
+```
+
+But the deeper formula is:
+
+```text
+EDITORIAL
+    +
+ENGINEERING
+    +
+AUDIOVISUAL
+    +
+INTERACTION
+    =
+WENODES
+```
+
+---
+
+# 29 — The Most Important Rule
+
+The website should **demonstrate the philosophy rather than merely describe it.**
+
+If WENODES says:
+
+> **We build experiences that behave like living systems.**
+
+then the website itself should:
+
+* respond to the cursor
+* react to scrolling
+* transition between states
+* reveal information progressively
+* generate motion
+* expose system metadata
+* treat imagery as dynamic material
+* feel different depending on how the user interacts with it
+
+That is what makes the identity convincing.
+
+**The website becomes the first WENODES experience.**
+
+### WENODES — Design System / Brand Identity Summary
+
+**Core identity:**
+WENODES is positioned as a **creative-technology collective** operating between **art, code, interaction, audiovisual systems, and emerging technology**.
+
+The visual language should feel **experimental, technical, minimal, tactile, and slightly industrial** — more like an experimental digital studio than a conventional agency.
+
+---
+
+## 1. Typography
+
+### Primary — ABC Whyte Inktrap
+
+Use:
+
+* `ABCWhyteInktrap-Regular-Trial.otf`
+* `ABCWhyteInktrap-Book-Trial.otf`
+* `ABCWhyteInktrap-Bold-Trial.otf`
+* `ABCWhyteInktrap-Extralight-Trial.otf`
+
+**Use for:**
+
+* Hero headlines
+* Section titles
+* Project titles
+* Navigation
+* Large statements
+* Body copy when a more editorial feel is wanted
+
+The **Inktrap character** is important to the identity. It gives the otherwise minimal interface a distinctive technical/editorial personality.
+
+### Secondary / Accent — CoFo Sans Pixel
+
+`CoFoSansPixel-Regular-Trial.otf`
+
+Use it selectively for:
+
+* `01 — ABOUT`
+* `02 — SELECTED WORK`
+* Metadata
+* Project categories
+* Years
+* Status labels
+* Small technical information
+* Counters
+* Loading/progress UI
+* Experimental UI elements
+
+**Do not use the pixel font for large paragraphs.**
+
+The contrast between **Whyte Inktrap + Pixel** creates much of the site's personality.
+
+---
+
+## 2. Typography hierarchy
+
+A typical page should have roughly:
+
+```text
+PIXEL / MONOSPACE
+01 — ABOUT
+
+WHYТE INKTRAP / EXTRALIGHT
+WE ARE
+WENODES.
+
+WHYТE INKTRAP / REGULAR
+We build experiences that behave
+like living systems.
+
+PIXEL
+REAL-TIME 3D
+GENERATIVE SYSTEMS
+INTERACTION
+```
+
+Large typography should feel **architectural**, with substantial negative space.
+
+---
+
+## 3. Color
+
+The palette is intentionally restrained.
+
+### Background
+
+Near-black:
+
+```css
+#080808
+#0a0a0a
+#111111
+```
+
+### Primary text
+
+Warm off-white rather than pure white:
+
+```css
+#e8e6e3
+#f4f4f0
+```
+
+### Secondary text
+
+```css
+#888
+#666
+```
+
+### Borders / UI
+
+Very subtle:
+
+```css
+rgba(232,230,227,0.12)
+rgba(232,230,227,0.25)
+rgba(232,230,227,0.6)
+```
+
+The site should **not feel colorful by default**.
+
+The work itself provides the color.
+
+---
+
+# 4. Layout language
+
+The layout is based around:
+
+**large typography + extreme whitespace + technical metadata + immersive media.**
+
+Typical structure:
+
+```text
+01 — ABOUT
+
+WE ARE
+WENODES.
+
+
+        large statement
+
+
+PHILOSOPHY
+────────────────────────
+
+PROCESS
+────────────────────────
+
+CAPABILITIES
+────────────────────────
+```
+
+Use:
+
+* asymmetric spacing
+* large vertical gaps
+* strong horizontal rules
+* large section numbers
+* restrained grids
+* full-width visual moments
+* occasional dense information blocks
+
+Avoid making everything perfectly centered.
+
+---
+
+# 5. Navigation
+
+Navigation should feel like a **studio control interface**, not a traditional corporate navbar.
+
+Example:
+
+```text
+WENODES                         MENU
+```
+
+or
+
+```text
+WENODES          WORK  ABOUT  TEAM  JOIN
+```
+
+Small typography, generous spacing, subtle hover transitions.
+
+---
+
+# 6. Motion language
+
+Motion is a major part of the WENODES identity.
+
+The principle is:
+
+> **The interface behaves like a system.**
+
+Not:
+
+> "Everything has a flashy animation."
+
+Animations should feel **physical, responsive and computational**.
+
+### Existing visual language
+
+* particle background
+* grain
+* pixel logo
+* image transitions
+* card entrance animations
+* hover image scaling
+* gallery cycling
+* fade transitions
+* staggered elements
+
+### Expand this with
+
+**Cursor interaction**
+
+Particles react to cursor position.
+
+```text
+cursor → field disturbance → particles respond
+```
+
+**Magnetic buttons**
+
+Buttons subtly move toward the cursor.
+
+**Text reveal**
+
+Large headlines reveal line-by-line or character-by-character.
+
+**Image displacement**
+
+Images can subtly distort on hover rather than simply scaling.
+
+**Scroll velocity**
+
+Fast scrolling produces slightly stronger motion; slow scrolling settles the system.
+
+**Micro-interactions**
+
+Buttons, metadata, counters and indicators should respond to interaction.
+
+---
+
+# 7. Particle / background system
+
+The background should remain subtle.
+
+It is **environmental**, not the main content.
+
+Think:
+
+```text
+CONTENT
+   ↓
+quiet particle field
+   ↓
+grain
+   ↓
+dark atmosphere
+```
+
+The particles establish the idea that the website itself is a **living system**.
+
+---
+
+# 8. Grain
+
+The grain layer is an important finishing layer.
+
+It prevents the dark background from feeling completely flat/digital.
+
+Use it extremely subtly.
+
+```text
+dark background
++
+particles
++
+grain
+=
+physical / cinematic atmosphere
+```
+
+---
+
+# 9. Project cards
+
+Project cards should feel like **windows into systems**.
+
+Normal:
+
+```text
+[ IMAGE ]
+```
+
+Hover:
+
+```text
+[ DARKENED IMAGE ]
+
+CATEGORY · YEAR
+
+PROJECT TITLE
+
+LOCATION
+
+SERVICE   SERVICE   SERVICE
+
+● ━━━ ● ● ●
+```
+
+The gallery indicator and metadata should remain visually lightweight.
+
+Important behavior:
+
+* delayed gallery activation
+* smooth image transitions
+* no abrupt return to cover image while hovering
+* subtle zoom
+* dark overlay
+* metadata reveals progressively
+
+---
+
+# 10. Information design
+
+Small information should use the **pixel font**.
+
+For example:
+
+```text
+17 — CONTINUUM
+IMMERSIVE / AUDIOVISUAL
+2025
+FREYA GALLERY
+```
+
+This creates a contrast:
+
+**human/editorial typography**
+
+vs.
+
+**machine/system typography**
+
+That contrast is one of the strongest brand characteristics.
+
+---
+
+# 11. Brand personality
+
+The site should communicate:
+
+### Experimental
+
+Not a conventional agency.
+
+### Technical
+
+Technology is part of the creative language.
+
+### Intelligent
+
+Minimal UI, deliberate decisions.
+
+### Physical
+
+Motion, grain, particles and image treatment prevent it from feeling sterile.
+
+### Mysterious
+
+Don't explain everything immediately.
+
+### Confident
+
+Avoid excessive decoration or marketing language.
+
+### Alive
+
+The interface reacts and changes.
+
+---
+
+# 12. WENODES visual formula
+
+The overall recipe is essentially:
+
+```text
+ABC WHYТE INKTRAP
+        +
+COFO SANS PIXEL
+        +
+NEAR-BLACK
+        +
+OFF-WHITE
+        +
+EXTREME WHITESPACE
+        +
+TECHNICAL METADATA
+        +
+PARTICLES
+        +
+GRAIN
+        +
+RESPONSIVE MOTION
+        +
+IMMERSIVE PROJECT MEDIA
+```
+
+### The core concept
+
+**WENODES should feel less like a website and more like an interactive instrument.**
+
+The static layer establishes the **studio/editorial identity**.
+
+The motion layer establishes the **technology identity**.
+
+The project media establishes the **creative identity**.
+
+And the pixel typography acts as the **system/UI layer** tying everything together.
