@@ -333,8 +333,8 @@ function createLetterTarget(letter) {
 
     const z =
       random(
-        -0.34,
-        0.34
+        -2.34,
+        2.34
       );
 
 

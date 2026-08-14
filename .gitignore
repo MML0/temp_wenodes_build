@@ -9,5 +9,4 @@ test.html
 .gitignore
 public/images/wenodes monogram b copy.png
 test.py
-.DS_Store
-.DS_Store
+out/

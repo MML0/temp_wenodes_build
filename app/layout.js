@@ -41,9 +41,10 @@ export const metadata = {
   title: "WENODES — Creative Technology",
   description:
     "WENODES — interactive systems, creative technology and digital experiences.",
-  // icons: {
-  //   icon: "/favicon.ico",
-  // },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/favicon.png",
+  },
 };
 
 export default function RootLayout({ children }) {
