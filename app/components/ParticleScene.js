@@ -1896,7 +1896,7 @@ function CursorGlow() {
       <meshBasicMaterial
         color="#f4f4f0"
         transparent
-        opacity={0.018}
+        opacity={0.0}
         blending={
           THREE.AdditiveBlending
         }
