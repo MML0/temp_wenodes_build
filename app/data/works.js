@@ -1075,7 +1075,19 @@ export const works = [
       "/works/makan-project/01.jpg",
       "/works/makan-project/02.jpg",
       "/works/makan-project/03.jpg",
-      "/works/makan-project/04.jpg"
+      "/works/makan-project/04.jpg",
+      "/works/makan-project/05.jpg",
+      "/works/makan-project/06.jpg",
+      "/works/makan-project/07.jpg",
+      "/works/makan-project/08.jpg",
+      "/works/makan-project/09.jpg",
+      "/works/makan-project/10.jpg",
+      "/works/makan-project/11.jpg",
+      "/works/makan-project/12.jpg",
+      "/works/makan-project/13.jpg",
+      "/works/makan-project/14.jpg",
+      "/works/makan-project/15.jpg",
+
     ],
     category: "New Media Art",
     tags: ["New Media", "Art", "Interaction", "Visual Storytelling", "Collective", "Experimental"],
@@ -1096,8 +1108,9 @@ export const works = [
       { type: "text", title: "Collective Vision", text: "Nine WeNodes artists presented works exploring contemporary approaches to media art, interaction, and visual storytelling." },
       { type: "image", src: "/works/makan-project/01.jpg", alt: "Makan Project exhibition" },
       { type: "text", title: "Collaboration", text: "Presented in collaboration with Ashkan Ghadimkhani at Ava Plat, the project represented a collective vision of WeNodes' experimental practice." },
-      { type: "gallery", images: ["/works/makan-project/02.jpg", "/works/makan-project/03.jpg", "/works/makan-project/04.jpg"] },
-      { type: "quote", text: "Nine voices, one frequency." }
+      { type: "gallery", images: ["/works/makan-project/02.jpg", "/works/makan-project/05.jpg", "/works/makan-project/06.jpg"] },
+      { type: "quote", text: "Nine voices, one frequency." },
+      { type: "video", src: "/works/makan-project/video.mp4", poster: "/works/makan-project/cover.jpg" },
     ],
     link: "#",
     video: "#",
@@ -1118,7 +1131,8 @@ export const works = [
     gallery: [
       "/works/nasl-festival/01.jpg",
       "/works/nasl-festival/02.jpg",
-      "/works/nasl-festival/03.jpg"
+      "/works/nasl-festival/03.jpg",
+      "/works/nasl-festival/04.jpg",
     ],
     category: "Festival / Live Visuals",
     tags: ["Festival", "Live Visuals", "Technical Production", "Visual Systems", "Rock", "Music"],

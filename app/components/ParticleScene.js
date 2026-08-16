@@ -984,7 +984,7 @@ function ParticleField() {
           mouse.current.x -
           smoothMouse.current.x
         ) *
-        0.045;
+        0.05;
 
 
       smoothMouse.current.y +=
@@ -992,7 +992,7 @@ function ParticleField() {
           mouse.current.y -
           smoothMouse.current.y
         ) *
-        0.045;
+        0.05;
 
 
       const mouseX =
