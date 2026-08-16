@@ -437,8 +437,8 @@ export default function PixelLogo({ size = 28, className = "" }) {
       if (!to) {
         s.mode = "idle";
         setPixels(LETTERS.W);
-        // Rest on 'W' for 5 to 10 seconds
-        s.nextAt = Date.now() + 5000 + Math.random() * 5000;
+        // Rest on 'W' for 2 to 4 seconds
+        s.nextAt = Date.now() + 2000 + Math.random() * 2000;
         return;
       }
 
@@ -449,7 +449,7 @@ export default function PixelLogo({ size = 28, className = "" }) {
         s.frames = ditherOutInFrames(LETTERS[from], LETTERS[to], fcTotal, Date.now());
       } else {
         const type = ANIMATIONS[Math.floor(Math.random() * ANIMATIONS.length)];
-        const fc = 10 + Math.floor(Math.random() * 8);
+        const fc = 5 + Math.floor(Math.random() * 5);
         s.frames = GENERATORS[type](LETTERS[from], LETTERS[to], fc, Date.now());
       }
 

@@ -26,7 +26,8 @@ const whyteInktrap = localFont({
     },
   ],
   variable: "--font-whyte",
-  display: "swap",
+  display: "block",
+  preload: true,
 });
 
 const pixelFont = localFont({
@@ -34,7 +35,8 @@ const pixelFont = localFont({
   weight: "400",
   style: "normal",
   variable: "--font-pixel",
-  display: "swap",
+  display: "block",
+  preload: true,
 });
 
 export const metadata = {
