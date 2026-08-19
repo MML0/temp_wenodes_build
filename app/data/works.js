@@ -16,7 +16,7 @@ export const works = [
       "/works/ifa-night/03.jpg",
       "/works/ifa-night/04.jpg"
     ],
-    category: "Brand Solutions",
+    category: "Brand Experience",
     tags: ["Interactive", "Realtime Media", "Live Experience", "Visual Systems", "Projection Mapping", "Event Production"],
     client: "IFA / Tak-On",
     collaborators: ["Tak-On"],
@@ -58,7 +58,7 @@ export const works = [
       "/works/harmony-av/02.jpg",
       "/works/harmony-av/03.jpg"
     ],
-    category: "Audiovisual Performance",
+    category: "Audiovisual",
     tags: ["Audiovisual", "Performance", "Persian Mythology", "Experience Design", "Live Event", "Sound Design"],
     client: "Harmony Furniture",
     collaborators: [],
@@ -142,7 +142,7 @@ export const works = [
       "/works/yektanet-noghteh/02.jpg",
       "/works/yektanet-noghteh/03.jpg"
     ],
-    category: "Interactive Experience",
+    category: "Interactive",
     tags: ["Data", "Interactive", "Mobile", "Realtime", "Audiovisual", "Game", "Data Visualization"],
     client: "Yektanet",
     collaborators: [],
@@ -312,7 +312,7 @@ export const works = [
       "/works/pakshoma-dream-home/03.jpg",
       "/works/pakshoma-dream-home/04.jpg"
     ],
-    category: "Interactive Campaign",
+    category: "Interactive",
     tags: ["Interactive", "Projection Mapping", "Spatial Design", "Brand Experience", "Installation", "Campaign", "Retail"],
     client: "Pakshoma",
     collaborators: [],
@@ -356,7 +356,7 @@ export const works = [
       "/works/miwa/03.jpg",
       "/works/miwa/04.jpg"
     ],
-    category: "Interactive Installation",
+    category: "Interactive",
     tags: ["Interactive", "Exhibition", "Installation", "Body Tracking", "Generative Visuals", "Realtime"],
     client: "Miwa",
     collaborators: [],
@@ -572,7 +572,7 @@ export const works = [
       "/works/wallex-yalda/03.jpg",
       "/works/wallex-yalda/04.jpg"
     ],
-    category: "Interactive Event",
+    category: "Interactive",
     tags: ["Interactive", "Realtime", "Event Experience", "Technology", "Yalda", "Corporate Event"],
     client: "Wallex",
     collaborators: [],
@@ -809,7 +809,7 @@ export const works = [
       "/works/av-experience/05.jpg",
       "/works/av-experience/06.jpg"
     ],
-    category: "Audiovisual Performance Series",
+    category: "Audiovisual",
     tags: ["Audiovisual", "Performance", "Sound", "Visuals", "Live", "Series", "Original Work"],
     client: null,
     collaborators: [],
@@ -900,7 +900,7 @@ export const works = [
       "/works/silence-experience/03.jpg",
       "/works/silence-experience/04.jpg"
     ],
-    category: "Audiovisual Performance",
+    category: "Audiovisual",
     tags: ["Silence", "Light", "Sound", "Immersive", "Performance", "Multisensory", "Spiritual"],
     client: null,
     collaborators: [],
@@ -1177,7 +1177,7 @@ export const works = [
       "/works/iran-house-of-music/03.jpg",
       "/works/iran-house-of-music/04.jpg"
     ],
-    category: "Audiovisual Event",
+    category: "Audiovisual",
     tags: ["Audiovisual", "Projection Mapping", "Music", "Live Performance", "Concert", "Synesthetic"],
     client: "Iran House of Music",
     collaborators: [],

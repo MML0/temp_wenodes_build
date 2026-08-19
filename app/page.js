@@ -19,6 +19,7 @@ export default function Home() {
       <div
         className="scene"
         aria-hidden="true"
+        style={{ opacity: 0.6 }}
       >
         <ParticleScene />
       </div>

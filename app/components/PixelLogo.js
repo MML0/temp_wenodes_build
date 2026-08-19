@@ -423,7 +423,7 @@ export default function PixelLogo({ size = 28, className = "" }) {
     isFirst: true, // Flag to ensure the initial animation is dither out/in over 5s
   });
 
-  const FPS = 10;
+  const FPS = 15;
   const MS = 1000 / FPS;
 
   useEffect(() => {

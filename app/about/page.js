@@ -795,7 +795,7 @@ export default function AboutPage() {
       <div
         className="scene"
         aria-hidden="true"
-        style={{ opacity: 0.4 }}
+        style={{ opacity: 0.6 }}
       >
         <ParticleScene />
       </div>
