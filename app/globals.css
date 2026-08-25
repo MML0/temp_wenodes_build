@@ -355,6 +355,7 @@ h1 strong {
 
 /* ── Team Grid ── */
 .team-grid {
+  max-width: 800px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2px;

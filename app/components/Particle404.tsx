@@ -30,7 +30,7 @@ const COUNT = 22000;
 
 const LETTER_WIDTH = 2.45;
 const LETTER_HEIGHT = 4.6;
-const LETTER_SPACING = 1.7;
+const LETTER_SPACING = 1.0;
 
 
 /* =========================================================
@@ -38,15 +38,15 @@ const LETTER_SPACING = 1.7;
 ========================================================= */
 
 const TIMING = {
-  INITIAL_SCATTER: 2.0,
+  INITIAL_SCATTER: 4.0,
 
-  FORM: 5.0,
+  FORM: 6.0,
 
   HOLD: 10.0,
 
-  SCATTER: 18.0,
+  SCATTER: 6.0,
 
-  REFORM: 13.0,
+  REFORM: 6.0,
 
   FINAL_HOLD: 12.0,
 };
@@ -219,8 +219,8 @@ function createLetterTarget(letter) {
 
     const z =
       random(
-        -0.8,
-        0.8
+        1.0,
+        2.9
       );
 
     result[i3] = x;
