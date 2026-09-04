@@ -564,5 +564,615 @@ export const team = [
       showCredits: true,
       previousNext: true
     }
+  },
+{
+  id: 5,
+  slug: "helia-jalnick",
+
+  fullName: "Helia Jalali",
+  nickname: "HELIA JALNICK",
+  role: "UI Designer / Graphic Designer / New Media Artist",
+
+  description:
+    "Designer and new media artist exploring the intersection of design, technology, and creative coding.",
+
+  longDescription:
+    "Helia Jalali is a designer and new media artist passionate about blending design, technology, and creative coding as an interdisciplinary field. Since 2012, she has been actively involved in music performances, and since 2016, she has collaborated with design studios on diverse creative projects. In 2023, she began exploring audiovisual performances more deeply, integrating programming and real-time media into her artistic practice. Her work explores how programming and new media art can create immersive and interactive experiences in contemporary design.",
+
+  hero: {
+    type: "image",
+    src: "/team/helia/hero.jpg",
+    alt: "Helia Jalali new media artist and designer",
+    effect: "generative",
+    position: "center",
+    scale: 1
+  },
+
+  story: {
+    title: "DESIGNING WITH TECHNOLOGY",
+    intro:
+      "Helia explores the relationship between design, code, and new media to create contemporary interactive experiences."
+  },
+
+  location: "Tehran, Iran",
+
+  disciplines: [
+    "New Media Art",
+    "UI Design",
+    "Graphic Design",
+    "Creative Coding",
+    "Audiovisual Performance"
+  ],
+
+  specialties: [
+    "Interface Design",
+    "Visual Systems",
+    "Realtime Media",
+    "Concept Design",
+    "Interactive Experiences"
+  ],
+
+  tools: [
+    "Adobe Suite",
+    "TouchDesigner",
+    "Blender",
+    "Houdini",
+    "Processing",
+    "Arduino"
+  ],
+
+  stats: [
+    {
+      label: "Design Experience",
+      value: "10 YRS"
+    },
+    {
+      label: "New Media",
+      value: "03.5 YRS"
+    },
+    {
+      label: "AV Performances",
+      value: "04+"
+    }
+  ],
+
+  quote:
+    "Concept and aesthetics in the age of technology are the elements that make my artistic language different.",
+
+  content: [
+    {
+      type: "text",
+      title: "APPROACH",
+      text:
+        "Helia works across graphic design, object design, concept design, and new media art. Her practice focuses on combining creative coding, technology, and visual language to create immersive contemporary experiences."
+    },
+
+    {
+      type: "image",
+      src: "/team/helia/01.jpg",
+      alt: "Helia Jalali working on a new media project"
+    },
+
+    {
+      type: "quote",
+      text:
+        "The foundation of my work is creating and designing in the age of technology through a contemporary language and personal artistic vision."
+    },
+
+    {
+      type: "text",
+      title: "AUDIOVISUAL PRACTICE",
+      text:
+        "Since 2023, Helia has focused on audiovisual performances, integrating programming and real-time media into her creative process."
+    },
+
+    {
+      type: "gallery",
+      images: [
+        "/team/helia/02.jpg",
+        "/team/helia/03.jpg",
+        "/team/helia/04.jpg"
+      ]
+    },
+
+    {
+      type: "text",
+      title: "SELECTED COLLABORATIONS",
+      text:
+        "Her collaborations with WeNodes include the first WeNodes AV project at Dieheim, Harmony project, AV performance with Ali Kianian, and the extended version of the AV performance with Ali Kianian."
+    },
+
+    {
+      type: "video",
+      src: "/team/helia/reel.mp4",
+      poster: "/team/helia/reel.jpg"
+    },
+
+    {
+      type: "text",
+      title: "CURRENT INTERESTS",
+      text:
+        "Creative coding, realtime media, immersive installations, audiovisual performances, and exploring new forms of interaction between humans, technology, and design."
+    }
+  ],
+
+  works: [],
+
+  links: {
+    instagram: "https://www.instagram.com/heliajalnick",
+    website: "https://heliajalnick.com",
+    youtube: "https://www.youtube.com/@Heliajalnick",
+    linkedin: "http://www.linkedin.com/in/heliajalnick"
+  },
+
+  credits: {
+    studio: "WeNodes",
+    role: "UI Designer / Graphic Designer"
+  },
+
+  page: {
+    showStory: true,
+    showStats: true,
+    showTools: true,
+    showWorks: true,
+    showGallery: true,
+    showCredits: true,
+    previousNext: true
   }
+},
+{
+  id: 6,
+  slug: "mohsen-kamali-mehr",
+
+  fullName: "Mohsen Kamali Mehr",
+  nickname: "MOHSEN",
+
+  role: "Laser Lighting Designer / Laser Show Specialist",
+
+  description:
+    "Laser lighting designer and performer with over two decades of experience creating laser shows and technical visual experiences.",
+
+  longDescription:
+    "Mohsen Kamali Mehr is a laser lighting designer, builder, and operator with 22 years of experience in laser show production in Iran. With more than 200–300 live performances across concerts, events, and cultural programs, he has become one of the experienced specialists in laser-based visual experiences. His practice combines technical expertise with artistic vision, focusing on laser graphics, animation creation, live execution, and hardware support.",
+
+  hero: {
+    type: "image",
+    src: "/team/mohsen/hero.jpg",
+    alt: "Mohsen Kamali Mehr laser lighting designer",
+    effect: "laser",
+    position: "center",
+    scale: 1
+  },
+
+  story: {
+    title: "FIND THE WAY",
+    intro:
+      "A technical mind driven by curiosity, problem solving, and the belief that every challenge has a solution."
+  },
+
+  location: "Iran",
+
+  disciplines: [
+    "Laser Lighting Design",
+    "Laser Show Production",
+    "Live Performance",
+    "Technical Production"
+  ],
+
+  specialties: [
+    "Laser Graphics",
+    "Laser Animation",
+    "Live Laser Execution",
+    "Hardware Support",
+    "Show Control Systems"
+  ],
+
+  tools: [
+    "Laser Systems",
+    "Laser Animation Software",
+    "Show Control Hardware",
+    "Lighting Equipment"
+  ],
+
+  stats: [
+    {
+      label: "Experience",
+      value: "22 YRS"
+    },
+    {
+      label: "Shows",
+      value: "300+"
+    },
+    {
+      label: "Specialty",
+      value: "LASER"
+    }
+  ],
+
+  quote:
+    "Nothing is impossible. Search until you find the way.",
+
+  content: [
+    {
+      type: "text",
+      title: "APPROACH",
+      text:
+        "Mohsen is primarily a technical specialist rather than a traditional artist, but believes that artistic vision is essential for creating meaningful laser experiences. His work connects engineering precision with creative expression."
+    },
+
+    {
+      type: "image",
+      src: "/team/mohsen/01.jpg",
+      alt: "Mohsen working on laser show production"
+    },
+
+    {
+      type: "quote",
+      text:
+        "Technology creates the possibility, but creativity gives it meaning."
+    },
+
+    {
+      type: "text",
+      title: "LASER PRACTICE",
+      text:
+        "His specialization is focused on laser lighting design, including laser graphics, animation production, live performance execution, and technical hardware support for visual shows."
+    },
+
+    {
+      type: "gallery",
+      images: [
+        "/team/mohsen/02.jpg",
+        "/team/mohsen/03.jpg",
+        "/team/mohsen/04.jpg"
+      ]
+    },
+
+    {
+      type: "text",
+      title: "SELECTED EXPERIENCE",
+      text:
+        "One of his most memorable collaborations with WeNodes was the opening ceremony of Mica Mall Ice Rink in Kish Island, a challenging and highly concentrated project that became an unforgettable experience."
+    },
+
+    {
+      type: "video",
+      src: "/team/mohsen/reel.mp4",
+      poster: "/team/mohsen/reel.jpg"
+    },
+
+    {
+      type: "text",
+      title: "CURRENT FOCUS",
+      text:
+        "Developing laser-based visual experiences, improving show technology, and supporting creative teams through technical knowledge and execution."
+    }
+  ],
+
+  works: [],
+
+  links: {
+    instagram: "https://www.instagram.com/lasershow.ir"
+  },
+
+  credits: {
+    studio: "WeNodes",
+    role: "Laser Lighting Designer"
+  },
+
+  page: {
+    showStory: true,
+    showStats: true,
+    showTools: true,
+    showWorks: true,
+    showGallery: true,
+    showCredits: true,
+    previousNext: true
+  }
+},
+{
+  id: 7,
+  slug: "mani-khazaei",
+
+  fullName: "Mani Khazaei",
+  nickname: "MANI",
+
+  role: "3D Artist / Visual Designer",
+
+  description:
+    "3D artist working between digital modeling, interactive experiences, and laser-based visual performances.",
+
+  longDescription:
+    "Mani Khazaei is a 3D artist focused on creating digital forms and visual experiences. His practice combines 3D modeling, interactive design, and laser performance systems. He is interested in building immersive digital spaces where minimal aesthetics meet interaction and technology.",
+
+  hero: {
+    type: "image",
+    src: "/team/mani/hero.jpg",
+    alt: "Mani Khazaei 3D artist",
+    effect: "generative",
+    position: "center",
+    scale: 1
+  },
+
+  story: {
+    title: "BUILDING DIGITAL FORMS",
+    intro:
+      "Mani explores the connection between imagination, digital modeling, and interactive visual experiences."
+  },
+
+  location: "Iran",
+
+  disciplines: [
+    "3D Art",
+    "Digital Modeling",
+    "Interactive Design",
+    "Laser Performance"
+  ],
+
+  specialties: [
+    "3D Modeling",
+    "Blender",
+    "Laser Show Systems",
+    "Interactive Visuals"
+  ],
+
+  tools: [
+    "Blender",
+    "Pangolin LivePRO",
+    "3D Printing",
+    "Laser Systems"
+  ],
+
+  stats: [
+    {
+      label: "Specialty",
+      value: "3D"
+    },
+    {
+      label: "Experience",
+      value: "—"
+    },
+    {
+      label: "Projects",
+      value: "—"
+    }
+  ],
+
+  quote:
+    "From an idea in my mind to a physical object in the real world.",
+
+  content: [
+    {
+      type: "text",
+      title: "APPROACH",
+      text:
+        "Mani enjoys creating minimal yet interactive experiences. His work focuses on transforming imagined concepts into digital and physical forms through 3D modeling and creative technology."
+    },
+
+    {
+      type: "image",
+      src: "/team/mani/01.jpg",
+      alt: "Mani working on 3D modeling"
+    },
+
+    {
+      type: "quote",
+      text:
+        "Creating a character in my mind and eventually turning it into a 3D printed object was one of my most memorable experiences."
+    },
+
+    {
+      type: "text",
+      title: "3D PRACTICE",
+      text:
+        "His main focus is 3D modeling with Blender, exploring digital characters, objects, and visual concepts that can move between virtual environments and physical production."
+    },
+
+    {
+      type: "gallery",
+      images: [
+        "/team/mani/02.jpg",
+        "/team/mani/03.jpg",
+        "/team/mani/04.jpg"
+      ]
+    },
+
+    {
+      type: "text",
+      title: "SELECTED COLLABORATIONS",
+      text:
+        "Mani has collaborated on WeNodes projects including Espinas project and Pakshoma laser performance."
+    },
+
+    {
+      type: "video",
+      src: "/team/mani/reel.mp4",
+      poster: "/team/mani/reel.jpg"
+    },
+
+    {
+      type: "text",
+      title: "CURRENT INTERESTS",
+      text:
+        "Exploring interactive 3D experiences, digital characters, physical fabrication, and the relationship between virtual worlds and real objects."
+    }
+  ],
+
+  works: [],
+
+  links: {},
+
+  credits: {
+    studio: "WeNodes",
+    role: "3D Artist / Visual Designer"
+  },
+
+  page: {
+    showStory: true,
+    showStats: true,
+    showTools: true,
+    showWorks: true,
+    showGallery: true,
+    showCredits: true,
+    previousNext: true
+  }
+},
+{
+  id: 8,
+  slug: "ara-hosseinvand",
+
+  fullName: "Ara Hosseinvand",
+  nickname: "ARA",
+
+  role: "Project Manager",
+
+  description:
+    "Project Manager focused on transforming creative visions into real experiences through collaboration and execution.",
+
+  longDescription:
+    "Ara Hosseinvand works as a Project Manager, passionate about creating unique experiences with creative teams and transforming ideas into real projects that audiences can connect with. His role focuses on connecting vision, people, and execution to bring complex creative projects to life.",
+
+  hero: {
+    type: "image",
+    src: "/team/ara/hero.jpg",
+    alt: "Ara Hosseinvand project manager",
+    effect: "generative",
+    position: "center",
+    scale: 1
+  },
+
+  story: {
+    title: "FROM VISION TO REALITY",
+    intro:
+      "Ara connects creative ideas with structured execution, helping teams transform concepts into meaningful experiences."
+  },
+
+  location: "Iran",
+
+  disciplines: [
+    "Project Management",
+    "Creative Production",
+    "Team Coordination",
+    "Visual Art"
+  ],
+
+  specialties: [
+    "Project Planning",
+    "Creative Workflow",
+    "Team Management",
+    "Experience Production"
+  ],
+
+  tools: [
+    "Microsoft Word",
+    "Excel",
+    "MSP",
+    "TouchDesigner",
+    "GPT",
+    "Claude"
+  ],
+
+  stats: [
+    {
+      label: "Age",
+      value: "27"
+    },
+    {
+      label: "Projects",
+      value: "11"
+    },
+    {
+      label: "Role",
+      value: "PM"
+    }
+  ],
+
+  quote:
+    "From Vision to Reality.",
+
+  content: [
+    {
+      type: "text",
+      title: "APPROACH",
+      text:
+        "Ara believes the most rewarding part of project management is creating special experiences with a team and turning creative ideas into real projects that people can emotionally connect with."
+    },
+
+    {
+      type: "image",
+      src: "/team/ara/01.jpg",
+      alt: "Ara working on creative project management"
+    },
+
+    {
+      type: "quote",
+      text:
+        "A beautiful idea needs the right team, structure, and direction to become reality."
+    },
+
+    {
+      type: "text",
+      title: "CREATIVE JOURNEY",
+      text:
+        "Alongside project management, Ara has recently started exploring Visual Art and developing his skills in creative technologies and visual experiences."
+    },
+
+    {
+      type: "gallery",
+      images: [
+        "/team/ara/02.jpg",
+        "/team/ara/03.jpg",
+        "/team/ara/04.jpg"
+      ]
+    },
+
+    {
+      type: "text",
+      title: "MEMORABLE EXPERIENCE",
+      text:
+        "During the first performance of Mantad (ممتد), the project faced an unexpected challenge when war started the night before the event. Despite uncertainty and concerns, the team continued working together inside the venue. The contrast between the peaceful creative atmosphere inside and the difficult conditions outside made the experience unforgettable. After the news of peace arrived, Mantad continued without interruption until its final day."
+    },
+
+    {
+      type: "text",
+      title: "SELECTED PROJECTS",
+      text:
+        "Ara has been involved in WeNodes projects including Mantad and Elecomp."
+    },
+
+    {
+      type: "video",
+      src: "/team/ara/reel.mp4",
+      poster: "/team/ara/reel.jpg"
+    },
+
+    {
+      type: "text",
+      title: "CURRENT INTERESTS",
+      text:
+        "Creative project management, visual experiences, TouchDesigner, and exploring the intersection between organization, technology, and art."
+    }
+  ],
+
+  works: [],
+
+  links: {
+    instagram: "https://www.instagram.com/arahosseinvand"
+  },
+
+  credits: {
+    studio: "WeNodes",
+    role: "Project Manager"
+  },
+
+  page: {
+    showStory: true,
+    showStats: true,
+    showTools: true,
+    showWorks: true,
+    showGallery: true,
+    showCredits: true,
+    previousNext: true
+  }
+}
 ];

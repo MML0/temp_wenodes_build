@@ -139,15 +139,21 @@ case "gallery":
       return (
         <div
           className="wn-member-content-block wn-reveal"
+          style={{
+            "--reveal-delay": `${index * 80}ms`,
+          }}
           key={index}
         >
-          <blockquote className="wn-member-quote">
-            <span className="wn-quote-mark">
-              “
-            </span>
+          <div className="wn-block-index">
+            {String(index + 1).padStart(2, "0")}
+          </div>
 
-            <span>{block.text}</span>
-          </blockquote>
+          <div className="wn-block-content">
+            <blockquote className="wn-member-quote">
+              <span className="wn-quote-mark">"</span>
+              <span>{block.text}</span>
+            </blockquote>
+          </div>
         </div>
       );
 
@@ -2013,6 +2019,27 @@ export default async function TeamDetailPage({
 
         .wn-quote-mark {
           color: #555;
+          font-size: 1.6em;
+          line-height: 1;
+          margin-right: .4rem;
+          position: relative;
+          top: .08em;
+        }
+
+        .wn-member-quote {
+          display: block;
+          grid-column: 1 / -1;
+          margin: 0;
+          padding: 0;
+          border: none;
+          font-family:
+            var(--font-whyte, sans-serif);
+
+          font-size: clamp(1.5rem,3vw,2.5rem);
+          font-weight: 400;
+          line-height: 1.3;
+          letter-spacing: -.03em;
+          color: #e8e6e3;
         }
 
         /* ═══════════════════════════════════════
