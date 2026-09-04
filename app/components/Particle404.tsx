@@ -1309,7 +1309,14 @@ export default function Particle404() {
 
         fov: 45,
       }}
-
+      style={{
+        position: "fixed",
+        inset: 0,
+        width: "100%",
+        height: "100svh",
+        pointerEvents: "auto",
+        touchAction: "none",
+      }}
       dpr={[
         1,
         1.5,

@@ -11,7 +11,7 @@ import Link from "next/link";
 
 export default function Home() {
   const featuredWorks = works.slice(0, 3);
-  const featuredTeam = team.slice(0, 2);
+  const featuredTeam = team.slice(2, 5);
 
   return (
     <main>
@@ -19,7 +19,7 @@ export default function Home() {
       <div
         className="scene"
         aria-hidden="true"
-        style={{ opacity: 0.6 }}
+        style={{ opacity: 0.8 }}
       >
         <ParticleScene />
       </div>

@@ -685,9 +685,9 @@ footer a:hover {
   }
 
   footer {
-    padding: 24px 20px;
-    flex-direction: column;
-    gap: 12px;
+    padding: 24px 10px;
+    flex-direction: row;
+    gap: 2px;
   }
 
   .subpage-hero {

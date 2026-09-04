@@ -47,12 +47,12 @@ const TIMING = {
   /*
     Full WENODES stays visible for a long time.
   */
-  WORD_HOLD: 14.0,
+  WORD_HOLD: 10.0,
 
   /*
     Slow explosion away from WENODES.
   */
-  WORD_SCATTER: 20.0,
+  WORD_SCATTER: 10.0,
 
   /*
     Time to form each individual letter.
@@ -62,12 +62,12 @@ const TIMING = {
   /*
     Individual letter remains visible.
   */
-  LETTER_HOLD: 20.0,
+  LETTER_HOLD: 10.0,
 
   /*
     Slow transition between letters.
   */
-  LETTER_SCATTER: 23.0,
+  LETTER_SCATTER: 13.0,
 
   /*
     Final WENODES remains visible even longer.
@@ -1958,10 +1958,16 @@ export default function ParticleScene() {
         alpha: true,
       }}
 
+      resize={{
+        scroll: false,
+        debounce: 100,
+      }}
+
       style={{
         width: "100%",
-        height: "100%",
-        pointerEvents: "none",
+        height: "100svh",
+        pointerEvents: "auto",
+        touchAction: "none",
       }}
     >
       <ParticleField />
