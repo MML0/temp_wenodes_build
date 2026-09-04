@@ -1319,7 +1319,194 @@ export const team = [
       title: "CURRENT INTERESTS",
       text:
         "Artificial intelligence, embedded intelligence, robotics, creative coding, hardware experimentation, networking, and building systems that connect the digital and physical worlds."
+    },
+{
+  type: "html",
+  html: `
+    <div class="mml-world-effect">
+
+      <div class="mml-floating-word w1">AI</div>
+      <div class="mml-floating-word w2">CODE</div>
+      <div class="mml-floating-word w3">ESP32</div>
+      <div class="mml-floating-word w4">PYTHON</div>
+      <div class="mml-floating-word w5">BUILD</div>
+      <div class="mml-floating-word w6">IMAGINE</div>
+
+      <div class="mml-core">
+        <span>CREATIVE SYSTEM</span>
+        <strong>ONLINE</strong>
+      </div>
+
+    </div>
+
+
+    <style>
+
+    .mml-world-effect{
+
+      position:fixed;
+      inset:0;
+
+      width:100vw;
+      height:100vh;
+
+      pointer-events:none;
+
+      z-index:20;
+
+      overflow:hidden;
+
     }
+
+
+    .mml-floating-word{
+
+      position:absolute;
+
+      font-family:monospace;
+
+      font-size:13px;
+
+      letter-spacing:3px;
+
+      opacity:.12;
+
+      color:white;
+
+      animation:
+      mmlMove 10s infinite alternate ease-in-out;
+
+    }
+
+
+    .w1{
+      left:10%;
+      top:20%;
+    }
+
+    .w2{
+      left:75%;
+      top:25%;
+      animation-delay:1s;
+    }
+
+
+    .w3{
+      left:30%;
+      top:70%;
+      animation-delay:2s;
+    }
+
+
+    .w4{
+      left:80%;
+      top:75%;
+      animation-delay:3s;
+    }
+
+
+    .w5{
+      left:50%;
+      top:15%;
+      animation-delay:4s;
+    }
+
+
+    .w6{
+      left:20%;
+      top:50%;
+      animation-delay:5s;
+    }
+
+
+
+    .mml-core{
+
+      position:absolute;
+
+      left:50%;
+      top:50%;
+
+      transform:
+      translate(-50%,-50%);
+
+      display:flex;
+
+      flex-direction:column;
+
+      text-align:center;
+
+      opacity:.15;
+
+    }
+
+
+    .mml-core span{
+
+      font-size:11px;
+
+      letter-spacing:5px;
+
+    }
+
+
+    .mml-core strong{
+
+      font-size:40px;
+
+      letter-spacing:8px;
+
+      animation:
+      mmlPulse 3s infinite;
+
+    }
+
+
+
+    @keyframes mmlMove{
+
+      from{
+        transform:
+        translateY(0)
+        rotate(0deg);
+      }
+
+
+      to{
+
+        transform:
+        translateY(-60px)
+        rotate(10deg);
+
+      }
+
+    }
+
+
+
+    @keyframes mmlPulse{
+
+      0%,100%{
+
+        text-shadow:
+        0 0 0 transparent;
+
+      }
+
+
+      50%{
+
+        text-shadow:
+        0 0 40px cyan;
+
+      }
+
+    }
+
+
+    </style>
+  `
+}
   ],
 
   works: [],
