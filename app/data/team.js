@@ -428,5 +428,141 @@ export const team = [
       showCredits: true,
       previousNext: true
     }
+  },
+  {
+    id: 4,
+    slug: "parsa",
+
+    fullName: "Parsa Dibazar",
+    nickname: "PARSA",
+    role: "Visual Design Director / Graphic Designer",
+
+    description:
+      "Graphic designer and Visual Design Director focused on building visual languages for projects and experiences.",
+
+    longDescription:
+      "Parsa works across graphic design, motion design, and experimental visual practices. He starts with simple ideas or visual forms and develops them into clear, cohesive visual systems. At WeNodes, he focuses on Visual Direction and visual identity development.",
+
+    hero: {
+      type: "image",
+      src: "/team/parsa/hero.jpg",
+      alt: "Parsa Dibazar working on visual design",
+      effect: "generative",
+      position: "center",
+      scale: 1
+    },
+
+    story: {
+      title: "DESIGNING VISUAL SYSTEMS",
+      intro:
+        "Parsa develops visual languages that give projects and experiences their own distinct identity."
+    },
+
+    location: "Tehran, Iran",
+
+    disciplines: [
+      "Graphic Design",
+      "Motion Design",
+      "Visual Identity",
+      "Generative Visuals"
+    ],
+
+    specialties: [
+      "Graphic Design",
+      "Motion Design",
+      "Generative / Experimental Visuals"
+    ],
+
+    tools: [
+      "Figma",
+      "Adobe Illustrator",
+      "After Effects",
+      "Cinema 4D",
+      "TouchDesigner"
+    ],
+
+    stats: [
+      {
+        label: "Specialty",
+        value: "VISUAL"
+      },
+      {
+        label: "Experience",
+        value: "08 YRS"
+      },
+      {
+        label: "Projects",
+        value: "50+"
+      }
+    ],
+
+    quote:
+      "Design is the process of making the invisible visible through form and motion.",
+
+    content: [
+      {
+        type: "text",
+        title: "APPROACH",
+        text:
+          "Parsa builds visual systems from simple ideas and forms. His work spans graphic design, motion design, and experimental visuals, always aiming for clarity and cohesion."
+      },
+
+      {
+        type: "image",
+        src: "/team/parsa/01.jpg",
+        alt: "Parsa working on visual identity"
+      },
+
+      {
+        type: "quote",
+        text:
+          "Visual design is not about decoration. It is about giving ideas a form they can live in."
+      },
+
+      {
+        type: "text",
+        title: "AWARDS & ACHIEVEMENTS",
+        text:
+          "Winner — Red Dot Award | Brand & Communication — 2023. Winner — 17th TASVIR SAL Festival, Graphic Section Poster — 2020. Finalist — Taiwan International Student Design Competition (TISDC) 2021. Finalist — TEDA Cup International Youth Design Competition — 2021. Selected — 100 Best Arabic Posters Exhibition — 2023. Selected — 18th TASVIR SAL Festival, Graphic Section – Poster — 2021. Participant — 11th Poster Triennial Trnava, Slovakia — 2022. Participant — 18th International Biennale of Theatre Posters, Poland — 2022. Participant — Golden Bee Biennial — 2020. Participant — BAZAR Art Book Fair — 2020."
+      },
+
+      {
+        type: "gallery",
+        images: [
+          "/team/parsa/02.jpg",
+          "/team/parsa/03.jpg",
+          "/team/parsa/04.jpg"
+        ]
+      },
+
+      {
+        type: "text",
+        title: "CURRENT INTERESTS",
+        text:
+          "Visual identity systems, motion design, experimental posters, typography, and bridging traditional graphic design with digital tools."
+      }
+    ],
+
+    works: [],
+
+    links: {
+      instagram: "https://www.instagram.com/parsadibazar/",
+      linkedin: "https://www.linkedin.com/in/parsa-dibazar-✸-19574727/"
+    },
+
+    credits: {
+      studio: "WeNodes",
+      role: "Visual Design Director / Graphic Designer"
+    },
+
+    page: {
+      showStory: true,
+      showStats: true,
+      showTools: true,
+      showWorks: true,
+      showGallery: true,
+      showCredits: true,
+      previousNext: true
+    }
   }
 ];
