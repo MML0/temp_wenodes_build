@@ -1174,5 +1174,177 @@ export const team = [
     showCredits: true,
     previousNext: true
   }
+},
+{
+  id: 9,
+  slug: "MML",
+
+  fullName: "Mohamad Mahdi Latifi",
+  nickname: "MML",
+
+  role: "Creative Technologist / Developer",
+
+  description:
+    "Developer and creative technologist exploring the intersection of software, hardware, AI, electronics, and experimental systems.",
+
+  longDescription:
+    "Mohamad Mahdi Latifi is a developer and creative technologist who enjoys exploring new challenges across different fields of technology. From AI and neural networks to signal processing, embedded systems, robotics, and interactive experiences, his work focuses on turning complex ideas into practical solutions. He believes that if something can be imagined, it can be built.",
+
+  hero: {
+    type: "image",
+    src: "/team/mml/hero.jpg",
+    alt: "Mohamad Mahdi Latifi creative technologist",
+    effect: "generative",
+    position: "center",
+    scale: 1
+  },
+
+  story: {
+    title: "IF IT CAN BE IMAGINED, IT CAN BE DONE",
+    intro:
+      "MML explores technology beyond routine solutions, constantly experimenting with new ideas, tools, and unexpected combinations."
+  },
+
+  location: "Iran",
+
+  disciplines: [
+    "Creative Technology",
+    "Programming",
+    "Embedded Systems",
+    "Hardware Development",
+    "Signal Processing"
+  ],
+
+  specialties: [
+    "AI & Neural Networks",
+    "Web Development",
+    "Embedded Systems",
+    "Electronics",
+    "Networking",
+    "Experimental Prototyping"
+  ],
+
+  tools: [
+    "Python",
+    "PHP",
+    "Embedded C",
+    "ESP32/ESP8266",
+    "TouchDesigner",
+    "AI / Neural Networks",
+    "Signal Processing"
+  ],
+
+  stats: [
+    {
+      label: "Experience",
+      value: "∞"
+    },
+    {
+      label: "Projects",
+      // value: "MANY",
+      value: "Lost Count"
+
+    },
+    {
+      label: "Lines of Code",
+      value: "100K+"
+    },
+    {
+      label: "Age",
+      value: "Enough"
+    }
+  ],
+
+  quote:
+    "Limited only by imagination.",
+
+  content: [
+    {
+      type: "text",
+      title: "APPROACH",
+      text:
+        "MML enjoys solving problems by reducing complex systems into their fundamental components. By breaking large challenges into smaller, understandable problems, he creates practical paths toward innovative solutions."
+    },
+
+    {
+      type: "image",
+      src: "/team/mml/01.jpg",
+      alt: "MML working on a technical project"
+    },
+
+    {
+      type: "quote",
+      text:
+        "If it's imaginable, it can be done."
+    },
+
+    {
+      type: "text",
+      title: "EXPERIMENTAL ENGINEERING",
+      text:
+        "His experiments range from AI, neural networks, and signal processing to hardware projects, embedded systems, and interactive technologies. He enjoys learning through building and testing real-world prototypes."
+    },
+
+    {
+      type: "gallery",
+      images: [
+        "/team/mml/02.jpg",
+        "/team/mml/03.jpg",
+        "/team/mml/04.jpg"
+      ]
+    },
+
+    {
+      type: "text",
+      title: "PROJECTS & PROTOTYPES",
+      text:
+        "Some of his personal experiments include building a small foam-board RC aircraft with two brushless motors, ESP8266, and MPU6050 PID control system, as well as WiFi-based lighting systems and embedded solutions."
+    },
+
+    {
+      type: "text",
+      title: "MEMORABLE MOMENTS",
+      text:
+        "Some of the most unforgettable experiences come from the nights before project deadlines — long sessions without sleep, solving unexpected problems, and pushing ideas until they finally work."
+    },
+
+    {
+      type: "video",
+      src: "/team/mml/reel.mp4",
+      poster: "/team/mml/reel.jpg"
+    },
+
+    {
+      type: "text",
+      title: "CURRENT INTERESTS",
+      text:
+        "Artificial intelligence, embedded intelligence, robotics, creative coding, hardware experimentation, networking, and building systems that connect the digital and physical worlds."
+    }
+  ],
+
+  works: [],
+
+  links: {
+    website: "https://www.mml-dev.ir/",
+    github: "https://github.com/MML0",
+    linkedin: "https://www.linkedin.com/in/mohamad-mahdi-latifi/",
+    telegram: "https://t.me/mml_0",
+    instagram: "https://msng.link/o?mml._.0=ig"
+  },
+
+  credits: {
+    studio: "WeNodes",
+    role: "Developer / Creative Technologist"
+  },
+
+  page: {
+    showStory: true,
+    showStats: true,
+    showTools: true,
+    showWorks: true,
+    showGallery: true,
+    showCredits: true,
+    previousNext: true
+  }
 }
 ];

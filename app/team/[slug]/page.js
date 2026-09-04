@@ -2124,6 +2124,7 @@ export default async function TeamDetailPage({
         .wn-member-image {
           position: relative;
           overflow: hidden;
+          max-width: 400px;
 
           background: #111;
         }
