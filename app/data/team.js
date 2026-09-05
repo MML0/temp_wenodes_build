@@ -1177,7 +1177,7 @@ export const team = [
 },
 {
   id: 9,
-  slug: "MML",
+  slug: "mml",
 
   fullName: "Mohamad Mahdi Latifi",
   nickname: "MML",
