@@ -1,282 +1,282 @@
 export const team = [
-  {
-    id: 1,
-    slug: "voxel",
+  // {
+  //   id: 1,
+  //   slug: "voxel",
 
-    fullName: "Alex Chen",
-    nickname: "VOXEL",
-    role: "Co-Founder / Creative Director",
+  //   fullName: "Alex Chen",
+  //   nickname: "VOXEL",
+  //   role: "Co-Founder / Creative Director",
 
-    description:
-      "Creative technologist working between realtime graphics, generative systems, and immersive environments.",
+  //   description:
+  //     "Creative technologist working between realtime graphics, generative systems, and immersive environments.",
 
-    longDescription:
-      "Alex builds visual systems where mathematics, code, and physical space become part of the same language. His work moves between realtime graphics, interactive installations, and experimental digital environments.",
+  //   longDescription:
+  //     "Alex builds visual systems where mathematics, code, and physical space become part of the same language. His work moves between realtime graphics, interactive installations, and experimental digital environments.",
 
-    hero: {
-      type: "image",
-      src: "/team/voxel/hero.jpg",
-      alt: "Alex Chen inside a realtime generative installation",
-      effect: "generative",
-      position: "center",
-      scale: 1
-    },
+  //   hero: {
+  //     type: "image",
+  //     src: "/team/voxel/hero.jpg",
+  //     alt: "Alex Chen inside a realtime generative installation",
+  //     effect: "generative",
+  //     position: "center",
+  //     scale: 1
+  //   },
 
-    story: {
-      title: "BUILDING WORLDS FROM CODE",
-      intro:
-        "Alex explores the space where mathematics becomes something you can see, touch, and experience."
-    },
+  //   story: {
+  //     title: "BUILDING WORLDS FROM CODE",
+  //     intro:
+  //       "Alex explores the space where mathematics becomes something you can see, touch, and experience."
+  //   },
 
-    location: "Tehran, Iran",
+  //   location: "Tehran, Iran",
 
-    disciplines: [
-      "Creative Technology",
-      "Realtime Graphics",
-      "Generative Art",
-      "Interactive Systems"
-    ],
+  //   disciplines: [
+  //     "Creative Technology",
+  //     "Realtime Graphics",
+  //     "Generative Art",
+  //     "Interactive Systems"
+  //   ],
 
-    specialties: [
-      "Shaders",
-      "Realtime Rendering",
-      "Interactive Installations",
-      "Visual Systems"
-    ],
+  //   specialties: [
+  //     "Shaders",
+  //     "Realtime Rendering",
+  //     "Interactive Installations",
+  //     "Visual Systems"
+  //   ],
 
-    tools: [
-      "TouchDesigner",
-      "GLSL",
-      "Three.js",
-      "React",
-      "Cinema 4D"
-    ],
+  //   tools: [
+  //     "TouchDesigner",
+  //     "GLSL",
+  //     "Three.js",
+  //     "React",
+  //     "Cinema 4D"
+  //   ],
 
-    stats: [
-      {
-        label: "Specialty",
-        value: "REALTIME"
-      },
-      {
-        label: "Experience",
-        value: "08 YRS"
-      },
-      {
-        label: "Projects",
-        value: "42+"
-      }
-    ],
+  //   stats: [
+  //     {
+  //       label: "Specialty",
+  //       value: "REALTIME"
+  //     },
+  //     {
+  //       label: "Experience",
+  //       value: "08 YRS"
+  //     },
+  //     {
+  //       label: "Projects",
+  //       value: "42+"
+  //     }
+  //   ],
 
-    quote:
-      "Make the machine part of the artwork.",
+  //   quote:
+  //     "Make the machine part of the artwork.",
 
-    content: [
-      {
-        type: "text",
-        title: "APPROACH",
-        text:
-          "Alex treats code as a visual material. Instead of separating design from technology, he builds systems where the two develop together."
-      },
+  //   content: [
+  //     {
+  //       type: "text",
+  //       title: "APPROACH",
+  //       text:
+  //         "Alex treats code as a visual material. Instead of separating design from technology, he builds systems where the two develop together."
+  //     },
 
-      {
-        type: "image",
-        src: "/team/voxel/01.jpg",
-        alt: "Alex working on a generative visual system"
-      },
+  //     {
+  //       type: "image",
+  //       src: "/team/voxel/01.jpg",
+  //       alt: "Alex working on a generative visual system"
+  //     },
 
-      {
-        type: "quote",
-        text:
-          "The best interface is sometimes the one you never notice."
-      },
+  //     {
+  //       type: "quote",
+  //       text:
+  //         "The best interface is sometimes the one you never notice."
+  //     },
 
-      {
-        type: "gallery",
-        images: [
-          "/team/voxel/02.jpg",
-          "/team/voxel/03.jpg",
-          "/team/voxel/04.jpg"
-        ]
-      },
+  //     {
+  //       type: "gallery",
+  //       images: [
+  //         "/team/voxel/02.jpg",
+  //         "/team/voxel/03.jpg",
+  //         "/team/voxel/04.jpg"
+  //       ]
+  //     },
 
-      {
-        type: "video",
-        src: "/team/voxel/reel.mp4",
-        poster: "/team/voxel/reel.jpg"
-      },
+  //     {
+  //       type: "video",
+  //       src: "/team/voxel/reel.mp4",
+  //       poster: "/team/voxel/reel.jpg"
+  //     },
 
-      {
-        type: "text",
-        title: "CURRENT INTERESTS",
-        text:
-          "Generative typography, particle systems, spatial interfaces, realtime simulation, and making digital systems feel physical."
-      }
-    ],
+  //     {
+  //       type: "text",
+  //       title: "CURRENT INTERESTS",
+  //       text:
+  //         "Generative typography, particle systems, spatial interfaces, realtime simulation, and making digital systems feel physical."
+  //     }
+  //   ],
 
-    works: [17, 3, 5],
+  //   works: [17, 3, 5],
 
-    links: {
-      instagram: "#",
-      website: "#",
-      github: "#",
-      linkedin: "#"
-    },
+  //   links: {
+  //     instagram: "#",
+  //     website: "#",
+  //     github: "#",
+  //     linkedin: "#"
+  //   },
 
-    credits: {
-      studio: "WeNodes",
-      role: "Co-Founder / Creative Director"
-    },
+  //   credits: {
+  //     studio: "WeNodes",
+  //     role: "Co-Founder / Creative Director"
+  //   },
 
-    page: {
-      showStory: true,
-      showStats: true,
-      showTools: true,
-      showWorks: true,
-      showGallery: true,
-      showCredits: true,
-      previousNext: true
-    }
-  },
+  //   page: {
+  //     showStory: true,
+  //     showStats: true,
+  //     showTools: true,
+  //     showWorks: true,
+  //     showGallery: true,
+  //     showCredits: true,
+  //     previousNext: true
+  //   }
+  // },
 
-  {
-    id: 2,
-    slug: "glitch",
+  // {
+  //   id: 2,
+  //   slug: "glitch",
 
-    fullName: "Mira Park",
-    nickname: "GLITCH",
-    role: "Co-Founder / Lead Designer",
+  //   fullName: "Mira Park",
+  //   nickname: "GLITCH",
+  //   role: "Co-Founder / Lead Designer",
 
-    description:
-      "Interaction designer working between physical interfaces, digital environments, and beautifully broken machines.",
+  //   description:
+  //     "Interaction designer working between physical interfaces, digital environments, and beautifully broken machines.",
 
-    longDescription:
-      "Mira is interested in the strange territory between physical objects and digital interfaces. Her work often begins with something that should not work, then follows the unexpected behavior until it becomes an experience.",
+  //   longDescription:
+  //     "Mira is interested in the strange territory between physical objects and digital interfaces. Her work often begins with something that should not work, then follows the unexpected behavior until it becomes an experience.",
 
-    hero: {
-      type: "image",
-      src: "/team/glitch/hero.jpg",
-      alt: "Mira Park interacting with an experimental installation",
-      effect: "glitch",
-      position: "center",
-      scale: 1.05
-    },
+  //   hero: {
+  //     type: "image",
+  //     src: "/team/glitch/hero.jpg",
+  //     alt: "Mira Park interacting with an experimental installation",
+  //     effect: "glitch",
+  //     position: "center",
+  //     scale: 1.05
+  //   },
 
-    story: {
-      title: "DESIGNING THE UNEXPECTED",
-      intro:
-        "Mira creates interfaces that behave more like physical objects than conventional software."
-    },
+  //   story: {
+  //     title: "DESIGNING THE UNEXPECTED",
+  //     intro:
+  //       "Mira creates interfaces that behave more like physical objects than conventional software."
+  //   },
 
-    location: "Tehran, Iran",
+  //   location: "Tehran, Iran",
 
-    disciplines: [
-      "Interaction Design",
-      "Experience Design",
-      "Physical Computing",
-      "Art Direction"
-    ],
+  //   disciplines: [
+  //     "Interaction Design",
+  //     "Experience Design",
+  //     "Physical Computing",
+  //     "Art Direction"
+  //   ],
 
-    specialties: [
-      "Interactive Installations",
-      "Sensors",
-      "Interface Design",
-      "Rapid Prototyping"
-    ],
+  //   specialties: [
+  //     "Interactive Installations",
+  //     "Sensors",
+  //     "Interface Design",
+  //     "Rapid Prototyping"
+  //   ],
 
-    tools: [
-      "TouchDesigner",
-      "Arduino",
-      "ESP32",
-      "Figma",
-      "Rhino"
-    ],
+  //   tools: [
+  //     "TouchDesigner",
+  //     "Arduino",
+  //     "ESP32",
+  //     "Figma",
+  //     "Rhino"
+  //   ],
 
-    stats: [
-      {
-        label: "Specialty",
-        value: "INTERACTION"
-      },
-      {
-        label: "Experience",
-        value: "06 YRS"
-      },
-      {
-        label: "Installations",
-        value: "31+"
-      }
-    ],
+  //   stats: [
+  //     {
+  //       label: "Specialty",
+  //       value: "INTERACTION"
+  //     },
+  //     {
+  //       label: "Experience",
+  //       value: "06 YRS"
+  //     },
+  //     {
+  //       label: "Installations",
+  //       value: "31+"
+  //     }
+  //   ],
 
-    quote:
-      "Perfect systems are usually boring.",
+  //   quote:
+  //     "Perfect systems are usually boring.",
 
-    content: [
-      {
-        type: "text",
-        title: "DESIGN PHILOSOPHY",
-        text:
-          "Mira designs through experimentation. Sensors, physical materials, software errors, and human behavior all become potential design materials."
-      },
+  //   content: [
+  //     {
+  //       type: "text",
+  //       title: "DESIGN PHILOSOPHY",
+  //       text:
+  //         "Mira designs through experimentation. Sensors, physical materials, software errors, and human behavior all become potential design materials."
+  //     },
 
-      {
-        type: "image",
-        src: "/team/glitch/01.jpg",
-        alt: "Experimental physical interface"
-      },
+  //     {
+  //       type: "image",
+  //       src: "/team/glitch/01.jpg",
+  //       alt: "Experimental physical interface"
+  //     },
 
-      {
-        type: "gallery",
-        images: [
-          "/team/glitch/02.jpg",
-          "/team/glitch/03.jpg",
-          "/team/glitch/04.jpg",
-          "/team/glitch/05.jpg"
-        ]
-      },
+  //     {
+  //       type: "gallery",
+  //       images: [
+  //         "/team/glitch/02.jpg",
+  //         "/team/glitch/03.jpg",
+  //         "/team/glitch/04.jpg",
+  //         "/team/glitch/05.jpg"
+  //       ]
+  //     },
 
-      {
-        type: "quote",
-        text:
-          "If it behaves strangely, don't fix it immediately."
-      },
+  //     {
+  //       type: "quote",
+  //       text:
+  //         "If it behaves strangely, don't fix it immediately."
+  //     },
 
-      {
-        type: "video",
-        src: "/team/glitch/reel.mp4",
-        poster: "/team/glitch/reel.jpg"
-      },
+  //     {
+  //       type: "video",
+  //       src: "/team/glitch/reel.mp4",
+  //       poster: "/team/glitch/reel.jpg"
+  //     },
 
-      {
-        type: "text",
-        title: "CURRENT INTERESTS",
-        text:
-          "Physical interfaces, unreliable sensors, tactile computing, strange controllers, obsolete technology, and systems that respond differently every time."
-      }
-    ],
+  //     {
+  //       type: "text",
+  //       title: "CURRENT INTERESTS",
+  //       text:
+  //         "Physical interfaces, unreliable sensors, tactile computing, strange controllers, obsolete technology, and systems that respond differently every time."
+  //     }
+  //   ],
 
-    works: [1, 7, 12],
+  //   works: [1, 7, 12],
 
-    links: {
-      instagram: "#",
-      website: "#",
-      github: "#",
-      linkedin: "#"
-    },
+  //   links: {
+  //     instagram: "#",
+  //     website: "#",
+  //     github: "#",
+  //     linkedin: "#"
+  //   },
 
-    credits: {
-      studio: "WeNodes",
-      role: "Co-Founder / Lead Designer"
-    },
+  //   credits: {
+  //     studio: "WeNodes",
+  //     role: "Co-Founder / Lead Designer"
+  //   },
 
-    page: {
-      showStory: true,
-      showStats: true,
-      showTools: true,
-      showWorks: true,
-      showGallery: true,
-      showCredits: true,
-      previousNext: true
-    }
-  },
+  //   page: {
+  //     showStory: true,
+  //     showStats: true,
+  //     showTools: true,
+  //     showWorks: true,
+  //     showGallery: true,
+  //     showCredits: true,
+  //     previousNext: true
+  //   }
+  // },
 
   {
     id: 3,

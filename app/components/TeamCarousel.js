@@ -17,6 +17,7 @@ import Link from "next/link";
 export default function TeamCarousel({ members }) {
   const trackRef = useRef(null);
   const itemRefs = useRef([]);
+  const cardRefs = useRef([]);
   const offsetRef = useRef(0);
   const targetOffsetRef = useRef(0);
   const rafRef = useRef(null);
@@ -26,11 +27,30 @@ export default function TeamCarousel({ members }) {
   const isUserInteractingRef = useRef(false);
   const dragDistanceRef = useRef(0);
   const didDragRef = useRef(false);
+  const velocityRef = useRef(0); // offset px per ms, measured while dragging
+  const momentumRef = useRef(0); // active fling velocity after release
+  const lastMoveTimeRef = useRef(0);
 
   const [isDragging, setIsDragging] = useState(false);
 
   const RESUME_DELAY = 1000; // ms after release before auto-scroll resumes
   const CLICK_DRAG_THRESHOLD = 6; // px of movement before a drag cancels the click
+  // Glide distance works out to roughly v0 * 16.67 / (1 - FRICTION), so at
+  // the velocity ceiling a hard flick coasts ~1250px (about 3 cards) over
+  // ~2s before auto-scroll takes back over. Raise FRICTION toward 1 for a
+  // longer spin, lower it for a shorter one.
+  const MOMENTUM_FRICTION = 0.96; // per 60fps frame - lower = stops sooner
+  const MOMENTUM_MIN = 0.02; // px/ms below which the fling is considered done
+  const MOMENTUM_MAX = 3.0; // px/ms ceiling so a hard flick can't spin forever
+
+  // Auto-scroll stays suspended until this fires, so a fling gets to finish
+  // gliding before the carousel takes back over.
+  const startResumeTimer = () => {
+    clearTimeout(resumeTimerRef.current);
+    resumeTimerRef.current = setTimeout(() => {
+      isUserInteractingRef.current = false;
+    }, RESUME_DELAY);
+  };
 
   // Triple the list for seamless infinite looping
   const looped = [...members, ...members, ...members];
@@ -44,8 +64,8 @@ export default function TeamCarousel({ members }) {
     const viewport = track.parentElement;
     const getViewportWidth = () => viewport?.offsetWidth || window.innerWidth;
 
-    // Fallback card width matching CSS (.wn-team-card-wrap { flex: 0 0 320px })
-    const FALLBACK_CARD_W = 320;
+    // Fallback card width matching CSS (.wn-team-card-wrap { flex: 0 0 380px })
+    const FALLBACK_CARD_W = 380;
     const GAP = 28;
 
     let cardW = FALLBACK_CARD_W;
@@ -77,11 +97,32 @@ export default function TeamCarousel({ members }) {
     // Set initial offset immediately with fallback values
     computeOffset();
 
+    // Per-card memo of the last applied curve position - lets the loop skip
+    // re-writing style on cards that are fully off to one side and clamped
+    // (identical t every frame), which is most of the 36 looped cards at any
+    // given moment. Re-styling all of them every frame was the main cause of
+    // the frame-rate drop.
+    const prevT = new Array(itemCount).fill(null);
+
     let lastTime = performance.now();
 
     const animate = (time) => {
       const delta = Math.min(time - lastTime, 64);
       lastTime = time;
+
+      // Fling momentum after a touch/drag release. Touch has no OS-level
+      // momentum the way a trackpad does (which keeps emitting decaying
+      // wheel events on its own), so on a phone the carousel would stop
+      // dead the instant a finger lifts - this carries it on instead.
+      if (momentumRef.current !== 0) {
+        targetOffsetRef.current += momentumRef.current * delta;
+        // Framerate-independent exponential decay
+        momentumRef.current *= Math.pow(MOMENTUM_FRICTION, delta / 16.67);
+        if (Math.abs(momentumRef.current) < MOMENTUM_MIN) {
+          momentumRef.current = 0;
+          startResumeTimer();
+        }
+      }
 
       if (!isUserInteractingRef.current) {
         targetOffsetRef.current += delta * 0.035;
@@ -106,14 +147,23 @@ export default function TeamCarousel({ members }) {
         }
       }
 
-      // Apply transforms to each item
-      itemRefs.current.forEach((el, i) => {
-        if (!el) return;
+      // Shift the whole track so card `i`'s on-screen center matches the
+      // itemCenter math below - without this the per-card depth/scale/rotate
+      // transforms animate in place but the layout never actually scrolls.
+      track.style.transform = `translate3d(${-offsetRef.current}px, 0, 0)`;
 
-        // Update cardW if real measurement becomes available
-        if (el.offsetWidth > 0 && el.offsetWidth !== cardW) {
-          // Don't update mid-frame; rely on next frame
-        }
+      // Apply transforms to each item. The wrap (flex item) gets opacity and
+      // z-index; the depth/scale/rotate transform goes on the INNER card
+      // element instead, which has its own local `perspective` from its
+      // immediate parent (see CSS) - each card is its own independent 3D
+      // context rather than all 30 sharing one distant vanishing point.
+      // That keeps a card's visual position and its real hit-test geometry
+      // in sync (a single shared perspective was distorting them apart for
+      // off-center cards) and means animating one card's transform never
+      // has to touch its siblings.
+      itemRefs.current.forEach((wrapEl, i) => {
+        const cardEl = cardRefs.current[i];
+        if (!wrapEl || !cardEl) return;
 
         const itemCenter =
           i * itemSlot + cardW / 2 - offsetRef.current;
@@ -127,13 +177,24 @@ export default function TeamCarousel({ members }) {
           Math.min(1.4, dist / (viewportW * 0.6))
         );
 
+        // Skip the write entirely when this card's position hasn't moved
+        // meaningfully since last frame (true for every clamped, off-to-the-
+        // side card - t pins at exactly +/-1.4 and stays there for many
+        // frames while the window scrolls past it).
+        const tRounded = Math.round(t * 1000);
+        if (prevT[i] === tRounded) return;
+        prevT[i] = tRounded;
+
         const t2 = t * t;
 
         // Tamed curve: less depth, less shrink, less fade, less rotation
         // so that even cards at the edges stay visible (just smaller & dimmer)
-        const depth = 280;
+        const depth = 260;
         const shrink = 0.22;
-        const fade = 0.45;
+        // Strong enough that a card reaches opacity 0 around |t| = 1.27,
+        // i.e. just before the edge of the container - this replaces the
+        // mask-image that used to do the edge fade.
+        const fade = 0.62;
         const rot = 8;
 
         const z = -depth * t2;
@@ -141,21 +202,31 @@ export default function TeamCarousel({ members }) {
         const opacity = Math.max(0, 1 - fade * t2);
         const rotateY = rot * t;
 
-        el.style.transform = `
-          translate3d(0, 0, ${z}px)
-          scale(${scale})
-          rotateY(${rotateY}deg)
-        `;
-        el.style.opacity = opacity;
-        el.style.zIndex = Math.round(100 - t2 * 100);
-        el.style.filter = `blur(${Math.min(2.5, t2 * 2.2)}px)`;
-        el.style.pointerEvents = t2 < 0.18 ? "auto" : "none";
+        cardEl.style.transform = `translateZ(${z}px) scale(${scale}) rotateY(${rotateY}deg)`;
+        wrapEl.style.opacity = opacity;
+        wrapEl.style.zIndex = Math.round(100 - t2 * 100);
       });
 
       rafRef.current = requestAnimationFrame(animate);
     };
 
-    rafRef.current = requestAnimationFrame(animate);
+    // Only animate while the carousel is actually on screen. It sits far
+    // down the page, so without this the loop runs during the whole hero -
+    // competing every frame with the WebGL particle scene's own render loop
+    // and the loading screen's timer.
+    const visibility = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && rafRef.current == null) {
+          lastTime = performance.now();
+          rafRef.current = requestAnimationFrame(animate);
+        } else if (!entry.isIntersecting && rafRef.current != null) {
+          cancelAnimationFrame(rafRef.current);
+          rafRef.current = null;
+        }
+      },
+      { rootMargin: "200px 0px" }
+    );
+    visibility.observe(track.parentElement || track);
 
     // Recompute on resize and after layout settles
     const handleResize = () => {
@@ -168,50 +239,120 @@ export default function TeamCarousel({ members }) {
       computeOffset();
     }, 100);
 
+    // Two-finger trackpad swipe: a horizontal-dominant wheel gesture drives
+    // the carousel directly; a vertical one is left alone so the page still
+    // scrolls normally. Bound natively (not via onWheel) with passive:false
+    // so preventDefault actually stops the browser's own swipe-navigation
+    // gesture instead of being silently ignored.
+    const handleWheel = (event) => {
+      const absX = Math.abs(event.deltaX);
+      const absY = Math.abs(event.deltaY);
+      if (absX < 2 || absX <= absY) return;
+      event.preventDefault();
+      isUserInteractingRef.current = true;
+      momentumRef.current = 0; // trackpad supplies its own decay
+      targetOffsetRef.current += event.deltaX * 1.15;
+      offsetRef.current = targetOffsetRef.current;
+      startResumeTimer();
+    };
+    track.addEventListener("wheel", handleWheel, { passive: false });
+
     return () => {
-      cancelAnimationFrame(rafRef.current);
+      if (rafRef.current != null) cancelAnimationFrame(rafRef.current);
+      rafRef.current = null;
+      visibility.disconnect();
       clearTimeout(resumeTimerRef.current);
       clearTimeout(remeasureTimer);
       window.removeEventListener("resize", handleResize);
+      track.removeEventListener("wheel", handleWheel);
     };
   }, [members]);
 
   /* --------------------- INTERACTION --------------------- */
 
+  const pointerIdRef = useRef(null);
+  const capturedRef = useRef(false);
+
+  // A plain click/tap must behave completely normally - no pointer capture,
+  // no auto-scroll pause - so hover and the card's Link navigation work
+  // untouched. Only once movement crosses CLICK_DRAG_THRESHOLD do we treat
+  // this as a real drag: capture the pointer and pause auto-scroll.
   const handlePointerDown = (event) => {
-    isUserInteractingRef.current = true;
     isDraggingRef.current = true;
     dragDistanceRef.current = 0;
     didDragRef.current = false;
-    setIsDragging(true);
+    capturedRef.current = false;
+    // Grabbing mid-fling catches the carousel, like stopping a spinning wheel
+    momentumRef.current = 0;
+    velocityRef.current = 0;
+    lastMoveTimeRef.current = performance.now();
+    pointerIdRef.current = event.pointerId;
     dragStartRef.current = {
       x: event.clientX,
       offset: targetOffsetRef.current,
     };
-
-    if (event.currentTarget) {
-      event.currentTarget.setPointerCapture?.(event.pointerId);
-    }
   };
 
   const handlePointerMove = (event) => {
     if (!isDraggingRef.current) return;
     const dx = event.clientX - dragStartRef.current.x;
     dragDistanceRef.current = Math.max(dragDistanceRef.current, Math.abs(dx));
-    if (dragDistanceRef.current > CLICK_DRAG_THRESHOLD) {
+
+    if (!didDragRef.current && dragDistanceRef.current > CLICK_DRAG_THRESHOLD) {
       didDragRef.current = true;
+      isUserInteractingRef.current = true;
+      setIsDragging(true);
+      if (!capturedRef.current) {
+        // Throws if the pointer is already gone; capture is an enhancement,
+        // not a requirement, so never let it abort the drag itself.
+        try {
+          event.currentTarget.setPointerCapture?.(pointerIdRef.current);
+        } catch {}
+        capturedRef.current = true;
+      }
     }
+
+    if (!didDragRef.current) return;
+
+    const prevOffset = targetOffsetRef.current;
     targetOffsetRef.current = dragStartRef.current.offset - dx * 1.4;
     offsetRef.current = targetOffsetRef.current;
+
+    // Track how fast the finger/cursor is actually moving so the release
+    // can hand that speed to the fling. Smoothed, because raw per-event
+    // deltas are noisy and a single jittery last event shouldn't decide
+    // the whole throw.
+    const now = performance.now();
+    const dt = now - lastMoveTimeRef.current;
+    if (dt > 0 && dt < 100) {
+      const instantV = (targetOffsetRef.current - prevOffset) / dt;
+      velocityRef.current = velocityRef.current * 0.6 + instantV * 0.4;
+    }
+    lastMoveTimeRef.current = now;
   };
 
   const handlePointerUp = () => {
+    if (!isDraggingRef.current) return;
     isDraggingRef.current = false;
     setIsDragging(false);
-    clearTimeout(resumeTimerRef.current);
-    resumeTimerRef.current = setTimeout(() => {
-      isUserInteractingRef.current = false;
-    }, RESUME_DELAY);
+    capturedRef.current = false;
+
+    if (!didDragRef.current) return;
+
+    // Throw it. If the release was slow enough to not count as a flick,
+    // skip straight to waiting for auto-scroll to resume.
+    const stale = performance.now() - lastMoveTimeRef.current > 120;
+    if (!stale && Math.abs(velocityRef.current) > MOMENTUM_MIN * 2) {
+      momentumRef.current = Math.max(
+        -MOMENTUM_MAX,
+        Math.min(MOMENTUM_MAX, velocityRef.current)
+      );
+      clearTimeout(resumeTimerRef.current); // resumes once the fling decays
+    } else {
+      momentumRef.current = 0;
+      startResumeTimer();
+    }
+    velocityRef.current = 0;
   };
 
   // A drag that moved past the threshold shouldn't also trigger the card's
@@ -247,12 +388,15 @@ export default function TeamCarousel({ members }) {
               href={`/team/${member.slug}`}
               className="wn-team-card"
               draggable={false}
+              ref={(el) => (cardRefs.current[i] = el)}
             >
               <div className="wn-team-card-image">
                 <img
                   src={member.hero?.src}
                   alt={member.hero?.alt || member.fullName}
                   draggable="false"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="wn-team-card-overlay" />
               </div>
@@ -285,24 +429,20 @@ export default function TeamCarousel({ members }) {
         .wn-team-carousel {
           position: relative;
           width: 100%;
-          min-height: 520px;
+          max-width: 100%;
+          min-height: 600px;
           padding: 4rem 0 2rem;
-          perspective: 1400px;
-          perspective-origin: 50% 50%;
-          -webkit-mask-image: linear-gradient(
-            to right,
-            transparent 0%,
-            black 10%,
-            black 90%,
-            transparent 100%
-          );
-          mask-image: linear-gradient(
-            to right,
-            transparent 0%,
-            black 10%,
-            black 90%,
-            transparent 100%
-          );
+          /* The track inside is width:max-content (~12,000px for 30 cards).
+             Without this it becomes the page's real layout width - which
+             blew the mobile viewport out sideways and shrank everything,
+             including the loading screen, to fit it. */
+          overflow: hidden;
+          /* No mask-image here on purpose. A mask forces this whole
+             ~1280x744 box through an offscreen pass, so ANY paint inside
+             it (a hover colour change, say) is amplified into re-masking
+             the entire container - on the same GPU the WebGL particle
+             background is using. The per-card opacity falloff in the
+             animation loop already does the edge fade. */
         }
 
         .wn-team-track {
@@ -311,7 +451,10 @@ export default function TeamCarousel({ members }) {
           justify-content: flex-start;
           gap: 28px;
           padding: 2rem 0 4rem;
-          transform-style: preserve-3d;
+          /* Deliberately NO will-change here: this element is ~12,000px
+             wide, so promoting it to its own compositor layer costs ~32MB
+             of GPU texture memory and starves the WebGL particle scene on
+             phones. The transform still animates fine without it. */
           width: max-content;
           touch-action: pan-y;
           user-select: none;
@@ -319,11 +462,14 @@ export default function TeamCarousel({ members }) {
         }
 
         .wn-team-card-wrap {
-          flex: 0 0 320px;
-          height: 440px;
-          transform-style: preserve-3d;
-          will-change: transform, opacity, filter;
-          transition: filter 0.2s ease;
+          flex: 0 0 380px;
+          height: 520px;
+          /* Each card gets its OWN local perspective instead of one shared
+             on the whole track: every card is its own independent 3D
+             context, so its visual position always matches its real
+             hit-test box, and animating one card's transform (e.g. on
+             hover) never forces its neighbors to recompute. */
+          perspective: 1200px;
         }
 
         .wn-team-card {
@@ -336,13 +482,23 @@ export default function TeamCarousel({ members }) {
           text-decoration: none;
           overflow: hidden;
           position: relative;
-          transform-style: preserve-3d;
-          transition: background 0.5s ease, border-color 0.5s ease;
         }
 
-        .wn-team-card:hover {
-          background: #111;
-          border-color: rgba(232,230,227,0.28);
+        /* Hover is deliberately confined to the small footer strip.
+           A full-card overlay had to blend a 380x520 surface over a
+           3D-transformed subtree (with a filtered image inside it) for
+           every frame of its transition - and because cards slide under a
+           stationary cursor while auto-scrolling, those transitions fire
+           back to back across cards. That repaint cost lands on the same
+           GPU as the WebGL particle background and drags its frame rate
+           down. Repainting a ~16px text strip does not.
+           hover:hover keeps it off touch devices entirely, where it would
+           otherwise stick on after a tap. */
+        @media (hover: hover) and (pointer: fine) {
+          .wn-team-card:hover .wn-team-card-footer {
+            color: rgba(232, 230, 227, 0.9);
+            border-top-color: rgba(232, 230, 227, 0.35);
+          }
         }
 
         .wn-team-card-image {
@@ -358,14 +514,6 @@ export default function TeamCarousel({ members }) {
           height: 100%;
           object-fit: cover;
           filter: grayscale(0.9) contrast(0.95) brightness(0.78);
-          transform: scale(1);
-          transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1),
-                      filter 0.8s ease;
-        }
-
-        .wn-team-card:hover .wn-team-card-image img {
-          transform: scale(1.06);
-          filter: grayscale(0.15) contrast(1) brightness(0.95);
         }
 
         .wn-team-card-overlay {
@@ -416,6 +564,7 @@ export default function TeamCarousel({ members }) {
           color: rgba(232,230,227,0.45);
           padding-top: 0.8rem;
           border-top: 1px solid rgba(232,230,227,0.08);
+          transition: color 0.25s ease, border-top-color 0.25s ease;
         }
 
         .wn-team-hint {
@@ -438,8 +587,8 @@ export default function TeamCarousel({ members }) {
 
         @media (max-width: 700px) {
           .wn-team-card-wrap {
-            flex: 0 0 240px;
-            height: 360px;
+            flex: 0 0 280px;
+            height: 420px;
           }
 
           .wn-team-card-name {

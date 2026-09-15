@@ -9,7 +9,7 @@ import * as THREE from "three";
    SETTINGS
 ========================================================= */
 
-const COUNT = 18000;
+const COUNT = 10000;
 
 const WORD = "WENODES";
 
