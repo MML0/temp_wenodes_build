@@ -7,7 +7,7 @@ export default function Navigation() {
       <Link className="logo" href="/" style={{ display: "flex", alignItems: "center", gap: "10px" }}>
         <PixelLogo size={22} />
         <span style={{ fontSize: "16px", fontWeight: 800, letterSpacing: "-0.04em" }}>
-          ENODES<span style={{ fontSize: "7px", verticalAlign: "top", marginLeft: "2px" }}>®</span>
+          WENODES<span style={{ fontSize: "7px", verticalAlign: "top", marginLeft: "2px" }}>®</span>
         </span>
       </Link>
       <nav>

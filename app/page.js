@@ -5,7 +5,7 @@ import ParticleScene from "./components/ParticleScene";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import ProjectCard from "./components/ProjectCard";
-import MemberCard from "./components/MemberCard";
+import TeamCarousel from "./components/TeamCarousel";
 import { works } from "./data/works";
 import { team } from "./data/team";
 import Link from "next/link";
@@ -161,7 +161,6 @@ function Reveal({ children, delay = 0 }) {
 
 export default function Home() {
   const [coords, setCoords] = useState({ x: 0.5, y: 0.5 });
-  const featuredTeam = team.slice(2, 5);
 
   const handleMouseMove = (e) => {
     setCoords({
@@ -403,11 +402,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="team-grid">
-            {featuredTeam.map((member) => (
-              <MemberCard key={member.id} member={member} />
-            ))}
-          </div>
+          <TeamCarousel members={team} />
         </section>
       </Reveal>
 

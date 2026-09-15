@@ -618,7 +618,8 @@ export const team = [
     "Blender",
     "Houdini",
     "Processing",
-    "Arduino"
+    "Arduino",
+    "Figma"
   ],
 
   stats: [
@@ -725,7 +726,7 @@ export const team = [
   slug: "mohsen-kamali-mehr",
 
   fullName: "Mohsen Kamali Mehr",
-  nickname: "MOHSEN",
+  nickname: "MR Kamali",
 
   role: "Laser Lighting Designer / Laser Show Specialist",
 
@@ -1114,7 +1115,7 @@ export const team = [
       type: "text",
       title: "CREATIVE JOURNEY",
       text:
-        "Alongside project management, Ara has recently started exploring Visual Art and developing his skills in creative technologies and visual experiences."
+        "Alongside project management, Ara has recently started exploring Visual Art and developing her skills in creative technologies and visual experiences."
     },
 
     {
@@ -1533,5 +1534,398 @@ export const team = [
     showCredits: true,
     previousNext: true
   }
-}
+},
+{
+  id: 10,
+  slug: "paniz",
+
+  fullName: "Paniz Habibi",
+  nickname: "PANIZ",
+  role: "International Partnerships Specialist / Creative Experience Design",
+
+  description:
+    "Creative and curious, always excited by what's in motion — especially live projects and experiential work. Building bridges between WeNodes and new people, places, and opportunities around the world.",
+
+  longDescription:
+    "Paniz works across social media, documentation, and international partnerships at WeNodes, with visual art work on the horizon as her path with the team continues. For her, creativity only really matters when it's personal — even the simplest or most abstract piece should carry a trace of the maker's mind and experience. Color is a language she keeps coming back to, and one that never stops exciting her. Learning, for Paniz, has no finish line: she's always looking for something new to try, build, or understand — and for ways to carry what WeNodes builds out into the world, toward new people and new opportunities.",
+
+  hero: {
+    type: "image",
+    src: "/team/paniz/hero.jpg",
+    alt: "Paniz Habibi",
+    effect: "soft-focus",
+    position: "center",
+    scale: 1
+  },
+
+  story: {
+    title: "NEVER BE AFRAID TO DO THE IDEA",
+    intro:
+      "Paniz believes the most creative work is the most personal work — and that color, more than anything else, is how she says so."
+  },
+
+  location: "Tehran, Iran",
+
+  disciplines: [
+    "Creative Experience Design",
+    "Visual Art & Design",
+    "Immersive Media",
+    "Creative Technology",
+    "International Partnerships"
+  ],
+
+  specialties: [
+    "Interactive Experiences",
+    "Digital & Generative Art",
+    "3D & Spatial Visualization",
+    "Social Media & Documentation"
+  ],
+
+  tools: [
+    "TouchDesigner",
+    "Rhino 3D",
+    "Sketchbook Pro",
+    "Photoshop",
+    "Generative AI Tools"
+  ],
+
+  stats: [
+    {
+      label: "Experience",
+      value: "7+ YRS"
+    },
+    {
+      label: "Projects",
+      value: "8"
+    },
+    {
+      label: "Major Projects",
+      value: "2"
+    }
+  ],
+
+  quote:
+    "Never be afraid to do the idea.",
+
+  content: [
+    {
+      type: "text",
+      title: "APPROACH",
+      text:
+        "Paniz treats creativity as something inherently personal. Even a simple or abstract piece, to her, should be rooted in a particular mind, a particular way of seeing — something that could only have come from her. Color is central to that language, and one of the fastest ways she finds her way into a piece."
+    },
+
+    {
+      type: "quote",
+      text:
+        "The most creative thing is the most personal thing."
+    },
+
+    {
+      type: "text",
+      title: "A DEFINING PROJECT",
+      text:
+        "Paniz's first collaboration with WeNodes was on PAKSHOMA, back before she formally joined the team. It was a demanding project, but it proved something bigger than the work itself: that WeNodes was a place she could belong. What stayed with her was how the team showed up for her through the hard parts of it — that's what team came to mean to her, and it's shaped how she tries to show up for the people she works with now."
+    },
+
+    {
+      type: "text",
+      title: "CURRENT FOCUS",
+      text:
+        "Right now, Paniz's work at WeNodes centers on social media, documentation, and international partnerships — carrying the studio's work out to new people and new opportunities worldwide. Her involvement in visual art is the next chapter she's building toward."
+    }
+  ],
+
+  // TODO: replace with the actual numeric ids for these projects
+  // from data/works.js — Continuum, PAKSHOMA, ELECOMP
+  works: [/* Continuum */, /* PAKSHOMA */, /* ELECOMP */],
+
+  links: {
+    linkedin:
+      "https://www.linkedin.com/in/paniz-habibi-302306425",
+    instagram:
+      "https://www.instagram.com/panizhabibi"
+  },
+
+  credits: {
+    studio: "WeNodes",
+    role: "International Partnerships Specialist"
+  },
+
+  page: {
+    showStory: true,
+    showStats: true,
+    showTools: true,
+    showWorks: true,
+    showGallery: true,
+    showCredits: true,
+    previousNext: true
+  }
+},
+{
+  id: 11,
+  slug: "moonessaa",
+
+  fullName: "Mooness Younessie",
+  nickname: "MOONESSAA",
+  role: "Visual Artist / AI Content Director",
+
+  description:
+    "Visual artist working across graphic design, animation, and New Media Arts, now focused on audiovisual experiences, generative art, and AI-assisted content creation.",
+
+  longDescription:
+    "Mooness brings over seven years of experience across graphic design, animation, visual communication, and New Media Arts, holding a Bachelor's degree in Design and Communications and a Master's degree in Illustration from the University of Tehran. After several years leading creative projects for high-end brands in commercial design, she began exploring New Media Arts at WeNodes Studio in 2025. Her practice now centers on audiovisual experiences, generative art, immersive visuals, and AI-assisted content creation — work built around a simple idea: that a visual should do more than be seen. It should capture attention, engage the senses, and create a real connection between a brand and its audience.",
+
+  hero: {
+    type: "image",
+    src: "/team/moonessaa/hero.jpg",
+    alt: "Mooness Younessie",
+    effect: "soft-focus",
+    position: "center",
+    scale: 1
+  },
+
+  story: {
+    title: "MEANT TO BE EXPERIENCED",
+    intro:
+      "Mooness works in the space between art, design, and technology, turning ideas into experiences that can be seen, felt, and remembered."
+  },
+
+  location: "Tehran, Iran",
+
+  disciplines: [
+    "Visual Art",
+    "Graphic Design",
+    "Animation",
+    "New Media Arts",
+    "AI-Assisted Content"
+  ],
+
+  specialties: [
+    "Audiovisual Experiences",
+    "Generative Art",
+    "Immersive Visuals",
+    "AI Content Direction",
+    "Visual Communication"
+  ],
+
+  // placeholder — confirm her actual software/tool stack
+  tools: [
+    "After Effects",
+    "Illustrator",
+    "Photoshop",
+    "TouchDesigner",
+    "Generative AI Tools"
+  ],
+
+  stats: [
+    {
+      label: "Experience",
+      value: "7+ YRS"
+    },
+    {
+      label: "New Media Practice",
+      value: "SINCE 2025"
+    },
+    {
+      label: "Degrees",
+      value: "BA + MA"
+    }
+  ],
+
+  quote:
+    "Creating visuals that are meant to be experienced.",
+
+  content: [
+    {
+      type: "text",
+      title: "APPROACH",
+      text:
+        "Mooness explores the space between art, design, and technology to transform ideas into immersive experiences that can be seen, felt, and remembered."
+    },
+
+    {
+      type: "text",
+      title: "BACKGROUND",
+      text:
+        "With a Bachelor's in Design and Communications and a Master's in Illustration from the University of Tehran, Mooness spent several years in commercial design, leading creative projects for high-end brands before turning toward New Media Arts at WeNodes in 2025."
+    },
+
+    {
+      type: "quote",
+      text:
+        "A visual shouldn't just be seen — it should be felt."
+    },
+
+    {
+      type: "text",
+      title: "CURRENT INTERESTS",
+      text:
+        "Audiovisual experiences, generative art, immersive visuals, and AI-assisted content creation — building visual work that captures attention and creates a real connection between brand and audience."
+    }
+  ],
+
+  // no works linked yet — add ids from data/works.js once assigned
+  works: [],
+
+  credits: {
+    studio: "WeNodes",
+    role: "Visual Artist / AI Content Director"
+  },
+
+  page: {
+    showStory: true,
+    showStats: true,
+    showTools: true,
+    showWorks: false,
+    showGallery: true,
+    showCredits: true,
+    previousNext: true
+  }
+},
+{
+  id: 12,
+  slug: "ahr",
+
+  fullName: "Arman Hajialinaghi",
+  nickname: "AHR",
+  role: "Embedded & Interactive Systems Developer",
+
+  description:
+    "Embedded and interactive systems developer working where hardware, software, light, and interaction meet — turning creative ideas into real, working systems.",
+
+  longDescription:
+    "Arman's focus is on embedded systems, IoT, and interactive projects — the space where hardware, software, light, and interaction come together. He works mostly on the design and implementation side, building the technical systems that turn creative ideas into real projects. He started out with electronics and microcontrollers and has since moved toward interactive systems, lighting, automation, and hybrid hardware/software work. What interests him most is building systems that don't just function, but become part of an experience.",
+
+  hero: {
+    type: "image",
+    src: "/team/ahr/hero.jpg",
+    alt: "Arman Hajialinaghi",
+    effect: "soft-focus",
+    position: "center",
+    scale: 1
+  },
+
+  story: {
+    title: "LIKE THE SEA",
+    intro:
+      "\"Life is like the sea — sometimes calm, sometimes stormy.\" Arman builds systems meant to be felt as much as used, where technology sits quietly inside something natural rather than announcing itself."
+  },
+
+  location: "Tehran, Iran",
+
+  disciplines: [
+    "Embedded Systems",
+    "IoT",
+    "Interactive Systems",
+    "Real-time Interaction",
+    "Electronics & Hardware",
+    "Automation & Control",
+    "Interactive Lighting"
+  ],
+
+  specialties: [
+    "Embedded Development",
+    "Sensor-driven Interaction",
+    "Lighting Systems",
+    "Hardware / Software Integration"
+  ],
+
+  tools: [
+    "ESP32 / ESP8266",
+    "Arduino",
+    "C++",
+    "Python",
+    "MQTT",
+    "UDP / TCP",
+    "Proteus",
+    "SolidWorks",
+    "Raspberry Pi",
+    "LiDAR",
+    "Ultrasonic Sensors",
+    "MIDI"
+  ],
+
+  stats: [
+    {
+      label: "Experience",
+      value: "4+ YRS"
+    },
+    {
+      label: "Projects",
+      value: "10+"
+    },
+    {
+      label: "Lighting Installs",
+      value: "9"
+    }
+  ],
+
+  quote:
+    "Life is like the sea — sometimes calm, sometimes stormy.",
+
+  content: [
+    {
+      type: "text",
+      title: "APPROACH",
+      text:
+        "Arman builds systems that are meant to be part of an experience, not just make something work. His path started with electronics and microcontrollers and grew toward interactive systems, lighting, automation, and hybrid hardware/software projects."
+    },
+
+    {
+      type: "text",
+      title: "VLIGHT",
+      text:
+        "One of the projects Arman found most engaging was VLight — an ESP8266-based system built to control a lighting setup and run different patterns across it. What drew him in was the link between the software and hardware sides: turning data into a real, visual output."
+    },
+
+    {
+      type: "quote",
+      text:
+        "A distance sensor doesn't have to just measure distance — it can become a tool for interaction."
+    },
+
+    {
+      type: "text",
+      title: "LIDAR WALL INTERACTION",
+      text:
+        "A different kind of project was an interactive wall built around LiDAR — using the sensor to detect where on the wall's surface someone was interacting and turning that into a responsive system. Repurposing a distance sensor into an interaction tool, instead of using it the conventional way, was what made the project stand out to him."
+    },
+
+    {
+      type: "text",
+      title: "CURRENT INTERESTS",
+      text:
+        "Embedded systems, IoT, real-time interaction, and interactive lighting — building the technical layer that lets a creative idea become a working, physical experience."
+    }
+  ],
+
+  // WeNodes projects he's worked on — map to ids in data/works.js once available:
+  // Lighting System Runs 1–4, Smart Tunnel Entrance, INOTEX, Pakshoma Dream House,
+  // MIDI for Kalin, Video Looper, Bank Mellat LiDAR Touch Wall, Node Room,
+  // WeNodes Platform Website (Frontend), VLight, Espinas Hotel (ongoing)
+  works: [],
+
+  links: {
+    instagram: "https://www.instagram.com/arman.h.r",
+    github: "https://github.com/Arman-H-R"
+    // linkedin: "",
+    // website: ""
+  },
+
+  credits: {
+    studio: "WeNodes",
+    role: "Embedded & Interactive Systems Developer"
+  },
+
+  page: {
+    showStory: true,
+    showStats: true,
+    showTools: true,
+    showWorks: false,
+    showGallery: true,
+    showCredits: true,
+    previousNext: true
+  }
+},
 ];

@@ -11,7 +11,7 @@ import Link from "next/link";
    - Cards follow a bezier curve in perspective
    - Center card is larger, more forward, more in focus
    - Side cards recede, shrink, fade
-   - Pauses on hover / drag
+   - Pauses while dragging, resumes smoothly 1s after release
 ========================================================= */
 
 export default function TeamCarousel({ members }) {
@@ -24,8 +24,13 @@ export default function TeamCarousel({ members }) {
   const isDraggingRef = useRef(false);
   const dragStartRef = useRef({ x: 0, offset: 0 });
   const isUserInteractingRef = useRef(false);
+  const dragDistanceRef = useRef(0);
+  const didDragRef = useRef(false);
 
-  const [isPaused, setIsPaused] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+
+  const RESUME_DELAY = 1000; // ms after release before auto-scroll resumes
+  const CLICK_DRAG_THRESHOLD = 6; // px of movement before a drag cancels the click
 
   // Triple the list for seamless infinite looping
   const looped = [...members, ...members, ...members];
@@ -176,6 +181,9 @@ export default function TeamCarousel({ members }) {
   const handlePointerDown = (event) => {
     isUserInteractingRef.current = true;
     isDraggingRef.current = true;
+    dragDistanceRef.current = 0;
+    didDragRef.current = false;
+    setIsDragging(true);
     dragStartRef.current = {
       x: event.clientX,
       offset: targetOffsetRef.current,
@@ -189,51 +197,45 @@ export default function TeamCarousel({ members }) {
   const handlePointerMove = (event) => {
     if (!isDraggingRef.current) return;
     const dx = event.clientX - dragStartRef.current.x;
+    dragDistanceRef.current = Math.max(dragDistanceRef.current, Math.abs(dx));
+    if (dragDistanceRef.current > CLICK_DRAG_THRESHOLD) {
+      didDragRef.current = true;
+    }
     targetOffsetRef.current = dragStartRef.current.offset - dx * 1.4;
     offsetRef.current = targetOffsetRef.current;
-
-    clearTimeout(resumeTimerRef.current);
-    resumeTimerRef.current = setTimeout(() => {
-      isUserInteractingRef.current = false;
-    }, 1800);
   };
 
   const handlePointerUp = () => {
     isDraggingRef.current = false;
+    setIsDragging(false);
     clearTimeout(resumeTimerRef.current);
     resumeTimerRef.current = setTimeout(() => {
       isUserInteractingRef.current = false;
-    }, 1800);
+    }, RESUME_DELAY);
   };
 
-  const handleWheel = (event) => {
-    isUserInteractingRef.current = true;
-    targetOffsetRef.current += event.deltaY * 1.2 + event.deltaX * 1.2;
-
-    clearTimeout(resumeTimerRef.current);
-    resumeTimerRef.current = setTimeout(() => {
-      isUserInteractingRef.current = false;
-    }, 1800);
+  // A drag that moved past the threshold shouldn't also trigger the card's
+  // link navigation - swallow that one click, then let normal clicks through.
+  const handleClickCapture = (event) => {
+    if (didDragRef.current) {
+      event.preventDefault();
+      event.stopPropagation();
+      didDragRef.current = false;
+    }
   };
 
   return (
-    <div
-      className="wn-team-carousel"
-      onPointerEnter={() => setIsPaused(true)}
-      onPointerLeave={() => {
-        setIsPaused(false);
-        handlePointerUp();
-      }}
-    >
+    <div className="wn-team-carousel">
       <div
         className="wn-team-track"
         ref={trackRef}
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
+        onPointerLeave={handlePointerUp}
         onPointerCancel={handlePointerUp}
-        onWheel={handleWheel}
-        style={{ cursor: isDraggingRef.current ? "grabbing" : "grab" }}
+        onClickCapture={handleClickCapture}
+        style={{ cursor: isDragging ? "grabbing" : "grab" }}
       >
         {looped.map((member, i) => (
           <div
@@ -244,6 +246,7 @@ export default function TeamCarousel({ members }) {
             <Link
               href={`/team/${member.slug}`}
               className="wn-team-card"
+              draggable={false}
             >
               <div className="wn-team-card-image">
                 <img
@@ -274,7 +277,7 @@ export default function TeamCarousel({ members }) {
 
       <div className="wn-team-hint">
         <span>←</span>
-        <span>DRAG / SCROLL</span>
+        <span>DRAG TO EXPLORE</span>
         <span>→</span>
       </div>
 
