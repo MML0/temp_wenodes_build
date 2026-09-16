@@ -919,7 +919,7 @@ export const works = [
       { type: "text", title: "Emerging from Silence", text: "Sound and light emerged from silence and gradually dissolved back into it, creating a cyclical journey through presence and absence." },
       { type: "image", src: "/works/silence-experience/01.jpg", alt: "Silence Experience performance" },
       { type: "text", title: "Four Evolving Layers", text: "Structured in four evolving layers, the project guided audiences through different emotional and spiritual interpretations of silence." },
-      { type: "gallery", images: ["/works/silence-experience/02.jpg", "/works/silence-experience/03.jpg", "/works/silence-experience/04.jpg"] },
+      { type: "gallery", images: ["/works/silence-experience/02.jpg", "/works/silence-experience/03.jpg", "/works/silence-experience/04.jpg", "/works/silence-experience/06.jpg", "/works/silence-experience/05.jpg"] },
       { type: "quote", text: "In silence, we find the space between perception and existence." }
     ],
     link: "#",

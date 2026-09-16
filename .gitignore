@@ -12,3 +12,5 @@ test.py
 out/
 public/team/*
 graphify-out/*
+.web/*
+DS_Store
