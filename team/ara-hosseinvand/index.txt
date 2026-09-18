@@ -1,0 +1,1555 @@
+1:"$Sreact.fragment"
+2:I[2658,["137","static/chunks/137-f728127ec681a27e.js","177","static/chunks/app/layout-90d55324faf0433e.js"],"default"]
+3:I[9766,[],""]
+4:I[8924,[],""]
+6:I[4431,[],"OutletBoundary"]
+8:I[5278,[],"AsyncMetadataOutlet"]
+a:I[4431,[],"ViewportBoundary"]
+c:I[4431,[],"MetadataBoundary"]
+d:"$Sreact.suspense"
+f:I[7150,[],""]
+:HL["/_next/static/media/4e10c8bdf804750d-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/7291cd39138a9f09-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/75c8fc24fc430ce2-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/c7ad1ca6150e3771-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/ca4179f71e7f1e56-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/53bd5825c9efcf23.css","style"]
+0:{"P":null,"b":"wuS4itDaxXnJZjjoA4urR","p":"","c":["","team","ara-hosseinvand",""],"i":false,"f":[[["",{"children":["team",{"children":[["slug","ara-hosseinvand","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/53bd5825c9efcf23.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"__variable_e8b694 __variable_93deb1","children":["$","body",null,{"children":[["$","$L2",null,{}],["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]}]]}],{"children":["team",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","ara-hosseinvand","d"],["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L5",null,["$","$L6",null,{"children":["$L7",["$","$L8",null,{"promise":"$@9"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$La",null,{"children":"$Lb"}],["$","meta",null,{"name":"next-size-adjust","content":""}]],["$","$Lc",null,{"children":["$","div",null,{"hidden":true,"children":["$","$d",null,{"fallback":null,"children":"$Le"}]}]}]]}],false]],"m":"$undefined","G":["$f",[]],"s":false,"S":true}
+10:I[2355,["619","static/chunks/619-ba102abea3e3d0e4.js","137","static/chunks/137-f728127ec681a27e.js","978","static/chunks/app/team/%5Bslug%5D/page-35d4e9cf13457ec9.js"],"default"]
+11:I[2619,["619","static/chunks/619-ba102abea3e3d0e4.js","137","static/chunks/137-f728127ec681a27e.js","978","static/chunks/app/team/%5Bslug%5D/page-35d4e9cf13457ec9.js"],""]
+12:I[6137,["619","static/chunks/619-ba102abea3e3d0e4.js","137","static/chunks/137-f728127ec681a27e.js","978","static/chunks/app/team/%5Bslug%5D/page-35d4e9cf13457ec9.js"],"default"]
+5:["$","main",null,{"className":"subpage wn-member-page","data-member":"ara-hosseinvand","children":[["$","div",null,{"className":"scene","aria-hidden":"true","style":{"opacity":0.4},"children":["$","$L10",null,{}]}],["$","div",null,{"className":"grain","aria-hidden":"true"}],["$","div",null,{"className":"wn-grid-overlay"}],["$","header",null,{"className":"nav","children":[["$","$L11",null,{"className":"logo","href":"/","style":{"display":"flex","alignItems":"center","gap":"10px"},"children":[["$","$L12",null,{"size":22}],["$","span",null,{"style":{"fontSize":"16px","fontWeight":800,"letterSpacing":"-0.04em"},"children":["WENODES",["$","span",null,{"style":{"fontSize":"7px","verticalAlign":"top","marginLeft":"2px"},"children":"®"}]]}]]}],["$","nav",null,{"children":[["$","$L11",null,{"href":"/work","children":"WORK"}],["$","$L11",null,{"href":"/team","children":"TEAM"}],["$","$L11",null,{"href":"/about","children":"ABOUT"}]]}],["$","$L11",null,{"className":"contact","href":"/join","children":"JOIN US ↗"}]]}],["$","section",null,{"className":"wn-member-hero","children":[["$","div",null,{"className":"wn-member-system","children":[["$","div",null,{"className":"wn-system-left","children":[["$","span",null,{"className":"wn-system-dot"}],["$","span",null,{"children":"WENODES / PEOPLE SYSTEM"}]]}],["$","span",null,{"children":"06"}]]}],["$","div",null,{"className":"wn-member-eyebrow","children":[["$","span",null,{"children":"Project Manager"}],["$","span",null,{"className":"wn-eyebrow-divider","children":"/"}],["$","span",null,{"children":"Iran"}]]}],["$","h1",null,{"className":"wn-member-title","children":[[["$","span","ARA-0",{"className":"wn-title-word","style":{"--word-delay":"0ms"},"children":"ARA"}]],["$","span",null,{"className":"wn-title-dot","children":"."}]]}],["$","p",null,{"className":"wn-member-description","children":"Project Manager focused on transforming creative visions into real experiences through collaboration and execution."}],["$","div",null,{"className":"wn-scroll-indicator","children":[["$","span",null,{"children":"SCROLL TO EXPLORE"}],["$","span",null,{"className":"wn-scroll-line"}],["$","span",null,{"children":"↓"}]]}]]}],["$","section",null,{"className":"subpage-content wn-member-cover-section","style":{"paddingTop":0},"children":["$","div",null,{"className":"wn-member-cover","children":[["$","div",null,{"className":"wn-cover-meta","children":[["$","span",null,{"children":"01 / IDENTITY"}],["$","span",null,{"children":"ARA"}]]}],["$","div",null,{"className":"wn-member-cover-image","children":[["$","img",null,{"src":"/team/ara/hero.jpg","alt":"Ara Hosseinvand project manager"}],["$","div",null,{"className":"wn-member-cover-overlay"}],["$","div",null,{"className":"wn-member-crosshair","children":[["$","span",null,{}],["$","span",null,{}]]}],["$","div",null,{"className":"wn-member-image-label","children":[["$","span",null,{"children":"SUBJECT"}],["$","strong",null,{"children":"ARA"}]]}]]}],["$","div",null,{"className":"wn-cover-footer","children":[["$","span",null,{"children":"WENODES CREATIVE TECHNOLOGY"}],["$","span",null,{"children":["PERSON /"," ","08"]}]]}]]}]}],["$","section",null,{"className":"subpage-content wn-member-info-section","style":{"paddingTop":"2rem"},"children":[["$","div",null,{"className":"wn-section-label","children":[["$","span",null,{"children":"02 — MEMBER DATA"}],["$","span",null,{"children":"LIVE RECORD"}]]}],["$","div",null,{"className":"wn-member-info-grid","children":[["$","div",null,{"className":"wn-member-info-item","children":[["$","span",null,{"className":"wn-member-info-label","children":"Name"}],["$","span",null,{"className":"wn-member-info-value","children":"Ara Hosseinvand"}]]}],["$","div",null,{"className":"wn-member-info-item","children":[["$","span",null,{"className":"wn-member-info-label","children":"Role"}],["$","span",null,{"className":"wn-member-info-value","children":"Project Manager"}]]}],["$","div",null,{"className":"wn-member-info-item","children":[["$","span",null,{"className":"wn-member-info-label","children":"Location"}],["$","span",null,{"className":"wn-member-info-value","children":"Iran"}]]}],["$","div",null,{"className":"wn-member-info-item","children":[["$","span",null,{"className":"wn-member-info-label","children":"Disciplines"}],["$","span",null,{"className":"wn-member-info-value","children":"Project Management / Creative Production / Team Coordination / Visual Art"}]]}]]}]]}],["$","section",null,{"className":"subpage-content wn-member-tags-section","style":{"paddingTop":0},"children":[["$","div",null,{"className":"wn-section-label","children":[["$","span",null,{"children":"03 — DISCIPLINES"}],["$","span",null,{"children":[4," PARAMETERS"]}]]}],["$","div",null,{"className":"wn-member-tags","children":[["$","span","Project Management",{"className":"wn-member-tag","style":{"--tag-delay":"0ms"},"children":["$L13","Project Management"]}],"$L14","$L15","$L16"]}]]}],"$L17","$L18","$L19","$L1a","$L1b","$L1c","$L1d",false,"$L1e","$L1f","$L20","$L21"]}]
+22:I[8335,["619","static/chunks/619-ba102abea3e3d0e4.js","137","static/chunks/137-f728127ec681a27e.js","978","static/chunks/app/team/%5Bslug%5D/page-35d4e9cf13457ec9.js"],"default"]
+13:["$","span",null,{"className":"wn-member-tag-dot"}]
+14:["$","span","Creative Production",{"className":"wn-member-tag","style":{"--tag-delay":"60ms"},"children":[["$","span",null,{"className":"wn-member-tag-dot"}],"Creative Production"]}]
+15:["$","span","Team Coordination",{"className":"wn-member-tag","style":{"--tag-delay":"120ms"},"children":[["$","span",null,{"className":"wn-member-tag-dot"}],"Team Coordination"]}]
+16:["$","span","Visual Art",{"className":"wn-member-tag","style":{"--tag-delay":"180ms"},"children":[["$","span",null,{"className":"wn-member-tag-dot"}],"Visual Art"]}]
+17:["$","section",null,{"className":"subpage-content wn-member-tags-section","style":{"paddingTop":0},"children":[["$","div",null,{"className":"wn-section-label","children":[["$","span",null,{"children":"04 — SPECIALTIES"}],["$","span",null,{"children":"WORKING SYSTEM"}]]}],["$","div",null,{"className":"wn-member-tags","children":[["$","span","Project Planning",{"className":"wn-member-tag","style":{"--tag-delay":"0ms"},"children":[["$","span",null,{"className":"wn-member-tag-dot"}],"Project Planning"]}],["$","span","Creative Workflow",{"className":"wn-member-tag","style":{"--tag-delay":"60ms"},"children":[["$","span",null,{"className":"wn-member-tag-dot"}],"Creative Workflow"]}],["$","span","Team Management",{"className":"wn-member-tag","style":{"--tag-delay":"120ms"},"children":[["$","span",null,{"className":"wn-member-tag-dot"}],"Team Management"]}],["$","span","Experience Production",{"className":"wn-member-tag","style":{"--tag-delay":"180ms"},"children":[["$","span",null,{"className":"wn-member-tag-dot"}],"Experience Production"]}]]}]]}]
+18:["$","section",null,{"className":"subpage-content wn-member-stats-section","style":{"paddingTop":0},"children":[["$","div",null,{"className":"wn-section-label","children":[["$","span",null,{"children":"05 — SYSTEM METRICS"}],["$","span",null,{"children":"PERFORMANCE DATA"}]]}],["$","div",null,{"className":"wn-member-stats","children":[["$","div","0",{"className":"wn-member-stat","style":{"--stat-delay":"0ms"},"children":[["$","div",null,{"className":"wn-member-stat-value","children":"27"}],["$","div",null,{"className":"wn-member-stat-label","children":"Age"}],["$","div",null,{"className":"wn-member-stat-line"}]]}],["$","div","1",{"className":"wn-member-stat","style":{"--stat-delay":"100ms"},"children":[["$","div",null,{"className":"wn-member-stat-value","children":"11"}],["$","div",null,{"className":"wn-member-stat-label","children":"Projects"}],["$","div",null,{"className":"wn-member-stat-line"}]]}],["$","div","2",{"className":"wn-member-stat","style":{"--stat-delay":"200ms"},"children":[["$","div",null,{"className":"wn-member-stat-value","children":"PM"}],["$","div",null,{"className":"wn-member-stat-label","children":"Role"}],["$","div",null,{"className":"wn-member-stat-line"}]]}]]}]]}]
+19:["$","section",null,{"className":"subpage-content wn-member-story-section","style":{"paddingTop":0},"children":[["$","div",null,{"className":"wn-section-label","children":[["$","span",null,{"children":"06 — CONTEXT"}],["$","span",null,{"children":"PERSONAL NARRATIVE"}]]}],["$","div",null,{"className":"wn-member-story","children":[["$","h2",null,{"children":"FROM VISION TO REALITY"}],["$","p",null,{"children":"Ara connects creative ideas with structured execution, helping teams transform concepts into meaningful experiences."}]]}]]}]
+1a:["$","section",null,{"className":"subpage-content wn-member-description-section","style":{"paddingTop":0},"children":[["$","div",null,{"className":"wn-section-label","children":[["$","span",null,{"children":"07 — ABOUT THE MEMBER"}],["$","span",null,{"children":"FIELD NOTES"}]]}],["$","div",null,{"className":"wn-member-long-description","children":[["$","div",null,{"className":"wn-description-marker","children":[["$","span",null,{}],["$","span",null,{}],["$","span",null,{}]]}],["$","p",null,{"children":"Ara Hosseinvand works as a Project Manager, passionate about creating unique experiences with creative teams and transforming ideas into real projects that audiences can connect with. His role focuses on connecting vision, people, and execution to bring complex creative projects to life."}]]}]]}]
+1b:["$","section",null,{"className":"subpage-content wn-member-tools-section","style":{"paddingTop":0},"children":[["$","div",null,{"className":"wn-section-label","children":[["$","span",null,{"children":"08 — TOOLCHAIN"}],["$","span",null,{"children":"ACTIVE STACK"}]]}],["$","div",null,{"className":"wn-member-tools","children":[["$","div","Microsoft Word",{"className":"wn-tool","children":[["$","span",null,{"className":"wn-tool-number","children":"01"}],["$","span",null,{"className":"wn-tool-name","children":"Microsoft Word"}],["$","span",null,{"className":"wn-tool-arrow","children":"↗"}]]}],["$","div","Excel",{"className":"wn-tool","children":[["$","span",null,{"className":"wn-tool-number","children":"02"}],["$","span",null,{"className":"wn-tool-name","children":"Excel"}],["$","span",null,{"className":"wn-tool-arrow","children":"↗"}]]}],["$","div","MSP",{"className":"wn-tool","children":[["$","span",null,{"className":"wn-tool-number","children":"03"}],["$","span",null,{"className":"wn-tool-name","children":"MSP"}],["$","span",null,{"className":"wn-tool-arrow","children":"↗"}]]}],["$","div","TouchDesigner",{"className":"wn-tool","children":[["$","span",null,{"className":"wn-tool-number","children":"04"}],["$","span",null,{"className":"wn-tool-name","children":"TouchDesigner"}],["$","span",null,{"className":"wn-tool-arrow","children":"↗"}]]}],["$","div","GPT",{"className":"wn-tool","children":[["$","span",null,{"className":"wn-tool-number","children":"05"}],["$","span",null,{"className":"wn-tool-name","children":"GPT"}],["$","span",null,{"className":"wn-tool-arrow","children":"↗"}]]}],["$","div","Claude",{"className":"wn-tool","children":[["$","span",null,{"className":"wn-tool-number","children":"06"}],["$","span",null,{"className":"wn-tool-name","children":"Claude"}],["$","span",null,{"className":"wn-tool-arrow","children":"↗"}]]}]]}]]}]
+1c:["$","section",null,{"className":"subpage-content wn-member-quote-section","style":{"paddingTop":0},"children":["$","blockquote",null,{"className":"wn-member-big-quote","children":[["$","span",null,{"className":"wn-quote-mark","children":"“"}],["$","span",null,{"children":"From Vision to Reality."}]]}]}]
+1d:["$","section",null,{"className":"subpage-content wn-member-content-section","style":{"paddingTop":0},"children":[["$","div",null,{"className":"wn-section-label","children":[["$","span",null,{"children":"09 — PROCESS / MEDIA"}],["$","span",null,{"children":"PERSONAL ARCHIVE"}]]}],[["$","div","0,0",{"className":"wn-member-content-block wn-reveal","style":{"--reveal-delay":"0ms"},"children":[["$","div",null,{"className":"wn-block-index","children":"01"}],["$","div",null,{"className":"wn-block-content","children":[["$","h3",null,{"children":"APPROACH"}],["$","p",null,{"children":"Ara believes the most rewarding part of project management is creating special experiences with a team and turning creative ideas into real projects that people can emotionally connect with."}]]}]]}],["$","div","1,1",{"className":"wn-member-content-block wn-reveal","style":{"--reveal-delay":"80ms"},"children":["$","div",null,{"className":"wn-media-frame","children":[["$","div",null,{"className":"wn-media-meta","children":[["$","span",null,{"children":["MEDIA /"," ","02"]}],["$","span",null,{"children":"IMAGE"}]]}],["$","div",null,{"className":"wn-member-image","children":["$","img",null,{"src":"/team/ara/01.jpg","alt":"Ara working on creative project management","loading":"lazy"}]}]]}]}],["$","div","2,2",{"className":"wn-member-content-block wn-reveal","style":{"--reveal-delay":"160ms"},"children":[["$","div",null,{"className":"wn-block-index","children":"03"}],["$","div",null,{"className":"wn-block-content","children":["$","blockquote",null,{"className":"wn-member-quote","children":[["$","span",null,{"className":"wn-quote-mark","children":"\""}],["$","span",null,{"children":"A beautiful idea needs the right team, structure, and direction to become reality."}]]}]}]]}],["$","div","3,3",{"className":"wn-member-content-block wn-reveal","style":{"--reveal-delay":"240ms"},"children":[["$","div",null,{"className":"wn-block-index","children":"04"}],["$","div",null,{"className":"wn-block-content","children":[["$","h3",null,{"children":"CREATIVE JOURNEY"}],["$","p",null,{"children":"Alongside project management, Ara has recently started exploring Visual Art and developing her skills in creative technologies and visual experiences."}]]}]]}],["$","div","4,4",{"className":"wn-member-content-block wn-reveal","style":{"--reveal-delay":"320ms"},"children":["$","div",null,{"className":"wn-media-frame","children":[["$","div",null,{"className":"wn-media-meta","children":[["$","span",null,{"children":["GALLERY / ","05"]}],["$","span",null,{"children":[3," FRAMES"]}]]}],["$","$L22",null,{"images":["/team/ara/02.jpg","/team/ara/03.jpg","/team/ara/04.jpg"],"title":"Ara Hosseinvand"}]]}]}],["$","div","5,5",{"className":"wn-member-content-block wn-reveal","style":{"--reveal-delay":"400ms"},"children":[["$","div",null,{"className":"wn-block-index","children":"06"}],["$","div",null,{"className":"wn-block-content","children":[["$","h3",null,{"children":"MEMORABLE EXPERIENCE"}],["$","p",null,{"children":"During the first performance of Mantad (ممتد), the project faced an unexpected challenge when war started the night before the event. Despite uncertainty and concerns, the team continued working together inside the venue. The contrast between the peaceful creative atmosphere inside and the difficult conditions outside made the experience unforgettable. After the news of peace arrived, Mantad continued without interruption until its final day."}]]}]]}],["$","div","6,6",{"className":"wn-member-content-block wn-reveal","style":{"--reveal-delay":"480ms"},"children":[["$","div",null,{"className":"wn-block-index","children":"07"}],["$","div",null,{"className":"wn-block-content","children":[["$","h3",null,{"children":"SELECTED PROJECTS"}],["$","p",null,{"children":"Ara has been involved in WeNodes projects including Mantad and Elecomp."}]]}]]}],["$","div","7,7",{"className":"wn-member-content-block wn-reveal","children":["$","div",null,{"className":"wn-media-frame","children":[["$","div",null,{"className":"wn-media-meta","children":[["$","span",null,{"children":["MEDIA /"," ","08"]}],["$","span",null,{"children":"VIDEO"}]]}],["$","video",null,{"className":"wn-member-video","controls":true,"preload":"none","poster":"/team/ara/reel.jpg","playsInline":true,"children":[["$","source",null,{"src":"/team/ara/reel.mp4","type":"video/mp4"}],"Your browser does not support the video tag."]}]]}]}],"$L23"]]}]
+1e:["$","section",null,{"className":"subpage-content wn-member-links-section","style":{"paddingTop":0},"children":[["$","div",null,{"className":"wn-section-label","children":[["$","span",null,{"children":"11 — NETWORK"}],["$","span",null,{"children":"EXTERNAL CHANNELS"}]]}],["$","div",null,{"className":"wn-member-links","children":[["$","a","instagram",{"href":"https://www.instagram.com/arahosseinvand","className":"wn-member-link","target":"_blank","rel":"noreferrer","children":[["$","span",null,{"children":"INSTAGRAM"}],["$","span",null,{"children":"↗"}]]}]]}]]}]
+1f:["$","section",null,{"className":"subpage-content wn-member-navigation","style":{"paddingTop":0},"children":[["$","div",null,{"className":"wn-section-label","children":[["$","span",null,{"children":"12 — CONTINUE EXPLORING"}],["$","span",null,{"children":[6," /"," ",10]}]]}],["$","div",null,{"className":"wn-member-nav-grid","children":[["$","$L11",null,{"href":"/team/mani-khazaei","className":"wn-member-nav-card","children":[["$","span",null,{"className":"wn-nav-direction","children":"← PREVIOUS"}],["$","strong",null,{"children":"MANI"}],["$","span",null,{"children":"3D Artist / Visual Designer"}]]}],["$","$L11",null,{"href":"/team","className":"wn-all-members","children":[["$","span",null,{"className":"wn-all-members-symbol","children":"×"}],["$","span",null,{"children":"ALL MEMBERS"}]]}],["$","$L11",null,{"href":"/team/mml","className":"wn-member-nav-card wn-next","children":[["$","span",null,{"className":"wn-nav-direction","children":"NEXT →"}],["$","strong",null,{"children":"MML"}],["$","span",null,{"children":"Creative Technologist / Developer"}]]}]]}]]}]
+20:["$","footer",null,{"id":"contact","children":[["$","span",null,{"children":"WENODES® — 2026"}],["$","div",null,{"style":{"display":"flex","gap":"24px","alignItems":"center"},"children":[["$","$L11",null,{"href":"/join","style":{"transition":"opacity .25s ease"},"children":"JOIN US ↗"}],["$","a",null,{"href":"https://www.instagram.com/wenodes/","target":"_blank","rel":"noreferrer","style":{"transition":"opacity .25s ease"},"children":"INSTAGRAM ↗"}],["$","a",null,{"href":"https://t.me/wenodes_fam","target":"_blank","rel":"noreferrer","style":{"transition":"opacity .25s ease"},"children":"TELEGRAM ↗"}]]}]]}]
+24:T7cd4,
+
+        /* ═══════════════════════════════════════
+           CORE
+        ═══════════════════════════════════════ */
+
+        .wn-member-page {
+          --wn-white: #e8e6e3;
+          --wn-muted: #888;
+          --wn-dim: #555;
+          --wn-border: rgba(232,230,227,.12);
+          --wn-border-strong: rgba(232,230,227,.22);
+          --wn-black: #090909;
+        }
+
+        .wn-grid-overlay {
+          position: fixed;
+          inset: 0;
+          pointer-events: none;
+          z-index: 0;
+          opacity: .035;
+
+          background-image:
+            linear-gradient(
+              rgba(255,255,255,.5) 1px,
+              transparent 1px
+            ),
+            linear-gradient(
+              90deg,
+              rgba(255,255,255,.5) 1px,
+              transparent 1px
+            );
+
+          background-size: 80px 80px;
+        }
+
+        /* ═══════════════════════════════════════
+           HERO
+        ═══════════════════════════════════════ */
+
+        .wn-member-hero {
+          position: relative;
+          min-height: 78vh;
+
+          padding:
+            clamp(8rem,15vw,12rem)
+            clamp(1.2rem,5vw,5rem)
+            6rem;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          overflow: hidden;
+        }
+
+        .wn-member-system {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          margin-bottom: 4rem;
+
+          font-family:
+            var(--font-pixel, monospace);
+
+          font-size: .62rem;
+          letter-spacing: .12em;
+          color: #666;
+        }
+
+        .wn-system-left {
+          display: flex;
+          align-items: center;
+          gap: .6rem;
+        }
+
+        .wn-system-dot {
+          width: 5px;
+          height: 5px;
+
+          border-radius: 50%;
+
+          background: #e8e6e3;
+
+          box-shadow:
+            0 0 12px
+            rgba(232,230,227,.7);
+
+          animation:
+            wnLivePulse
+            1.8s
+            ease-in-out
+            infinite;
+        }
+
+        @keyframes wnLivePulse {
+
+          0%,100% {
+            opacity: .35;
+            transform: scale(.7);
+          }
+
+          50% {
+            opacity: 1;
+            transform: scale(1);
+          }
+
+        }
+
+        .wn-member-eyebrow {
+          display: flex;
+          align-items: center;
+          gap: .6rem;
+
+          margin-bottom: 1.5rem;
+
+          font-family:
+            var(--font-pixel, monospace);
+
+          font-size: .68rem;
+          letter-spacing: .12em;
+
+          text-transform: uppercase;
+
+          color: #777;
+        }
+
+        .wn-eyebrow-divider {
+          color: #333;
+        }
+
+        .wn-member-title {
+          display: flex;
+          flex-wrap: wrap;
+
+          gap: 0 .25em;
+
+          max-width: 1300px;
+
+          margin: 0;
+
+          font-family:
+            var(--font-whyte, sans-serif);
+
+          font-size:
+            clamp(4rem,12vw,11rem);
+
+          font-weight: 400;
+
+          line-height: .82;
+
+          letter-spacing: -.065em;
+
+          text-transform: uppercase;
+        }
+
+        .wn-title-word {
+          opacity: 0;
+
+          transform:
+            translateY(60px);
+
+          animation:
+            wnTitleIn
+            .9s
+            cubic-bezier(.22,1,.36,1)
+            var(--word-delay)
+            forwards;
+        }
+
+        .wn-title-dot {
+          opacity: 0;
+
+          animation:
+            wnTitleIn
+            .7s
+            cubic-bezier(.22,1,.36,1)
+            500ms
+            forwards;
+        }
+
+        @keyframes wnTitleIn {
+
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+
+        }
+
+        .wn-member-description {
+          max-width: 700px;
+
+          margin: 3rem 0 0;
+
+          font-family:
+            var(--font-whyte, sans-serif);
+
+          font-size:
+            clamp(1rem,1.6vw,1.3rem);
+
+          line-height: 1.55;
+
+          color: #aaa7a2;
+
+          opacity: 0;
+
+          transform:
+            translateY(20px);
+
+          animation:
+            wnFadeUp
+            .8s
+            cubic-bezier(.22,1,.36,1)
+            .65s
+            forwards;
+        }
+
+        @keyframes wnFadeUp {
+
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+
+        }
+
+        .wn-scroll-indicator {
+          display: flex;
+          align-items: center;
+          gap: .8rem;
+
+          margin-top: 5rem;
+
+          font-family:
+            var(--font-pixel, monospace);
+
+          font-size: .58rem;
+          letter-spacing: .1em;
+
+          color: #666;
+        }
+
+        .wn-scroll-line {
+          width: 70px;
+          height: 1px;
+
+          background: #444;
+
+          position: relative;
+          overflow: hidden;
+        }
+
+        .wn-scroll-line::after {
+          content: "";
+
+          position: absolute;
+          inset: 0;
+
+          background: #e8e6e3;
+
+          transform:
+            translateX(-100%);
+
+          animation:
+            wnScan
+            2s
+            ease-in-out
+            infinite;
+        }
+
+        @keyframes wnScan {
+
+          0% {
+            transform:
+              translateX(-100%);
+          }
+
+          50%,100% {
+            transform:
+              translateX(100%);
+          }
+
+        }
+
+        /* ═══════════════════════════════════════
+           SECTION LABEL
+        ═══════════════════════════════════════ */
+
+        .wn-section-label {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          padding: 1rem 0;
+          margin-bottom: 1.5rem;
+
+          border-top:
+            1px solid
+            var(--wn-border);
+
+          font-family:
+            var(--font-pixel, monospace);
+
+          font-size: .58rem;
+          letter-spacing: .1em;
+
+          color: #666;
+        }
+
+        /* ═══════════════════════════════════════
+           IDENTITY IMAGE
+        ═══════════════════════════════════════ */
+
+        .wn-member-cover {
+          position: relative;
+        }
+
+        .wn-cover-meta,
+        .wn-cover-footer {
+          display: flex;
+          justify-content: space-between;
+
+          font-family:
+            var(--font-pixel, monospace);
+
+          font-size: .56rem;
+          letter-spacing: .1em;
+
+          color: #555;
+        }
+
+        .wn-cover-meta {
+          margin-bottom: .8rem;
+        }
+
+        .wn-cover-footer {
+          padding-top: .8rem;
+        }
+
+        .wn-member-cover-image {
+          position: relative;
+          overflow: hidden;
+
+          background: #111;
+        }
+
+        .wn-member-cover-image img {
+          display: block;
+          width: 100%;
+          height: min(578px, 78vw);
+          object-fit: cover;
+          object-position: center;
+          filter: grayscale(.15);
+
+          transition:
+            transform 1.8s
+              cubic-bezier(.22,1,.36,1),
+            filter 1s ease;
+        }
+
+        .wn-member-cover:hover
+        .wn-member-cover-image img {
+          transform: scale(1.018);
+          filter: grayscale(0);
+        }
+
+        .wn-member-cover-overlay {
+          position: absolute;
+          inset: 0;
+
+          pointer-events: none;
+
+          background:
+            linear-gradient(
+              180deg,
+              transparent 60%,
+              rgba(0,0,0,.55)
+            );
+        }
+
+        .wn-member-crosshair {
+          position: absolute;
+
+          top: 50%;
+          left: 50%;
+
+          width: 30px;
+          height: 30px;
+
+          transform:
+            translate(-50%,-50%);
+
+          opacity: .35;
+        }
+
+        .wn-member-crosshair::before,
+        .wn-member-crosshair::after {
+          content: "";
+
+          position: absolute;
+
+          background:
+            rgba(232,230,227,.7);
+        }
+
+        .wn-member-crosshair::before {
+          width: 1px;
+          height: 100%;
+
+          left: 50%;
+        }
+
+        .wn-member-crosshair::after {
+          height: 1px;
+          width: 100%;
+
+          top: 50%;
+        }
+
+        .wn-member-image-label {
+          position: absolute;
+
+          left: 1.5rem;
+          bottom: 1.5rem;
+
+          display: flex;
+          flex-direction: column;
+
+          gap: .35rem;
+        }
+
+        .wn-member-image-label span {
+          font-family:
+            var(--font-pixel, monospace);
+
+          font-size: .5rem;
+          letter-spacing: .12em;
+
+          color: rgba(232,230,227,.5);
+        }
+
+        .wn-member-image-label strong {
+          font-family:
+            var(--font-whyte, sans-serif);
+
+          font-size:
+            clamp(1.5rem,4vw,3rem);
+
+          font-weight: 400;
+
+          letter-spacing: -.04em;
+
+          color: #e8e6e3;
+        }
+
+        /* ═══════════════════════════════════════
+           INFO
+        ═══════════════════════════════════════ */
+
+        .wn-member-info-grid {
+          display: grid;
+
+          grid-template-columns:
+            repeat(
+              auto-fit,
+              minmax(180px,1fr)
+            );
+
+          border-bottom:
+            1px solid
+            var(--wn-border);
+        }
+
+        .wn-member-info-item {
+          position: relative;
+
+          min-height: 120px;
+
+          padding: 1.3rem;
+
+          border-right:
+            1px solid
+            var(--wn-border);
+
+          border-bottom:
+            1px solid
+            var(--wn-border);
+
+          transition:
+            background .35s ease,
+            transform .35s ease;
+        }
+
+        .wn-member-info-item:hover {
+          background:
+            rgba(232,230,227,.035);
+
+          transform:
+            translateY(-3px);
+        }
+
+        .wn-member-info-label {
+          display: block;
+
+          margin-bottom: 1rem;
+
+          font-family:
+            var(--font-pixel, monospace);
+
+          font-size: .58rem;
+          letter-spacing: .1em;
+
+          text-transform: uppercase;
+
+          color: #555;
+        }
+
+        .wn-member-info-value {
+          display: block;
+
+          font-family:
+            var(--font-whyte, sans-serif);
+
+          font-size: .95rem;
+          line-height: 1.4;
+
+          color: #d0cdc8;
+        }
+
+        /* ═══════════════════════════════════════
+           TAGS
+        ═══════════════════════════════════════ */
+
+        .wn-member-tags {
+          display: flex;
+          flex-wrap: wrap;
+
+          gap: .5rem;
+        }
+
+        .wn-member-tag {
+          display: inline-flex;
+          align-items: center;
+
+          gap: .45rem;
+
+          padding: .5rem .8rem;
+
+          border:
+            1px solid
+            rgba(232,230,227,.14);
+
+          border-radius: 999px;
+
+          font-family:
+            var(--font-pixel, monospace);
+
+          font-size: .58rem;
+          letter-spacing: .06em;
+
+          text-transform: uppercase;
+
+          color: #999;
+
+          transition:
+            border-color .3s ease,
+            color .3s ease,
+            background .3s ease,
+            transform .3s ease;
+        }
+
+        .wn-member-tag:hover {
+          color: #e8e6e3;
+
+          border-color:
+            rgba(232,230,227,.4);
+
+          background:
+            rgba(232,230,227,.05);
+
+          transform:
+            translateY(-3px);
+        }
+
+        .wn-member-tag-dot {
+          width: 4px;
+          height: 4px;
+
+          border-radius: 50%;
+
+          background: #666;
+
+          transition:
+            background .3s ease,
+            box-shadow .3s ease;
+        }
+
+        .wn-member-tag:hover
+        .wn-member-tag-dot {
+          background: #e8e6e3;
+
+          box-shadow:
+            0 0 8px
+            rgba(232,230,227,.7);
+        }
+
+        /* ═══════════════════════════════════════
+           STATS
+        ═══════════════════════════════════════ */
+
+        .wn-member-stats {
+          display: grid;
+
+          grid-template-columns:
+            repeat(
+              auto-fit,
+              minmax(150px,1fr)
+            );
+
+          border-left:
+            1px solid
+            var(--wn-border);
+        }
+
+        .wn-member-stat {
+          position: relative;
+
+          padding: 2rem 1.5rem;
+
+          min-height: 150px;
+
+          border-right:
+            1px solid
+            var(--wn-border);
+
+          border-bottom:
+            1px solid
+            var(--wn-border);
+
+          overflow: hidden;
+
+          transition:
+            background .4s ease;
+        }
+
+        .wn-member-stat:hover {
+          background:
+            rgba(232,230,227,.035);
+        }
+
+        .wn-member-stat-value {
+          font-family:
+            var(--font-whyte, sans-serif);
+
+          font-size:
+            clamp(2rem,4vw,3.5rem);
+
+          line-height: 1;
+
+          letter-spacing: -.04em;
+
+          color: #e8e6e3;
+
+          transition:
+            transform .5s
+            cubic-bezier(.22,1,.36,1);
+        }
+
+        .wn-member-stat:hover
+        .wn-member-stat-value {
+          transform:
+            translateX(8px);
+        }
+
+        .wn-member-stat-label {
+          margin-top: .8rem;
+
+          font-family:
+            var(--font-pixel, monospace);
+
+          font-size: .55rem;
+          letter-spacing: .1em;
+
+          text-transform: uppercase;
+
+          color: #555;
+        }
+
+        .wn-member-stat-line {
+          position: absolute;
+
+          left: 0;
+          bottom: 0;
+
+          width: 0;
+          height: 1px;
+
+          background: #e8e6e3;
+
+          transition:
+            width .6s
+            cubic-bezier(.22,1,.36,1);
+        }
+
+        .wn-member-stat:hover
+        .wn-member-stat-line {
+          width: 100%;
+        }
+
+        /* ═══════════════════════════════════════
+           STORY
+        ═══════════════════════════════════════ */
+
+        .wn-member-story {
+          max-width: 1000px;
+        }
+
+        .wn-member-story h2 {
+          margin: 0 0 2rem;
+
+          font-family:
+            var(--font-whyte, sans-serif);
+
+          font-size:
+            clamp(2.5rem,6vw,6rem);
+
+          font-weight: 400;
+
+          line-height: .95;
+
+          letter-spacing: -.055em;
+        }
+
+        .wn-member-story p {
+          max-width: 800px;
+
+          margin: 0;
+
+          font-family:
+            var(--font-whyte, sans-serif);
+
+          font-size:
+            clamp(1.15rem,2vw,1.5rem);
+
+          line-height: 1.6;
+
+          color: #aaa7a2;
+        }
+
+        /* ═══════════════════════════════════════
+           DESCRIPTION
+        ═══════════════════════════════════════ */
+
+        .wn-member-long-description {
+          display: grid;
+
+          grid-template-columns:
+            80px minmax(0,800px);
+
+          gap: 2rem;
+        }
+
+        .wn-member-long-description p {
+          margin: 0;
+
+          font-family:
+            var(--font-whyte, sans-serif);
+
+          font-size:
+            clamp(1.2rem,2.2vw,1.7rem);
+
+          line-height: 1.6;
+
+          color: #aaa7a2;
+        }
+
+        .wn-description-marker {
+          display: flex;
+          flex-direction: column;
+
+          gap: 5px;
+
+          padding-top: .7rem;
+        }
+
+        .wn-description-marker span {
+          width: 35px;
+          height: 1px;
+
+          background: #555;
+        }
+
+        .wn-description-marker span:nth-child(2) {
+          width: 22px;
+        }
+
+        .wn-description-marker span:nth-child(3) {
+          width: 12px;
+        }
+
+        /* ═══════════════════════════════════════
+           TOOLS
+        ═══════════════════════════════════════ */
+
+        .wn-member-tools {
+          border-top:
+            1px solid
+            var(--wn-border);
+        }
+
+        .wn-tool {
+          display: grid;
+
+          grid-template-columns:
+            80px 1fr 40px;
+
+          align-items: center;
+
+          padding: 1.1rem 0;
+
+          border-bottom:
+            1px solid
+            var(--wn-border);
+
+          font-family:
+            var(--font-pixel, monospace);
+
+          font-size: .62rem;
+
+          letter-spacing: .08em;
+
+          transition:
+            padding .35s
+              cubic-bezier(.22,1,.36,1),
+            background .35s ease;
+        }
+
+        .wn-tool:hover {
+          padding-left: 1rem;
+          padding-right: 1rem;
+
+          background:
+            rgba(232,230,227,.025);
+        }
+
+        .wn-tool-number {
+          color: #444;
+        }
+
+        .wn-tool-name {
+          color: #aaa;
+        }
+
+        .wn-tool-arrow {
+          text-align: right;
+
+          color: #444;
+
+          transition:
+            transform .4s ease,
+            color .3s ease;
+        }
+
+        .wn-tool:hover
+        .wn-tool-arrow {
+          color: #e8e6e3;
+
+          transform:
+            translate(3px,-3px);
+        }
+
+        /* ═══════════════════════════════════════
+           QUOTE
+        ═══════════════════════════════════════ */
+
+        .wn-member-big-quote {
+          display: flex;
+
+          gap: 1rem;
+
+          max-width: 1100px;
+
+          margin: 0;
+
+          font-family:
+            var(--font-whyte, sans-serif);
+
+          font-size:
+            clamp(2rem,5vw,5rem);
+
+          font-weight: 400;
+
+          line-height: 1;
+
+          letter-spacing: -.045em;
+
+          color: #e8e6e3;
+        }
+
+        .wn-quote-mark {
+          color: #555;
+          font-size: 1.6em;
+          line-height: 1;
+          margin-right: .4rem;
+          position: relative;
+          top: .08em;
+        }
+
+        .wn-member-quote {
+          display: block;
+          grid-column: 1 / -1;
+          margin: 0;
+          padding: 0;
+          border: none;
+          font-family:
+            var(--font-whyte, sans-serif);
+
+          font-size: clamp(1.5rem,3vw,2.5rem);
+          font-weight: 400;
+          line-height: 1.3;
+          letter-spacing: -.03em;
+          color: #e8e6e3;
+        }
+
+        /* ═══════════════════════════════════════
+           CONTENT
+        ═══════════════════════════════════════ */
+
+        .wn-member-content-block {
+          position: relative;
+
+          display: grid;
+
+          grid-template-columns:
+            80px minmax(0,900px);
+
+          gap: 2rem;
+
+          padding: 4rem 0;
+
+          border-bottom:
+            1px solid
+            var(--wn-border);
+        }
+
+        .wn-block-index {
+          font-family:
+            var(--font-pixel, monospace);
+
+          font-size: .6rem;
+
+          color: #555;
+
+          padding-top: .5rem;
+        }
+
+        .wn-block-content h3 {
+          margin: 0 0 1rem;
+
+          font-family:
+            var(--font-whyte, sans-serif);
+
+          font-size:
+            clamp(1.5rem,3vw,2.5rem);
+
+          font-weight: 400;
+
+          letter-spacing: -.03em;
+        }
+
+        .wn-block-content p {
+          margin: 0;
+
+          font-family:
+            var(--font-whyte, sans-serif);
+
+          font-size: 1.05rem;
+
+          line-height: 1.7;
+
+          color: #999;
+        }
+
+        .wn-media-frame {
+          grid-column: 1 / -1;
+        }
+
+        .wn-media-meta {
+          display: flex;
+          justify-content: space-between;
+
+          margin-bottom: .7rem;
+
+          font-family:
+            var(--font-pixel, monospace);
+
+          font-size: .55rem;
+
+          letter-spacing: .1em;
+
+          color: #555;
+        }
+
+        .wn-member-image {
+          position: relative;
+          overflow: hidden;
+          max-width: 400px;
+
+          background: #111;
+        }
+
+        .wn-member-image img {
+          width: 100%;
+
+          display: block;
+
+          transition:
+            transform 1.2s
+              cubic-bezier(.22,1,.36,1),
+            filter .8s ease;
+        }
+
+        .wn-member-image:hover img {
+          transform: scale(1.025);
+          filter: brightness(.8);
+        }
+
+        .wn-member-gallery {
+          display: grid;
+
+          grid-template-columns:
+            repeat(
+              auto-fit,
+              minmax(280px,1fr)
+            );
+
+          gap: 1rem;
+        }
+
+        .wn-member-gallery-image {
+          position: relative;
+          overflow: hidden;
+
+          background: #111;
+        }
+
+        .wn-member-gallery-image img {
+          width: 100%;
+          display: block;
+
+          transition:
+            transform 1.2s
+            cubic-bezier(.22,1,.36,1);
+        }
+
+        .wn-member-gallery-image:hover img {
+          transform: scale(1.025);
+        }
+
+        .wn-member-gallery-image span {
+          position: absolute;
+
+          left: .8rem;
+          bottom: .8rem;
+
+          font-family:
+            var(--font-pixel, monospace);
+
+          font-size: .55rem;
+
+          color:
+            rgba(232,230,227,.7);
+
+          opacity: 0;
+
+          transform:
+            translateY(5px);
+
+          transition: .3s ease;
+        }
+
+        .wn-member-gallery-image:hover span {
+          opacity: 1;
+          transform:
+            translateY(0);
+        }
+
+        .wn-member-video {
+          width: 100%;
+          display: block;
+
+          background: #050505;
+        }
+
+        /* ═══════════════════════════════════════
+           SELECTED WORK
+        ═══════════════════════════════════════ */
+
+        .wn-member-work-grid {
+          display: grid;
+
+          grid-template-columns:
+            repeat(2,1fr);
+
+          gap: 1rem;
+        }
+
+        .wn-member-work-card {
+          display: block;
+
+          text-decoration: none;
+
+          color: inherit;
+        }
+
+        .wn-member-work-image {
+          position: relative;
+
+          overflow: hidden;
+
+          background: #111;
+        }
+
+        .wn-member-work-image img {
+          width: 100%;
+          display: block;
+
+          transition:
+            transform 1.2s
+              cubic-bezier(.22,1,.36,1),
+            filter .8s ease;
+        }
+
+        .wn-member-work-card:hover
+        .wn-member-work-image img {
+          transform: scale(1.035);
+          filter: brightness(.72);
+        }
+
+        .wn-member-work-index {
+          position: absolute;
+
+          left: 1rem;
+          top: 1rem;
+
+          font-family:
+            var(--font-pixel, monospace);
+
+          font-size: .55rem;
+
+          color:
+            rgba(232,230,227,.7);
+        }
+
+        .wn-member-work-meta {
+          display: flex;
+          justify-content: space-between;
+
+          padding: 1rem 0;
+
+          border-bottom:
+            1px solid
+            var(--wn-border);
+
+          font-family:
+            var(--font-pixel, monospace);
+
+          font-size: .55rem;
+        }
+
+        .wn-member-work-meta div {
+          display: flex;
+          flex-direction: column;
+          gap: .35rem;
+        }
+
+        .wn-member-work-meta strong {
+          font-family:
+            var(--font-whyte, sans-serif);
+
+          font-size: 1.2rem;
+
+          font-weight: 400;
+
+          letter-spacing: -.03em;
+        }
+
+        .wn-member-work-meta span {
+          color: #555;
+        }
+
+        /* ═══════════════════════════════════════
+           LINKS
+        ═══════════════════════════════════════ */
+
+        .wn-member-links {
+          display: grid;
+
+          grid-template-columns:
+            repeat(
+              auto-fit,
+              minmax(180px,1fr)
+            );
+
+          border-top:
+            1px solid
+            var(--wn-border);
+        }
+
+        .wn-member-link {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          padding: 1.3rem;
+
+          border-right:
+            1px solid
+            var(--wn-border);
+
+          border-bottom:
+            1px solid
+            var(--wn-border);
+
+          font-family:
+            var(--font-pixel, monospace);
+
+          font-size: .58rem;
+
+          letter-spacing: .1em;
+
+          text-decoration: none;
+
+          color: #777;
+
+          transition:
+            color .3s ease,
+            background .3s ease,
+            padding .3s ease;
+        }
+
+        .wn-member-link:hover {
+          color: #e8e6e3;
+
+          background:
+            rgba(232,230,227,.035);
+
+          padding-left: 1.7rem;
+        }
+
+        /* ═══════════════════════════════════════
+           NAVIGATION
+        ═══════════════════════════════════════ */
+
+        .wn-member-nav-grid {
+          display: grid;
+
+          grid-template-columns:
+            1fr 120px 1fr;
+
+          border-top:
+            1px solid
+            var(--wn-border);
+
+          border-bottom:
+            1px solid
+            var(--wn-border);
+        }
+
+        .wn-member-nav-card,
+        .wn-all-members {
+          min-height: 220px;
+
+          padding: 1.5rem;
+
+          display: flex;
+          flex-direction: column;
+
+          justify-content: center;
+
+          text-decoration: none;
+
+          color: inherit;
+
+          border-right:
+            1px solid
+            var(--wn-border);
+
+          transition:
+            background .4s ease,
+            padding .4s
+            cubic-bezier(.22,1,.36,1);
+        }
+
+        .wn-member-nav-card:hover {
+          background:
+            rgba(232,230,227,.035);
+
+          padding-left: 2rem;
+        }
+
+        .wn-member-nav-card.wn-next {
+          text-align: right;
+          align-items: flex-end;
+        }
+
+        .wn-nav-direction {
+          margin-bottom: 1.2rem;
+
+          font-family:
+            var(--font-pixel, monospace);
+
+          font-size: .55rem;
+
+          letter-spacing: .1em;
+
+          color: #555;
+        }
+
+        .wn-member-nav-card strong {
+          font-family:
+            var(--font-whyte, sans-serif);
+
+          font-size:
+            clamp(1.5rem,3vw,3rem);
+
+          font-weight: 400;
+
+          line-height: .95;
+
+          letter-spacing: -.04em;
+        }
+
+        .wn-member-nav-card > span:last-child {
+          margin-top: 1rem;
+
+          font-family:
+            var(--font-pixel, monospace);
+
+          font-size: .55rem;
+
+          color: #555;
+        }
+
+        .wn-all-members {
+          align-items: center;
+          justify-content: center;
+
+          gap: 1rem;
+
+          font-family:
+            var(--font-pixel, monospace);
+
+          font-size: .55rem;
+
+          letter-spacing: .08em;
+
+          color: #777;
+
+          text-align: center;
+        }
+
+        .wn-all-members:hover {
+          color: #e8e6e3;
+
+          background:
+            rgba(232,230,227,.035);
+        }
+
+        .wn-all-members-symbol {
+          font-family:
+            var(--font-whyte, sans-serif);
+
+          font-size: 3rem;
+
+          line-height: 1;
+
+          transition:
+            transform .5s ease;
+        }
+
+        .wn-all-members:hover
+        .wn-all-members-symbol {
+          transform:
+            rotate(90deg);
+        }
+
+        /* ═══════════════════════════════════════
+           REVEAL
+        ═══════════════════════════════════════ */
+
+        .wn-reveal {
+          opacity: 0;
+
+          transform:
+            translateY(35px);
+
+          animation:
+            wnReveal
+            .8s
+            cubic-bezier(.22,1,.36,1)
+            var(--reveal-delay,0ms)
+            forwards;
+        }
+
+        @keyframes wnReveal {
+
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+
+        }
+
+        /* ═══════════════════════════════════════
+           MOBILE
+        ═══════════════════════════════════════ */
+
+        @media (max-width: 800px) {
+
+          .wn-member-hero {
+            min-height: 70vh;
+            padding-top: 8rem;
+          }
+
+          .wn-member-system {
+            margin-bottom: 2.5rem;
+          }
+
+          .wn-member-title {
+            font-size:
+              clamp(
+                3.4rem,
+                16vw,
+                7rem
+              );
+          }
+
+          .wn-scroll-indicator {
+            margin-top: 3rem;
+          }
+
+          .wn-member-long-description,
+          .wn-member-content-block {
+            grid-template-columns:
+              35px minmax(0,1fr);
+
+            gap: 1rem;
+          }
+
+          .wn-member-work-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .wn-member-nav-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .wn-member-nav-card,
+          .wn-all-members {
+            min-height: 150px;
+
+            border-right: 0;
+
+            border-bottom:
+              1px solid
+              var(--wn-border);
+          }
+
+          .wn-member-nav-card.wn-next {
+            text-align: left;
+            align-items: flex-start;
+          }
+
+          .wn-all-members {
+            min-height: 100px;
+          }
+
+          .wn-tool {
+            grid-template-columns:
+              45px 1fr 30px;
+          }
+
+        }
+
+        /* ═══════════════════════════════════════
+           REDUCED MOTION
+        ═══════════════════════════════════════ */
+
+        @media (prefers-reduced-motion: reduce) {
+
+          .wn-title-word,
+          .wn-title-dot,
+          .wn-member-description,
+          .wn-reveal,
+          .wn-system-dot,
+          .wn-scroll-line::after {
+            animation: none !important;
+
+            opacity: 1;
+
+            transform: none;
+          }
+
+          * {
+            scroll-behavior: auto !important;
+          }
+
+        }
+
+      21:["$","style",null,{"children":"$24"}]
+23:["$","div","8,8",{"className":"wn-member-content-block wn-reveal","style":{"--reveal-delay":"640ms"},"children":[["$","div",null,{"className":"wn-block-index","children":"09"}],["$","div",null,{"className":"wn-block-content","children":[["$","h3",null,{"children":"CURRENT INTERESTS"}],["$","p",null,{"children":"Creative project management, visual experiences, TouchDesigner, and exploring the intersection between organization, technology, and art."}]]}]]}]
+b:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+7:null
+25:I[622,[],"IconMark"]
+9:{"metadata":[["$","title","0",{"children":"ARA — WENODES"}],["$","meta","1",{"name":"description","content":"Project Manager focused on transforming creative visions into real experiences through collaboration and execution."}],["$","link","2",{"rel":"icon","href":"/favicon.ico"}],["$","link","3",{"rel":"apple-touch-icon","href":"/favicon.png"}],["$","$L25","4",{}]],"error":null,"digest":"$undefined"}
+e:"$9:metadata"

@@ -1,0 +1,971 @@
+1:"$Sreact.fragment"
+2:I[2658,["137","static/chunks/137-f728127ec681a27e.js","177","static/chunks/app/layout-90d55324faf0433e.js"],"default"]
+3:I[9766,[],""]
+4:I[8924,[],""]
+6:I[4431,[],"OutletBoundary"]
+8:I[5278,[],"AsyncMetadataOutlet"]
+a:I[4431,[],"ViewportBoundary"]
+c:I[4431,[],"MetadataBoundary"]
+d:"$Sreact.suspense"
+f:I[7150,[],""]
+:HL["/_next/static/media/4e10c8bdf804750d-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/7291cd39138a9f09-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/75c8fc24fc430ce2-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/c7ad1ca6150e3771-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/ca4179f71e7f1e56-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/53bd5825c9efcf23.css","style"]
+0:{"P":null,"b":"wuS4itDaxXnJZjjoA4urR","p":"","c":["","work","8",""],"i":false,"f":[[["",{"children":["work",{"children":[["id","8","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/53bd5825c9efcf23.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"__variable_e8b694 __variable_93deb1","children":["$","body",null,{"children":[["$","$L2",null,{}],["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]}]]}],{"children":["work",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["id","8","d"],["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L5",null,["$","$L6",null,{"children":["$L7",["$","$L8",null,{"promise":"$@9"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$La",null,{"children":"$Lb"}],["$","meta",null,{"name":"next-size-adjust","content":""}]],["$","$Lc",null,{"children":["$","div",null,{"hidden":true,"children":["$","$d",null,{"fallback":null,"children":"$Le"}]}]}]]}],false]],"m":"$undefined","G":["$f",[]],"s":false,"S":true}
+10:I[2355,["619","static/chunks/619-ba102abea3e3d0e4.js","137","static/chunks/137-f728127ec681a27e.js","780","static/chunks/app/work/%5Bid%5D/page-35d4e9cf13457ec9.js"],"default"]
+11:I[2619,["619","static/chunks/619-ba102abea3e3d0e4.js","137","static/chunks/137-f728127ec681a27e.js","780","static/chunks/app/work/%5Bid%5D/page-35d4e9cf13457ec9.js"],""]
+12:I[6137,["619","static/chunks/619-ba102abea3e3d0e4.js","137","static/chunks/137-f728127ec681a27e.js","780","static/chunks/app/work/%5Bid%5D/page-35d4e9cf13457ec9.js"],"default"]
+5:["$","main",null,{"className":"subpage wn-project-page","children":[["$","div",null,{"className":"scene","aria-hidden":"true","style":{"opacity":0.4},"children":["$","$L10",null,{}]}],["$","div",null,{"className":"grain","aria-hidden":"true"}],["$","div",null,{"className":"wn-grid-overlay"}],["$","header",null,{"className":"nav","children":[["$","$L11",null,{"className":"logo","href":"/","style":{"display":"flex","alignItems":"center","gap":"10px"},"children":[["$","$L12",null,{"size":22}],["$","span",null,{"style":{"fontSize":"16px","fontWeight":800,"letterSpacing":"-0.04em"},"children":["WENODES",["$","span",null,{"style":{"fontSize":"7px","verticalAlign":"top","marginLeft":"2px"},"children":"®"}]]}]]}],["$","nav",null,{"children":[["$","$L11",null,{"href":"/work","children":"WORK"}],["$","$L11",null,{"href":"/team","children":"TEAM"}],["$","$L11",null,{"href":"/about","children":"ABOUT"}]]}],["$","$L11",null,{"className":"contact","href":"/join","children":"JOIN US ↗"}]]}],["$","section",null,{"className":"wn-project-hero","children":[["$","div",null,{"className":"wn-project-system","children":[["$","div",null,{"className":"wn-system-left","children":[["$","span",null,{"className":"wn-system-dot"}],["$","span",null,{"children":"WENODES / PROJECT SYSTEM"}]]}],["$","span",null,{"children":"08"}]]}],["$","div",null,{"className":"wn-project-eyebrow","children":[["$","span",null,{"children":"Interactive"}],["$","span",null,{"className":"wn-eyebrow-divider","children":"/"}],["$","span",null,{"children":2025}],null]}],["$","h1",null,{"className":"wn-project-title","children":[[["$","span","Pakshoma-0",{"className":"wn-title-word","style":{"--word-delay":"0ms"},"children":"Pakshoma"}],["$","span","'Dream-1",{"className":"wn-title-word","style":{"--word-delay":"90ms"},"children":"'Dream"}],["$","span","Home'-2",{"className":"wn-title-word","style":{"--word-delay":"180ms"},"children":"Home'"}],["$","span","Campaign-3",{"className":"wn-title-word","style":{"--word-delay":"270ms"},"children":"Campaign"}]],["$","span",null,{"className":"wn-title-dot","children":"."}]]}],["$","p",null,{"className":"wn-project-description","children":"An immersive interactive campaign for the launch of Pakshoma's new refrigerator line."}],["$","div",null,{"className":"wn-scroll-indicator","children":[["$","span",null,{"children":"SCROLL TO EXPLORE"}],["$","span",null,{"className":"wn-scroll-line"}],["$","span",null,{"children":"↓"}]]}]]}],["$","section",null,{"className":"subpage-content wn-cover-section","style":{"paddingTop":0},"children":["$","div",null,{"className":"wn-cover-wrapper","children":[["$","div",null,{"className":"wn-cover-corner wn-cover-corner-tl"}],["$","div",null,{"className":"wn-cover-corner wn-cover-corner-tr"}],["$","div",null,{"className":"wn-cover-corner wn-cover-corner-bl"}],["$","div",null,{"className":"wn-cover-corner wn-cover-corner-br"}],["$","div",null,{"className":"wn-cover-meta","children":[["$","span",null,{"children":"01 / COVER"}],["$","span",null,{"children":["PROJECT ",8]}]]}],["$","div",null,{"className":"wn-cover-image","children":[["$","img",null,{"src":"/works/pakshoma-dream-home/cover.jpg","alt":"Pakshoma 'Dream Home' Campaign"}],["$","div",null,{"className":"wn-cover-scan"}]]}],["$","div",null,{"className":"wn-cover-footer","children":[["$","span",null,{"children":"WENODES CREATIVE TECHNOLOGY"}],["$","span",null,{"children":2025}]]}]]}]}],["$","section",null,{"className":"subpage-content wn-info-section","style":{"paddingTop":"2rem"},"children":[["$","div",null,{"className":"wn-section-label","children":[["$","span",null,{"children":"02 — PROJECT DATA"}],["$","span",null,{"children":"LIVE RECORD"}]]}],["$","div",null,{"className":"wn-info-grid","children":[["$","div",null,{"className":"wn-info-item","children":[["$","span",null,{"className":"wn-info-label","children":"Client"}],["$","span",null,{"className":"wn-info-value","children":"Pakshoma"}]]}],["$","div",null,{"className":"wn-info-item","children":[["$","span",null,{"className":"wn-info-label","children":"Location"}],["$","span",null,{"className":"wn-info-value","children":"Tehran, Iran"}]]}],["$","div",null,{"className":"wn-info-item","children":[["$","span",null,{"className":"wn-info-label","children":"Year"}],["$","span",null,{"className":"wn-info-value","children":2025}]]}],["$","div",null,{"className":"wn-info-item","children":[["$","span",null,{"className":"wn-info-label","children":"Services"}],["$","span",null,{"className":"wn-info-value","children":"Concept Development / Spatial Design / Interactive Systems / Content Production / Fabrication / Operational Support"}]]}],false]}]]}],["$","section",null,{"className":"subpage-content wn-tags-section","style":{"paddingTop":0},"children":[["$","div",null,{"className":"wn-section-label","children":[["$","span",null,{"children":"03 — SYSTEM TAGS"}],"$L13"]}],"$L14"]}],"$L15","$L16","$L17","$L18","$L19","$L1a","$L1b","$L1c","$L1d"]}]
+1e:I[8335,["619","static/chunks/619-ba102abea3e3d0e4.js","137","static/chunks/137-f728127ec681a27e.js","780","static/chunks/app/work/%5Bid%5D/page-35d4e9cf13457ec9.js"],"default"]
+13:["$","span",null,{"children":[7," PARAMETERS"]}]
+14:["$","div",null,{"className":"wn-tags","children":[["$","span","0",{"className":"wn-tag","style":{"--tag-delay":"0ms"},"children":[["$","span",null,{"className":"wn-tag-dot"}],"Interactive"]}],["$","span","1",{"className":"wn-tag","style":{"--tag-delay":"70ms"},"children":[["$","span",null,{"className":"wn-tag-dot"}],"Projection Mapping"]}],["$","span","2",{"className":"wn-tag","style":{"--tag-delay":"140ms"},"children":[["$","span",null,{"className":"wn-tag-dot"}],"Spatial Design"]}],["$","span","3",{"className":"wn-tag","style":{"--tag-delay":"210ms"},"children":[["$","span",null,{"className":"wn-tag-dot"}],"Brand Experience"]}],["$","span","4",{"className":"wn-tag","style":{"--tag-delay":"280ms"},"children":[["$","span",null,{"className":"wn-tag-dot"}],"Installation"]}],["$","span","5",{"className":"wn-tag","style":{"--tag-delay":"350ms"},"children":[["$","span",null,{"className":"wn-tag-dot"}],"Campaign"]}],["$","span","6",{"className":"wn-tag","style":{"--tag-delay":"420ms"},"children":[["$","span",null,{"className":"wn-tag-dot"}],"Retail"]}]]}]
+15:["$","section",null,{"className":"subpage-content wn-stats-section","style":{"paddingTop":0},"children":[["$","div",null,{"className":"wn-section-label","children":[["$","span",null,{"children":"04 — SYSTEM METRICS"}],["$","span",null,{"children":"PERFORMANCE DATA"}]]}],["$","div",null,{"className":"wn-stats","children":[["$","div","0",{"className":"wn-stat","style":{"--stat-delay":"0ms"},"children":[["$","div",null,{"className":"wn-stat-value","children":"6 Months Active"}],["$","div",null,{"className":"wn-stat-label","children":"Duration"}],["$","div",null,{"className":"wn-stat-line"}]]}],["$","div","1",{"className":"wn-stat","style":{"--stat-delay":"100ms"},"children":[["$","div",null,{"className":"wn-stat-value","children":"Fog-Filled Chilled Space"}],["$","div",null,{"className":"wn-stat-label","children":"Environment"}],["$","div",null,{"className":"wn-stat-line"}]]}],["$","div","2",{"className":"wn-stat","style":{"--stat-delay":"200ms"},"children":[["$","div",null,{"className":"wn-stat-value","children":"Dynamic Projection Mapping"}],["$","div",null,{"className":"wn-stat-label","children":"Response"}],["$","div",null,{"className":"wn-stat-line"}]]}]]}]]}]
+16:["$","section",null,{"className":"subpage-content wn-story-section","style":{"paddingTop":0},"children":[["$","div",null,{"className":"wn-section-label","children":[["$","span",null,{"children":"05 — CONTEXT"}],["$","span",null,{"children":"PROJECT NARRATIVE"}]]}],["$","div",null,{"className":"wn-story","children":[["$","h2",null,{"children":"Step Inside the Product"}],["$","p",null,{"children":"A refrigerator launch where visitors didn't just see the product — they walked inside its world, answered by walls that reshaped themselves."}]]}]]}]
+17:["$","section",null,{"className":"subpage-content wn-description-section","style":{"paddingTop":0},"children":[["$","div",null,{"className":"wn-section-label","children":[["$","span",null,{"children":"06 — ABOUT THE PROJECT"}],["$","span",null,{"children":"FIELD NOTES"}]]}],["$","div",null,{"className":"wn-long-description","children":[["$","div",null,{"className":"wn-description-marker","children":[["$","span",null,{}],["$","span",null,{}],["$","span",null,{}]]}],["$","p",null,{"children":"Developed for the launch of Pakshoma's new refrigerator line, this campaign transformed audience participation into an immersive interactive experience. Visitors entered a fog-filled, chilled environment inspired by the interior atmosphere of a refrigerator. At the center of the installation, an interactive panel asked participants questions about their ideal home, after which the walls dynamically transformed through projection mapping based on their responses. The campaign received significant audience engagement and remained active for six months. From concept and spatial design to interactive systems, content production, fabrication, and operational support, the entire project was developed by WeNodes."}]]}]]}]
+18:["$","section",null,{"className":"subpage-content wn-content-section","style":{"paddingTop":0},"children":[["$","div",null,{"className":"wn-section-label","children":[["$","span",null,{"children":"07 — PROCESS / MEDIA"}],["$","span",null,{"children":"ARCHIVE"}]]}],[["$","div","0,0",{"className":"wn-project-content-block wn-reveal","style":{"--reveal-delay":"0ms"},"children":[["$","div",null,{"className":"wn-block-index","children":"01"}],["$","div",null,{"className":"wn-block-content","children":[["$","h3",null,{"children":"The Chilled Environment"}],["$","p",null,{"children":"Visitors stepped into a fog-filled, chilled space evoking the atmosphere inside a refrigerator — an unexpected sensory entry into the product world."}]]}]]}],["$","div","1,1",{"className":"wn-project-content-block wn-reveal","style":{"--reveal-delay":"80ms"},"children":["$","div",null,{"className":"wn-media-frame","children":[["$","div",null,{"className":"wn-media-meta","children":[["$","span",null,{"children":["MEDIA / ","02"]}],["$","span",null,{"children":"IMAGE"}]]}],["$","div",null,{"className":"project-detail-image wn-project-image","children":["$","img",null,{"src":"/works/pakshoma-dream-home/01.jpg","alt":"Pakshoma Dream Home immersive environment","loading":"lazy"}]}]]}]}],["$","div","2,2",{"className":"wn-project-content-block wn-reveal","style":{"--reveal-delay":"160ms"},"children":[["$","div",null,{"className":"wn-block-index","children":"03"}],["$","div",null,{"className":"wn-block-content","children":[["$","h3",null,{"children":"Interactive Projection Mapping"}],["$","p",null,{"children":"An interactive panel collected visitor responses about their ideal home, then dynamically transformed the surrounding walls through projection mapping based on those answers."}]]}]]}],["$","div","3,3",{"className":"wn-project-content-block wn-reveal","style":{"--reveal-delay":"240ms"},"children":["$","div",null,{"className":"wn-media-frame","children":[["$","div",null,{"className":"wn-media-meta","children":[["$","span",null,{"children":["GALLERY / ","04"]}],["$","span",null,{"children":[3," FRAMES"]}]]}],["$","div",null,{"className":"project-gallery-grid","children":[["$","div","0",{"className":"wn-project-image wn-gallery-image","children":[["$","img",null,{"src":"/works/pakshoma-dream-home/02.jpg","alt":"Pakshoma 'Dream Home' Campaign gallery 1","loading":"lazy"}],["$","span",null,{"className":"wn-image-number","children":"01"}]]}],["$","div","1",{"className":"wn-project-image wn-gallery-image","children":[["$","img",null,{"src":"/works/pakshoma-dream-home/03.jpg","alt":"Pakshoma 'Dream Home' Campaign gallery 2","loading":"lazy"}],["$","span",null,{"className":"wn-image-number","children":"02"}]]}],["$","div","2",{"className":"wn-project-image wn-gallery-image","children":[["$","img",null,{"src":"/works/pakshoma-dream-home/04.jpg","alt":"Pakshoma 'Dream Home' Campaign gallery 3","loading":"lazy"}],["$","span",null,{"className":"wn-image-number","children":"03"}]]}]]}]]}]}],["$","div","4,4",{"className":"wn-project-content-block wn-reveal","children":["$","blockquote",null,{"className":"wn-project-quote","children":[["$","span",null,{"className":"wn-quote-mark","children":"“"}],["$","span",null,{"children":"The walls listened, and the walls answered."}]]}]}]]]}]
+19:["$","section",null,{"className":"subpage-content wn-gallery-section","style":{"paddingTop":0},"children":[["$","div",null,{"className":"wn-section-label","children":[["$","span",null,{"children":"08 — VISUAL ARCHIVE"}],["$","span",null,{"children":[4," FRAMES"]}]]}],["$","div",null,{"className":"wn-gallery-intro","children":[["$","div",null,{"className":"wn-gallery-title","children":["VISUAL",["$","br",null,{}],"MEMORY."]}],["$","div",null,{"className":"wn-gallery-description","children":"A collection of captured states, environments, interactions and moments from the project."}]]}],["$","$L1e",null,{"images":["/works/pakshoma-dream-home/01.jpg","/works/pakshoma-dream-home/02.jpg","/works/pakshoma-dream-home/03.jpg","/works/pakshoma-dream-home/04.jpg"],"title":"Pakshoma 'Dream Home' Campaign"}]]}]
+1a:["$","section",null,{"className":"subpage-content wn-credits-section","style":{"paddingTop":0},"children":[["$","div",null,{"className":"wn-section-label","children":[["$","span",null,{"children":"09 — CREDITS"}],["$","span",null,{"children":"PROJECT LOG"}]]}],["$","div",null,{"className":"wn-credits","children":[["$","div",null,{"className":"wn-credit-header","children":[["$","span",null,{"children":"ENTITY"}],["$","span",null,{"children":"ROLE"}]]}],["$","div",null,{"className":"wn-credit-row","children":[["$","span",null,{"children":"WENODES"}],["$","span",null,{"children":"STUDIO"}]]}],["$","div",null,{"className":"wn-credit-row","children":[["$","span",null,{"children":"Pakshoma"}],["$","span",null,{"children":"CLIENT"}]]}],"$undefined","$undefined"]}]]}]
+1b:["$","section",null,{"className":"subpage-content wn-project-navigation","style":{"paddingTop":0},"children":[["$","div",null,{"className":"wn-section-label","children":[["$","span",null,{"children":"10 — CONTINUE EXPLORING"}],["$","span",null,{"children":[8," / ",27]}]]}],["$","div",null,{"className":"wn-project-nav-grid","children":[["$","$L11",null,{"href":"/work/7","className":"wn-project-nav-card","children":[["$","span",null,{"className":"wn-nav-direction","children":"← PREVIOUS"}],["$","strong",null,{"children":"Pakshoma Rebranding Event"}],["$","span",null,{"children":"Brand Experience"}]]}],["$","$L11",null,{"href":"/work","className":"wn-all-projects","children":[["$","span",null,{"className":"wn-all-projects-symbol","children":"×"}],["$","span",null,{"children":"ALL PROJECTS"}]]}],["$","$L11",null,{"href":"/work/9","className":"wn-project-nav-card wn-next","children":[["$","span",null,{"className":"wn-nav-direction","children":"NEXT →"}],["$","strong",null,{"children":"MIWA at International Drinks Exhibition"}],["$","span",null,{"children":"Interactive"}]]}]]}]]}]
+1c:["$","footer",null,{"id":"contact","children":[["$","span",null,{"children":"WENODES® — 2026"}],["$","div",null,{"style":{"display":"flex","gap":"24px","alignItems":"center"},"children":[["$","$L11",null,{"href":"/join","style":{"transition":"opacity .25s ease"},"children":"JOIN US ↗"}],["$","a",null,{"href":"https://www.instagram.com/wenodes/","target":"_blank","rel":"noreferrer","style":{"transition":"opacity .25s ease"},"children":"INSTAGRAM ↗"}],["$","a",null,{"href":"https://t.me/wenodes_fam","target":"_blank","rel":"noreferrer","style":{"transition":"opacity .25s ease"},"children":"TELEGRAM ↗"}]]}]]}]
+1f:T6561,
+
+        /* ═══════════════════════════════════════
+           BASE
+        ═══════════════════════════════════════ */
+
+        .wn-project-page {
+          --wn-white: #e8e6e3;
+          --wn-muted: #888;
+          --wn-dim: #555;
+          --wn-border: rgba(232,230,227,0.12);
+          --wn-border-strong: rgba(232,230,227,0.22);
+          --wn-black: #090909;
+        }
+
+        .wn-grid-overlay {
+          position: fixed;
+          inset: 0;
+          pointer-events: none;
+          z-index: 0;
+          opacity: 0.035;
+          background-image:
+            linear-gradient(
+              rgba(255,255,255,0.5) 1px,
+              transparent 1px
+            ),
+            linear-gradient(
+              90deg,
+              rgba(255,255,255,0.5) 1px,
+              transparent 1px
+            );
+          background-size: 80px 80px;
+        }
+
+        /* ═══════════════════════════════════════
+           HERO
+        ═══════════════════════════════════════ */
+
+        .wn-project-hero {
+          position: relative;
+          min-height: 78vh;
+          padding:
+            clamp(8rem, 15vw, 12rem)
+            clamp(1.2rem, 5vw, 5rem)
+            6rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          overflow: hidden;
+        }
+
+        .wn-project-system {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 4rem;
+          font-family: var(--font-pixel, monospace);
+          font-size: 0.62rem;
+          letter-spacing: 0.12em;
+          color: #666;
+        }
+
+        .wn-system-left {
+          display: flex;
+          align-items: center;
+          gap: 0.6rem;
+        }
+
+        .wn-system-dot {
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          background: #e8e6e3;
+          box-shadow:
+            0 0 12px rgba(232,230,227,0.7);
+          animation: wnLivePulse 1.8s ease-in-out infinite;
+        }
+
+        @keyframes wnLivePulse {
+          0%, 100% {
+            opacity: .35;
+            transform: scale(.7);
+          }
+
+          50% {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+
+        .wn-project-eyebrow {
+          display: flex;
+          align-items: center;
+          gap: .6rem;
+          margin-bottom: 1.5rem;
+          font-family: var(--font-pixel, monospace);
+          font-size: .68rem;
+          letter-spacing: .12em;
+          text-transform: uppercase;
+          color: #777;
+        }
+
+        .wn-eyebrow-divider {
+          color: #333;
+        }
+
+        .wn-project-title {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0 .25em;
+          max-width: 1300px;
+          margin: 0;
+          font-family: var(--font-whyte, sans-serif);
+          font-size: clamp(4rem, 12vw, 11rem);
+          font-weight: 400;
+          line-height: .82;
+          letter-spacing: -.065em;
+          text-transform: uppercase;
+        }
+
+        .wn-title-word {
+          opacity: 0;
+          transform: translateY(60px);
+          animation:
+            wnTitleIn .9s
+            cubic-bezier(.22,1,.36,1)
+            var(--word-delay)
+            forwards;
+        }
+
+        .wn-title-dot {
+          opacity: 0;
+          animation:
+            wnTitleIn .7s
+            cubic-bezier(.22,1,.36,1)
+            500ms forwards;
+        }
+
+        @keyframes wnTitleIn {
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .wn-project-description {
+          max-width: 700px;
+          margin: 3rem 0 0;
+          font-family: var(--font-whyte, sans-serif);
+          font-size: clamp(1rem, 1.6vw, 1.3rem);
+          line-height: 1.55;
+          color: #aaa7a2;
+          opacity: 0;
+          transform: translateY(20px);
+          animation:
+            wnFadeUp .8s
+            cubic-bezier(.22,1,.36,1)
+            .65s forwards;
+        }
+
+        @keyframes wnFadeUp {
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .wn-scroll-indicator {
+          display: flex;
+          align-items: center;
+          gap: .8rem;
+          margin-top: 5rem;
+          font-family: var(--font-pixel, monospace);
+          font-size: .58rem;
+          letter-spacing: .1em;
+          color: #666;
+        }
+
+        .wn-scroll-line {
+          width: 70px;
+          height: 1px;
+          background: #444;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .wn-scroll-line::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: #e8e6e3;
+          transform: translateX(-100%);
+          animation: wnScan 2s ease-in-out infinite;
+        }
+
+        @keyframes wnScan {
+          0% {
+            transform: translateX(-100%);
+          }
+
+          50%, 100% {
+            transform: translateX(100%);
+          }
+        }
+
+        /* ═══════════════════════════════════════
+           SECTION LABEL
+        ═══════════════════════════════════════ */
+
+        .wn-section-label {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1rem 0;
+          margin-bottom: 1.5rem;
+          border-top: 1px solid var(--wn-border);
+          font-family: var(--font-pixel, monospace);
+          font-size: .58rem;
+          letter-spacing: .1em;
+          color: #666;
+        }
+
+        /* ═══════════════════════════════════════
+           COVER
+        ═══════════════════════════════════════ */
+
+        .wn-cover-wrapper {
+          position: relative;
+        }
+
+        .wn-cover-image {
+          position: relative;
+          overflow: hidden;
+          background: #111;
+        }
+
+        .wn-cover-image img {
+          width: 100%;
+          display: block;
+          transition:
+            transform 1.8s cubic-bezier(.22,1,.36,1),
+            filter 1s ease;
+        }
+
+        .wn-cover-wrapper:hover
+        .wn-cover-image img {
+          transform: scale(1.025);
+          filter: brightness(.75);
+        }
+
+        .wn-cover-meta,
+        .wn-cover-footer {
+          display: flex;
+          justify-content: space-between;
+          font-family: var(--font-pixel, monospace);
+          font-size: .56rem;
+          letter-spacing: .1em;
+          color: #555;
+        }
+
+        .wn-cover-meta {
+          margin-bottom: .8rem;
+        }
+
+        .wn-cover-footer {
+          padding-top: .8rem;
+        }
+
+        .wn-cover-scan {
+          position: absolute;
+          left: 0;
+          right: 0;
+          height: 1px;
+          top: -2px;
+          background: rgba(232,230,227,.35);
+          box-shadow: 0 0 15px rgba(232,230,227,.25);
+          animation: wnCoverScan 5s linear infinite;
+          pointer-events: none;
+        }
+
+        @keyframes wnCoverScan {
+          from {
+            top: -2px;
+          }
+
+          to {
+            top: calc(100% + 2px);
+          }
+        }
+
+        .wn-cover-corner {
+          position: absolute;
+          width: 14px;
+          height: 14px;
+          border-color: #777;
+          z-index: 3;
+          pointer-events: none;
+        }
+
+        .wn-cover-corner-tl {
+          top: 27px;
+          left: -5px;
+          border-top: 1px solid;
+          border-left: 1px solid;
+        }
+
+        .wn-cover-corner-tr {
+          top: 27px;
+          right: -5px;
+          border-top: 1px solid;
+          border-right: 1px solid;
+        }
+
+        .wn-cover-corner-bl {
+          bottom: 27px;
+          left: -5px;
+          border-bottom: 1px solid;
+          border-left: 1px solid;
+        }
+
+        .wn-cover-corner-br {
+          bottom: 27px;
+          right: -5px;
+          border-bottom: 1px solid;
+          border-right: 1px solid;
+        }
+
+        /* ═══════════════════════════════════════
+           PROJECT INFO
+        ═══════════════════════════════════════ */
+
+        .wn-info-grid {
+          display: grid;
+          grid-template-columns:
+            repeat(auto-fit, minmax(180px, 1fr));
+          border-bottom: 1px solid var(--wn-border);
+        }
+
+        .wn-info-item {
+          position: relative;
+          min-height: 120px;
+          padding: 1.3rem;
+          border-right: 1px solid var(--wn-border);
+          border-bottom: 1px solid var(--wn-border);
+          transition:
+            background .35s ease,
+            transform .35s ease;
+        }
+
+        .wn-info-item:hover {
+          background: rgba(232,230,227,.035);
+          transform: translateY(-3px);
+        }
+
+        .wn-info-label {
+          display: block;
+          margin-bottom: 1rem;
+          font-family: var(--font-pixel, monospace);
+          font-size: .58rem;
+          letter-spacing: .1em;
+          text-transform: uppercase;
+          color: #555;
+        }
+
+        .wn-info-value {
+          display: block;
+          font-family: var(--font-whyte, sans-serif);
+          font-size: .95rem;
+          line-height: 1.4;
+          color: #d0cdc8;
+        }
+
+        /* ═══════════════════════════════════════
+           TAGS
+        ═══════════════════════════════════════ */
+
+        .wn-tags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: .5rem;
+        }
+
+        .wn-tag {
+          display: inline-flex;
+          align-items: center;
+          gap: .45rem;
+          padding: .5rem .8rem;
+          border: 1px solid rgba(232,230,227,.14);
+          border-radius: 999px;
+          font-family: var(--font-pixel, monospace);
+          font-size: .58rem;
+          letter-spacing: .06em;
+          text-transform: uppercase;
+          color: #999;
+          transition:
+            border-color .3s ease,
+            color .3s ease,
+            background .3s ease,
+            transform .3s ease;
+        }
+
+        .wn-tag:hover {
+          color: #e8e6e3;
+          border-color: rgba(232,230,227,.4);
+          background: rgba(232,230,227,.05);
+          transform: translateY(-3px);
+        }
+
+        .wn-tag-dot {
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          background: #666;
+          transition:
+            background .3s ease,
+            box-shadow .3s ease;
+        }
+
+        .wn-tag:hover .wn-tag-dot {
+          background: #e8e6e3;
+          box-shadow: 0 0 8px rgba(232,230,227,.7);
+        }
+
+        /* ═══════════════════════════════════════
+           STATS
+        ═══════════════════════════════════════ */
+
+        .wn-stats {
+          display: grid;
+          grid-template-columns:
+            repeat(auto-fit, minmax(150px, 1fr));
+          border-left: 1px solid var(--wn-border);
+        }
+
+        .wn-stat {
+          position: relative;
+          padding: 2rem 1.5rem;
+          min-height: 150px;
+          border-right: 1px solid var(--wn-border);
+          border-bottom: 1px solid var(--wn-border);
+          overflow: hidden;
+          transition: background .4s ease;
+        }
+
+        .wn-stat:hover {
+          background: rgba(232,230,227,.035);
+        }
+
+        .wn-stat-value {
+          font-family: var(--font-whyte, sans-serif);
+          font-size: clamp(2rem, 4vw, 3.5rem);
+          line-height: 1;
+          letter-spacing: -.04em;
+          color: #e8e6e3;
+          transition: transform .5s cubic-bezier(.22,1,.36,1);
+        }
+
+        .wn-stat:hover .wn-stat-value {
+          transform: translateX(8px);
+        }
+
+        .wn-stat-label {
+          margin-top: .8rem;
+          font-family: var(--font-pixel, monospace);
+          font-size: .55rem;
+          letter-spacing: .1em;
+          text-transform: uppercase;
+          color: #555;
+        }
+
+        .wn-stat-line {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 0;
+          height: 1px;
+          background: #e8e6e3;
+          transition: width .6s cubic-bezier(.22,1,.36,1);
+        }
+
+        .wn-stat:hover .wn-stat-line {
+          width: 100%;
+        }
+
+        /* ═══════════════════════════════════════
+           STORY
+        ═══════════════════════════════════════ */
+
+        .wn-story {
+          max-width: 1000px;
+        }
+
+        .wn-story h2 {
+          margin: 0 0 2rem;
+          font-family: var(--font-whyte, sans-serif);
+          font-size: clamp(2.5rem, 6vw, 6rem);
+          font-weight: 400;
+          line-height: .95;
+          letter-spacing: -.055em;
+        }
+
+        .wn-story p {
+          max-width: 800px;
+          margin: 0;
+          font-family: var(--font-whyte, sans-serif);
+          font-size: clamp(1.15rem, 2vw, 1.5rem);
+          line-height: 1.6;
+          color: #aaa7a2;
+        }
+
+        /* ═══════════════════════════════════════
+           LONG DESCRIPTION
+        ═══════════════════════════════════════ */
+
+        .wn-long-description {
+          display: grid;
+          grid-template-columns: 80px minmax(0, 800px);
+          gap: 2rem;
+        }
+
+        .wn-long-description p {
+          margin: 0;
+          font-family: var(--font-whyte, sans-serif);
+          font-size: clamp(1.2rem, 2.2vw, 1.7rem);
+          line-height: 1.6;
+          color: #aaa7a2;
+        }
+
+        .wn-description-marker {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          padding-top: .7rem;
+        }
+
+        .wn-description-marker span {
+          width: 35px;
+          height: 1px;
+          background: #555;
+        }
+
+        .wn-description-marker span:nth-child(2) {
+          width: 22px;
+        }
+
+        .wn-description-marker span:nth-child(3) {
+          width: 12px;
+        }
+
+        /* ═══════════════════════════════════════
+           CONTENT
+        ═══════════════════════════════════════ */
+
+        .wn-project-content-block {
+          position: relative;
+          display: grid;
+          grid-template-columns: 80px minmax(0, 900px);
+          gap: 2rem;
+          padding: 4rem 0;
+          border-bottom: 1px solid var(--wn-border);
+        }
+
+        .wn-block-index {
+          font-family: var(--font-pixel, monospace);
+          font-size: .6rem;
+          color: #555;
+          padding-top: .5rem;
+        }
+
+        .wn-block-content h3 {
+          margin: 0 0 1rem;
+          font-family: var(--font-whyte, sans-serif);
+          font-size: clamp(1.5rem, 3vw, 2.5rem);
+          font-weight: 400;
+          letter-spacing: -.03em;
+        }
+
+        .wn-block-content p {
+          margin: 0;
+          font-family: var(--font-whyte, sans-serif);
+          font-size: 1.05rem;
+          line-height: 1.7;
+          color: #999;
+        }
+
+        /* ═══════════════════════════════════════
+           MEDIA
+        ═══════════════════════════════════════ */
+
+        .wn-media-frame {
+          grid-column: 1 / -1;
+        }
+
+        .wn-media-meta {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: .7rem;
+          font-family: var(--font-pixel, monospace);
+          font-size: .55rem;
+          letter-spacing: .1em;
+          color: #555;
+        }
+
+        .wn-project-image {
+          overflow: hidden;
+          background: #111;
+          position: relative;
+        }
+
+        .wn-project-image img {
+          width: 100%;
+          height: auto;
+          display: block;
+          transition:
+            transform 1.2s cubic-bezier(.22,1,.36,1),
+            filter .8s ease;
+        }
+
+        .wn-project-image:hover img {
+          transform: scale(1.025);
+          filter: brightness(.8);
+        }
+
+        .project-gallery-grid {
+          display: grid;
+          grid-template-columns:
+            repeat(auto-fit, minmax(280px, 1fr));
+          gap: 1rem;
+        }
+
+        .wn-gallery-image {
+          overflow: hidden;
+        }
+
+        .wn-image-number {
+          position: absolute;
+          left: .8rem;
+          bottom: .8rem;
+          font-family: var(--font-pixel, monospace);
+          font-size: .55rem;
+          color: rgba(232,230,227,.7);
+          opacity: 0;
+          transform: translateY(5px);
+          transition: .3s ease;
+        }
+
+        .wn-gallery-image:hover .wn-image-number {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        .wn-project-video {
+          width: 100%;
+          display: block;
+          background: #050505;
+        }
+
+        /* ═══════════════════════════════════════
+           QUOTE
+        ═══════════════════════════════════════ */
+
+        .wn-project-quote {
+          display: flex;
+          gap: 1rem;
+          margin: 0;
+          max-width: 1000px;
+          font-family: var(--font-whyte, sans-serif);
+          font-size: clamp(2rem, 5vw, 5rem);
+          font-weight: 400;
+          line-height: 1;
+          letter-spacing: -.045em;
+          color: #e8e6e3;
+        }
+
+        .wn-quote-mark {
+          color: #555;
+        }
+
+        /* ═══════════════════════════════════════
+           GALLERY INTRO
+        ═══════════════════════════════════════ */
+
+        .wn-gallery-intro {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 3rem;
+          margin-bottom: 3rem;
+        }
+
+        .wn-gallery-title {
+          font-family: var(--font-whyte, sans-serif);
+          font-size: clamp(3rem, 7vw, 7rem);
+          line-height: .82;
+          letter-spacing: -.06em;
+        }
+
+        .wn-gallery-description {
+          max-width: 450px;
+          align-self: end;
+          font-family: var(--font-whyte, sans-serif);
+          font-size: 1rem;
+          line-height: 1.6;
+          color: #777;
+        }
+
+        /* ═══════════════════════════════════════
+           CREDITS
+        ═══════════════════════════════════════ */
+
+        .wn-credits {
+          border-top: 1px solid var(--wn-border);
+        }
+
+        .wn-credit-header,
+        .wn-credit-row {
+          display: grid;
+          grid-template-columns: 1fr 180px;
+          gap: 2rem;
+          padding: 1rem;
+          border-bottom: 1px solid var(--wn-border);
+          font-family: var(--font-pixel, monospace);
+          font-size: .58rem;
+          letter-spacing: .08em;
+        }
+
+        .wn-credit-header {
+          color: #444;
+        }
+
+        .wn-credit-row {
+          color: #aaa;
+          transition:
+            background .3s ease,
+            padding-left .3s ease;
+        }
+
+        .wn-credit-row:hover {
+          background: rgba(232,230,227,.03);
+          padding-left: 1.5rem;
+        }
+
+        /* ═══════════════════════════════════════
+           PROJECT NAVIGATION
+        ═══════════════════════════════════════ */
+
+        .wn-project-nav-grid {
+          display: grid;
+          grid-template-columns: 1fr 120px 1fr;
+          border-top: 1px solid var(--wn-border);
+          border-bottom: 1px solid var(--wn-border);
+        }
+
+        .wn-project-nav-card,
+        .wn-all-projects {
+          min-height: 220px;
+          padding: 1.5rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          text-decoration: none;
+          color: inherit;
+          border-right: 1px solid var(--wn-border);
+          transition:
+            background .4s ease,
+            padding .4s cubic-bezier(.22,1,.36,1);
+        }
+
+        .wn-project-nav-card:last-child {
+          border-right: 0;
+        }
+
+        .wn-project-nav-card:hover {
+          background: rgba(232,230,227,.035);
+          padding-left: 2rem;
+        }
+
+        .wn-project-nav-card.wn-next {
+          text-align: right;
+          align-items: flex-end;
+        }
+
+        .wn-nav-direction {
+          margin-bottom: 1.2rem;
+          font-family: var(--font-pixel, monospace);
+          font-size: .55rem;
+          letter-spacing: .1em;
+          color: #555;
+        }
+
+        .wn-project-nav-card strong {
+          font-family: var(--font-whyte, sans-serif);
+          font-size: clamp(1.5rem, 3vw, 3rem);
+          font-weight: 400;
+          line-height: .95;
+          letter-spacing: -.04em;
+        }
+
+        .wn-project-nav-card > span:last-child {
+          margin-top: 1rem;
+          font-family: var(--font-pixel, monospace);
+          font-size: .55rem;
+          color: #555;
+        }
+
+        .wn-all-projects {
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+          border-right: 1px solid var(--wn-border);
+          font-family: var(--font-pixel, monospace);
+          font-size: .55rem;
+          letter-spacing: .08em;
+          color: #777;
+          text-align: center;
+        }
+
+        .wn-all-projects:hover {
+          color: #e8e6e3;
+          background: rgba(232,230,227,.035);
+        }
+
+        .wn-all-projects-symbol {
+          font-family: var(--font-whyte, sans-serif);
+          font-size: 3rem;
+          line-height: 1;
+          transition: transform .5s ease;
+        }
+
+        .wn-all-projects:hover
+        .wn-all-projects-symbol {
+          transform: rotate(90deg);
+        }
+
+        /* ═══════════════════════════════════════
+           REVEALS
+        ═══════════════════════════════════════ */
+
+        .wn-reveal {
+          opacity: 0;
+          transform: translateY(35px);
+          animation:
+            wnReveal .8s
+            cubic-bezier(.22,1,.36,1)
+            var(--reveal-delay, 0ms)
+            forwards;
+        }
+
+        @keyframes wnReveal {
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        /* ═══════════════════════════════════════
+           RESPONSIVE
+        ═══════════════════════════════════════ */
+
+        @media (max-width: 800px) {
+
+          .wn-project-hero {
+            min-height: 70vh;
+            padding-top: 8rem;
+          }
+
+          .wn-project-system {
+            margin-bottom: 2.5rem;
+          }
+
+          .wn-project-title {
+            font-size: clamp(3.4rem, 16vw, 7rem);
+          }
+
+          .wn-scroll-indicator {
+            margin-top: 3rem;
+          }
+
+          .wn-long-description,
+          .wn-project-content-block {
+            grid-template-columns: 35px minmax(0, 1fr);
+            gap: 1rem;
+          }
+
+          .wn-gallery-intro {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+          }
+
+          .wn-project-nav-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .wn-project-nav-card,
+          .wn-all-projects {
+            min-height: 150px;
+            border-right: 0;
+            border-bottom: 1px solid var(--wn-border);
+          }
+
+          .wn-project-nav-card.wn-next {
+            text-align: left;
+            align-items: flex-start;
+          }
+
+          .wn-all-projects {
+            min-height: 100px;
+          }
+
+          .wn-credit-header,
+          .wn-credit-row {
+            grid-template-columns: 1fr 120px;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+          .wn-title-word,
+          .wn-title-dot,
+          .wn-project-description,
+          .wn-reveal,
+          .wn-system-dot,
+          .wn-scroll-line::after,
+          .wn-cover-scan {
+            animation: none !important;
+            opacity: 1;
+            transform: none;
+          }
+
+          * {
+            scroll-behavior: auto !important;
+          }
+        }
+
+      1d:["$","style",null,{"children":"$1f"}]
+b:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+7:null
+20:I[622,[],"IconMark"]
+9:{"metadata":[["$","title","0",{"children":"Pakshoma 'Dream Home' Campaign — WENODES"}],["$","meta","1",{"name":"description","content":"An immersive interactive campaign for the launch of Pakshoma's new refrigerator line."}],["$","link","2",{"rel":"icon","href":"/favicon.ico"}],["$","link","3",{"rel":"apple-touch-icon","href":"/favicon.png"}],["$","$L20","4",{}]],"error":null,"digest":"$undefined"}
+e:"$9:metadata"
