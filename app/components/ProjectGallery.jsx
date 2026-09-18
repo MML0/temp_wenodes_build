@@ -128,6 +128,8 @@ export default function ProjectGallery({ images, title }) {
               src={img}
               alt={`${title} gallery ${i + 1}`}
               draggable="false"
+              loading="lazy"
+              decoding="async"
             />
 
             <div className="gallery-number">

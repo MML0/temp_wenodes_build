@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import ParticleScene from "./components/ParticleScene";
+import ParticleScene from "./components/ParticleSceneLazy";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import ProjectCard from "./components/ProjectCard";

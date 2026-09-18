@@ -1,6 +1,6 @@
 import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
-import ParticleScene from "../../components/ParticleScene";
+import ParticleScene from "../../components/ParticleSceneLazy";
 import ProjectGallery from "../../components/ProjectGallery";
 import { team } from "../../data/team";
 import { works } from "../../data/works";
@@ -177,6 +177,7 @@ case "gallery":
             <video
               className="wn-member-video"
               controls
+              preload="none"
               poster={block.poster}
               playsInline
             >

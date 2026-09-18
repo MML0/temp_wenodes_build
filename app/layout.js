@@ -5,37 +5,37 @@ import LoadingScreen from "./components/LoadingScreen";
 const whyteInktrap = localFont({
   src: [
     {
-      path: "../public/fonts/ABCWhyteInktrap-Extralight-Trial.otf",
+      path: "../public/fonts/ABCWhyteInktrap-Extralight-Trial.woff2",
       weight: "200",
       style: "normal",
     },
     {
-      path: "../public/fonts/ABCWhyteInktrap-Book-Trial.otf",
+      path: "../public/fonts/ABCWhyteInktrap-Book-Trial.woff2",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../public/fonts/ABCWhyteInktrap-Regular-Trial.otf",
+      path: "../public/fonts/ABCWhyteInktrap-Regular-Trial.woff2",
       weight: "500",
       style: "normal",
     },
     {
-      path: "../public/fonts/ABCWhyteInktrap-Bold-Trial.otf",
+      path: "../public/fonts/ABCWhyteInktrap-Bold-Trial.woff2",
       weight: "700",
       style: "normal",
     },
   ],
   variable: "--font-whyte",
-  display: "block",
+  display: "swap",
   preload: true,
 });
 
 const pixelFont = localFont({
-  src: "../public/fonts/CoFoSansPixel-Regular-Trial.otf",
+  src: "../public/fonts/CoFoSansPixel-Regular-Trial.woff2",
   weight: "400",
   style: "normal",
   variable: "--font-pixel",
-  display: "block",
+  display: "swap",
   preload: true,
 });
 

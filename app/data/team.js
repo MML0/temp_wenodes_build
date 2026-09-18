@@ -1276,7 +1276,7 @@ export const team = [
     {
       type: "quote",
       text:
-        "If it's imaginable, it can be done."
+        "There’s always something new to try."
     },
 
     {

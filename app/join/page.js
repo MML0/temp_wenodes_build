@@ -2,7 +2,7 @@
 
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
-import ParticleScene from "../components/ParticleScene";
+import ParticleScene from "../components/ParticleSceneLazy";
 import { useState } from "react";
 
 export default function JoinPage() {

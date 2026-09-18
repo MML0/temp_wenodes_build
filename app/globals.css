@@ -30,6 +30,23 @@ a {
   align-items: center;
   justify-content: center;
   gap: 20px;
+
+  /* CSS-driven dismissal.
+
+     The overlay is server-rendered, so on a slow connection it used to
+     sit on top of a fully-usable page until React finished hydrating
+     (every JS chunk, three.js included). This animation lifts it on a
+     fixed schedule whether or not JS has arrived; the React component
+     still fades it out earlier when hydration beats the clock. */
+  animation: loaderAutoDismiss .6s ease 2.4s forwards;
+}
+
+@keyframes loaderAutoDismiss {
+  to {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
 }
 
 .loading-screen.fade-out {

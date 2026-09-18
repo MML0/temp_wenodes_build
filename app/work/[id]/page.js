@@ -1,6 +1,6 @@
 import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
-import ParticleScene from "../../components/ParticleScene";
+import ParticleScene from "../../components/ParticleSceneLazy";
 import ProjectGallery from "../../components/ProjectGallery";
 import { works } from "../../data/works";
 import Link from "next/link";
@@ -151,6 +151,7 @@ function ContentBlock({ block, index, workTitle }) {
 
             <video
               controls
+              preload="none"
               poster={block.poster}
               className="wn-project-video"
             >
