@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback, memo } from "react";
 import Link from "next/link";
 
-export default function ProjectCard({ project, index }) {
+function ProjectCard({ project, index }) {
   const [isHovered, setIsHovered] = useState(false);
   const [galleryIndex, setGalleryIndex] = useState(0);
   const [showGallery, setShowGallery] = useState(false);
@@ -902,3 +902,5 @@ export default function ProjectCard({ project, index }) {
     </Link>
   );
 }
+
+export default memo(ProjectCard);

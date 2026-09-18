@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import ParticleScene from "../components/ParticleSceneLazy";
@@ -9,23 +9,57 @@ import { works } from "../data/works";
 
 export default function WorkPage() {
   const [activeFilter, setActiveFilter] = useState("All");
-  const [mouse, setMouse] = useState({ x: 0, y: 0 });
   const [hoveredFilter, setHoveredFilter] = useState(null);
-  const [isLoaded, setIsLoaded] = useState(false);
 
+  const sceneRef = useRef(null);
+
+  /*
+    Background parallax.
+
+    This used to hold the pointer position in React state and update it on
+    every mousemove, which re-rendered the whole page (all 27 project cards)
+    and rewrote the transform on the element wrapping the WebGL canvas —
+    dozens of times a second. On touch devices the compatibility mousemove
+    that follows a tap triggered the same cascade, which is why the particles
+    stuttered for a moment whenever you touched the screen.
+
+    The transform is now written straight to the node inside a rAF, so the
+    parallax costs no React renders at all. Touch devices skip it entirely:
+    there is no hovering pointer to follow.
+  */
   useEffect(() => {
-    setIsLoaded(true);
+    const scene = sceneRef.current;
+    if (!scene) return;
+
+    if (
+      typeof window.matchMedia === "function" &&
+      window.matchMedia("(pointer: coarse)").matches
+    ) {
+      return;
+    }
+
+    let frame = 0;
 
     const handleMouseMove = (event) => {
-      setMouse({
-        x: (event.clientX / window.innerWidth - 0.5) * 2,
-        y: (event.clientY / window.innerHeight - 0.5) * 2,
+      if (frame) return;
+
+      frame = requestAnimationFrame(() => {
+        frame = 0;
+
+        const x = (event.clientX / window.innerWidth - 0.5) * 2;
+        const y = (event.clientY / window.innerHeight - 0.5) * 2;
+
+        scene.style.transform =
+          `translate(${x * -6}px, ${y * -6}px)`;
       });
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove, {
+      passive: true,
+    });
 
     return () => {
+      if (frame) cancelAnimationFrame(frame);
       window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
@@ -64,6 +98,18 @@ export default function WorkPage() {
           from {
             opacity: 0;
             transform: translateY(24px);
+          }
+
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes workTitleEnter {
+          from {
+            opacity: 0;
+            transform: translateY(40px);
           }
 
           to {
@@ -142,11 +188,8 @@ export default function WorkPage() {
           align-items: center;
           gap: 2rem;
           margin-bottom: clamp(3rem, 7vw, 6rem);
-          opacity: ${isLoaded ? 1 : 0};
-          transform: ${isLoaded ? "translateY(0)" : "translateY(20px)"};
-          transition:
-            opacity 0.8s ease,
-            transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+          animation:
+            workHeroEnter 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
         }
 
         .wn-work-title {
@@ -156,11 +199,8 @@ export default function WorkPage() {
           line-height: 0.82;
           letter-spacing: -0.055em;
           max-width: 1100px;
-          opacity: ${isLoaded ? 1 : 0};
-          transform: ${isLoaded ? "translateY(0)" : "translateY(40px)"};
-          transition:
-            opacity 1s ease 0.1s,
-            transform 1.1s cubic-bezier(0.22, 1, 0.36, 1) 0.1s;
+          animation:
+            workTitleEnter 1.1s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
         }
 
         .wn-work-title span {
@@ -186,11 +226,8 @@ export default function WorkPage() {
           padding-top: 1.2rem;
           border-top: 1px solid rgba(232, 230, 227, 0.12);
           position: relative;
-          opacity: ${isLoaded ? 1 : 0};
-          transform: ${isLoaded ? "translateY(0)" : "translateY(20px)"};
-          transition:
-            opacity 0.8s ease 0.3s,
-            transform 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.3s;
+          animation:
+            workHeroEnter 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
         }
 
         .wn-work-hero-bottom::before {
@@ -408,9 +445,7 @@ export default function WorkPage() {
       <div
         className="wn-work-scene"
         aria-hidden="true"
-        style={{
-          transform: `translate(${mouse.x * -6}px, ${mouse.y * -6}px)`,
-        }}
+        ref={sceneRef}
       >
         <ParticleScene />
       </div>
