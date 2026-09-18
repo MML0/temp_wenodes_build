@@ -105,6 +105,12 @@ a {
   display: flex;
   align-items: center;
   gap: 10px;
+
+  /* .nav is a `1fr auto 1fr` grid and items stretch to fill their cell by
+     default, so without this the logo's clickable area ran the full width
+     of the first column — all the way over to WORK. `.contact` uses the
+     same trick on the right-hand column. */
+  justify-self: start;
 }
 
 .logo span {
